@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <base >
+    <title> hYPer</title>
+    <link href="cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+    <link href="hyper152.cn/assets/css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Loading hover -->
+    <div class="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+
+    <!-- Main box -->
+    <main>
+        <div class="content">
+            <div class="left">
+                <div class="avatar">
+                    <img src="hyper152.cn/assets/img/head.png">
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a goto="#home">主页</a>
+                    </li>
+                    <li>
+                        <a goto="#news">资讯</a>
+                    </li>
+					<li>
+                        <a goto="#competitions">赛事</a>
+                    </li>
+                    <li>
+                        <a goto="#contact">了解</a>
+                    </li>
+                    <li>
+                        <a goto="#donate">捐助</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    Made with
+                    <i class="fa fa-heart"></i> by
+                    <br>
+                    <a href="index.html" target="_blank">hYPer</a>
+                </div>
+            </div>
+            <div class="right">
+                <section id="home" class="active">
+                    <h1></h1>
+                    <p>
+                        hYPer
+                       
+                        <br> 身处祖国东南一隅，就读于某不知名高中。
+						<br>玩cs，lol，minecraft,apex
+						<br>看lpl，algs，csmajor
+						<br>踢足球
+						<br>垃圾佬热爱装电脑
+						<br>只会理科
+						<br>是2班龙王
+ 
+                    </p>
+                </section>
+                <section id="news">
+                    <h1>资讯</h1>
+	<div class="news">
+	<a href="https://pan.baidu.com/s/1ZOaHuS8GXG3Cuu5KRzZRsA?pwd=jtfx" target="_blank">
+                            <i class="camera"></i>
+                        <li>camera in class 2</li>
+						<img src="images/PICT1090.jpg">
+						</a>
+	</div>
+                    </ul>
+					</a>
+                </section>
+	<section id="competitions">
+	<div class="competitions">
+	<a href="competitions.html" target="_blank">
+                            <i class="camera"></i>
+                        <li>赛程</li>
+						<img src="hyper152.cn/assets/img/logo.png">
+						</a>
+	</div>
+	</section>
+
+
+
+
+				<section id="contact">
+                    <hl>了解hYPer</hl>
+                    <div class="items">
+                       
+                       
+                        <a href="https://space.bilibili.com/1689598128?spm_id_from=333.1007.0.0" target="_blank">
+                            <i class="bilibili"></i>
+		<div class="contact">
+		<img src="hyper152.cn/assets/img/head.png">
+		</div>
+                            <span>bilibili</span>
+                        </a>
+                    
+               
+                    </div>
+                </section>
+                <section id="donate">
+                    <h1>拯救hYPer</h1>
+                    <div class="donate-img-box">
+                        <img src="hyper152.cn/assets/img/WeChat.jpg">
+                        <img src="hyper152.cn/assets/img/AliPay.png">
+                    </div>
+<!--                     <p>
+                        Bitcoin: 32VRHdCR1nSsKG5aXi4MZBrvTwH8dvHFm4
+                        <br>PayPal:
+                        <a href="https://paypal.me/lwl12" target="_blank">https://paypal.me/lwl12</a>
+                    </p> -->
+                </section>
+            </div>
+        </div>
+
+
+
+    <!-- Some scripts -->
+    <script src="cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="hyper152.cn/assets/js/main.js"></script>
+</body>
+</html>
