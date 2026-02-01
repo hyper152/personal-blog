@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hyper的个人Vlog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #6a5acd;
+            --secondary-color: #ff6b6b;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+            --gray-color: #e9ecef;
+            --text-color: #495057;
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* 英雄区域样式 */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 最新视频样式 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .latest-video {
+            margin-bottom: 80px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 宽高比 */
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* 博客文章样式 */
+        .blog-posts {
+            margin-bottom: 80px;
+        }
+        
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .post-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .post-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .post-card:hover .post-image img {
+            transform: scale(1.1);
+        }
+        
+        .post-content {
+            padding: 20px;
+        }
+        
+        .post-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* 关于hyper样式 */
+        .about {
+            background-color: white;
+            padding: 80px 0;
+            margin-bottom: 80px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--gray-color);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* 页脚样式 */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #adb5bd;
+        }
+        
+        /* 动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">hyper的<span>Vlog</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#videos">视频</a></li>
+                    <li><a href="#blog">博客</a></li>
+                    <li><a href="#about">关于hyper</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>记录生活，分享故事</h1>
+            <p>欢迎来到hyper的个人Vlog空间，这里记录了hyper的日常生活、旅行经历和思考感悟。希望通过视频和文字，与您分享hyper的故事。</p>
+            <a href="#videos" class="btn">观看最新视频</a>
+        </div>
+    </section>
+
+    <!-- 最新视频 -->
+    <section class="latest-video" id="videos">
+        <div class="container">
+            <h2 class="section-title">最新视频</h2>
+            <div class="video-container">
+                <iframe src="./video/聚是一团火，散是满天星.mp4" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>聚是一团火，散是满天星</h3>
+                <h3>(别下载，会卡爆的)</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博客文章 -->
+    <section class="blog-posts" id="blog">
+        <div class="container">
+            <h2 class="section-title">动态</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="../旅游记录/2025.6.16-2025.6.18上海交通大学面试记/shanghai (6).jpg" alt="旅行文章">
+                    </div>
+                    <div class="post-content">
+                        <h3>我的第一次独自旅行经历(上交面试记)</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> 2024.7.28-2024.7.30</span>
+                            <span><i class="far fa-comment"></i> 0条评论</span>
+                        </div>
+                        <p>独自旅行是一次与自己对话的旅程。在这次旅行中，我学会了独立，也遇到了许多有趣的人和事,还有被做局的面试</p>
+                        <a href="http://0o0hyper0o0.cyou/%E6%97%85%E6%B8%B8%E8%AE%B0%E5%BD%95/2025.6.16-2025.6.18%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%9D%A2%E8%AF%95%E8%AE%B0/" class="read-more">阅读更多</a>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="../装机记录/zj (4).jpg" alt="实践文章">
+                    </div>
+                    <div class="post-content">
+                        <h3>自主DIY电脑记</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> 2023年</span>
+                            <span><i class="far fa-comment"></i> 0条评论</span>
+                        </div>
+                        <p>尝试自己DIY电脑，过程中遭遇了很多挫折，但最后还是获得了成功</p>
+                        <a href="http://0o0hyper0o0.cyou/%E8%A3%85%E6%9C%BA%E8%AE%B0%E5%BD%95/" class="read-more">阅读更多</a>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="../home/img/love.png" alt="创作">
+                    </div>
+                    <div class="post-content">
+                        <h3>love u</h3>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> 2025年6月10日</span>
+                            <span><i class="far fa-comment"></i> 0条评论</span>
+                        </div>
+                        <p>love you forever</p>
+                        <a href="http://love.0o0hyper0o0.cyou" class="read-more">阅读更多</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="../人物志/hyp.jpg" alt="关于我">
+                </div>
+                <div class="about-text">
+                    <h2>你好，我是hyper</h2>
+                    <p>我是一名热爱生活的内容创作者，喜欢通过视频和文字记录生活中的美好瞬间。从2022年开始制作Vlog，至今已经发布了超过80个视频。</p>
+                    <p>我的内容主要涵盖旅行、美食、个人成长和日常生活。希望通过我的分享，能够给大家带来一些启发和快乐。</p>
+                    <p>除了制作视频，我还喜欢摄影、阅读和户外运动。我相信生活中有无数值得记录的瞬间，而我的使命就是捕捉这些瞬间并与大家分享。</p>
+                    <p>还会python编程</p>
+                    <p>能够运行minecraft和terraria的服务器</p>
+                    <p>玩cs，lol，valorant,apex，mc，terraria可以找我</p>
+                    <p>QQ:2361542526</p>
+                    <p>wx:Hyper20070129</p>
+                    <div class="social-links">
+                        <a href="https://space.bilibili.com/1689598128?spm_id_from=333.1387.0.0"><i class="fab fa-bilibili"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>hyper的Vlog</h3>
+                    <p>记录生活，分享故事。希望通过我的视频和文字，为您带来启发和快乐。</p>
+                </div>
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#videos">视频</a></li>
+                        <li><a href="#blog">博客</a></li>
+                        <li><a href="#about">关于我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>关注我</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://space.bilibili.com/1689598128?spm_id_from=333.1387.0.0"><i class="fab fa-bilibili"></i> Bilibili</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>更多内容</h3>
+                    <ul class="footer-links">
+                        <li><a href="../旅游记录/">旅游记录</a></li>
+                        <li><a href="../人物志/">人物志</a></li>
+                        <li><a href="../觉醒年代/">觉醒年代</a></li>
+                        <li><a href="../2班战狼班班务日志/">2班战狼班班务日志</a></li>
+                        <li><a href="http://py.0o0hyper0o0.cyou">留言板</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 我的个人Vlog. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
