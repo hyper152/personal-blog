@@ -3,652 +3,868 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hyper的个人Vlog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>hyper的个人Vlog | 记录生活，分享故事</title>
+    <!-- 外部资源CDN优化：添加跨域、异步加载 -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    <!-- 内联CSS（含留言板居中布局优化） -->
     <style>
+        :root {
+            /* 语义化变量命名 */
+            --color-primary: #6a5acd;
+            --color-accent: #ff6b6b;
+            --color-secondary: #4ecdc4;
+            --color-dark: #2d3436;
+            --color-light: #f8f9fa;
+            --color-white: #ffffff;
+            --color-gray: #495057;
+            --color-light-gray: #e9ecef;
+            
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
+            
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            
+            --transition-base: all 0.3s ease;
+            --transition-fast: all 0.2s ease;
+        }
+
+        /* 全局重置优化：保留box-sizing，精简默认样式 */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Microsoft YaHei', sans-serif;
         }
-        
-        :root {
-            --primary-color: #6a5acd;
-            --secondary-color: #ff6b6b;
-            --dark-color: #333;
-            --light-color: #f8f9fa;
-            --gray-color: #e9ecef;
-            --text-color: #495057;
-            --transition: all 0.3s ease;
-        }
-        
+
         body {
-            background-color: var(--light-color);
-            color: var(--text-color);
+            background-color: var(--color-light);
+            color: var(--color-gray);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
-        
-        a {
-            text-decoration: none;
-            color: var(--primary-color);
-            transition: var(--transition);
-        }
-        
-        a:hover {
-            color: var(--secondary-color);
-        }
-        
+
         .container {
-            width: 90%;
-            max-width: 1200px;
+            width: min(1200px, 90%);
             margin: 0 auto;
             padding: 0 15px;
         }
-        
-        /* 头部样式 */
+
+        /* 头部导航：优化粘性定位、性能 */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-sm);
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: var(--transition-base);
         }
-        
+
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: var(--shadow-md);
+        }
+
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--color-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
+        .logo i {
+            color: var(--color-accent);
+            font-size: 1.5rem;
+        }
+
         .logo span {
-            color: var(--secondary-color);
+            color: var(--color-accent);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
+            text-decoration: none;
+            color: var(--color-gray);
             font-weight: 500;
+            transition: var(--transition-fast);
             position: relative;
+            padding: 8px 0;
         }
-        
-        .nav-links a:after {
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a::after {
             content: '';
             position: absolute;
+            bottom: 0;
+            left: 0;
             width: 0;
             height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--secondary-color);
-            transition: var(--transition);
+            background-color: var(--color-accent);
+            transition: var(--transition-base);
         }
-        
-        .nav-links a:hover:after {
+
+        .nav-links a:hover::after {
             width: 100%;
         }
-        
-        .hamburger {
+
+        .mobile-menu-btn {
             display: none;
-            cursor: pointer;
             font-size: 1.5rem;
+            color: var(--color-primary);
+            cursor: pointer;
+            border: none;
+            background: none;
         }
-        
-        /* 英雄区域样式 */
+
+        /* 英雄区：优化背景性能、语义化 */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/bg.jpg');
+            background: linear-gradient(rgba(106, 90, 205, 0.85), rgba(255, 107, 107, 0.85)), url('/home/img/bg.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
+            background-attachment: scroll; /* 移动端优化，取消fixed避免性能问题 */
+            color: var(--color-white);
             text-align: center;
-            padding: 100px 0;
-            margin-bottom: 50px;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            animation: fadeIn 1.5s ease;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* 最新视频样式 */
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary-color);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .latest-video {
+            padding: 120px 0;
             margin-bottom: 80px;
-        }
-        
-        .video-container {
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
             position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 56.25%; /* 16:9 宽高比 */
-            margin-bottom: 30px;
-            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
-        .video-container iframe {
+
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.2;
         }
-        
-        .video-info {
-            text-align: center;
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
             max-width: 800px;
             margin: 0 auto;
         }
-        
-        .video-info h3 {
-            font-size: 1.8rem;
+
+        .hero h1 {
+            font-size: clamp(1.8rem, 5vw, 3.5rem); /* 响应式字体 */
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--color-white);
+            color: var(--color-primary);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-base);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-btn:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* 通用区块标题：优化语义化 */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
+            color: var(--color-dark);
             margin-bottom: 15px;
-            color: var(--dark-color);
         }
-        
-        /* 博客文章样式 */
-        .blog-posts {
-            margin-bottom: 80px;
+
+        .section-title p {
+            color: var(--color-gray);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        /* 博客卡片网格：优化响应式、性能 */
         .posts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
+            margin-bottom: 80px;
         }
-        
+
         .post-card {
-            background-color: white;
-            border-radius: 10px;
+            background-color: var(--color-white);
+            border-radius: var(--radius-md);
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-base);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .post-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
         }
-        
+
         .post-image {
-            height: 200px;
+            height: 220px;
             overflow: hidden;
+            position: relative;
         }
-        
+
         .post-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: var(--transition);
+            transition: var(--transition-base);
+            /* 懒加载优化 */
+            loading: lazy;
         }
-        
+
         .post-card:hover .post-image img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
-        
+
+        .post-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
         .post-content {
-            padding: 20px;
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
-        
+
         .post-content h3 {
-            margin-bottom: 10px;
-            color: var(--dark-color);
+            color: var(--color-dark);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            transition: var(--transition-fast);
         }
-        
+
+        .post-card:hover .post-content h3 {
+            color: var(--color-primary);
+        }
+
+        .post-content p {
+            color: var(--color-gray);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
         .post-meta {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 0.9rem;
             color: #6c757d;
-            margin-bottom: 15px;
+            border-top: 1px solid var(--color-light-gray);
+            padding-top: 15px;
         }
-        
+
+        .post-meta i {
+            margin-right: 5px;
+            color: var(--color-primary);
+        }
+
         .read-more {
             display: inline-block;
-            font-weight: 600;
-            margin-top: 10px;
+            color: var(--color-accent);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition-fast);
         }
-        
-        /* 关于hyper样式 */
-        .about {
-            background-color: white;
-            padding: 80px 0;
+
+        .read-more:hover {
+            color: var(--color-primary);
+            transform: translateX(5px);
+        }
+
+        /* 分类导航：核心优化 - 留言板第二行居中 */
+        .categories {
+            background-color: var(--color-white);
+            padding: 60px 0;
             margin-bottom: 80px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
         }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
+
+        .category-grid {
+            display: grid;
+            gap: 20px;
+            justify-items: center;
         }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        /* 大屏（≥1200px）：一行5个，留言板跨列居中 */
+        @media (min-width: 1200px) {
+            .category-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            /* 第6个元素（留言板）跨所有列并居中 */
+            .category-grid > div:nth-child(5) {
+                grid-column: 5 / 6;
+            }
+            .category-grid > div:nth-child(6) {
+                grid-column: 1 / -1;
+                max-width: 200px;
+                margin: 0 auto;
+            }
         }
-        
-        .about-image img {
+
+        /* 中屏（800px-1199px）：一行3个，留言板居中 */
+        @media (max-width: 1199px) and (min-width: 800px) {
+            .category-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .category-grid > div:nth-child(6) {
+                grid-column: 2 / 3;
+            }
+        }
+
+        /* 小屏（500px-799px）：一行2个，留言板跨列居中 */
+        @media (max-width: 799px) and (min-width: 500px) {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .category-grid > div:nth-child(6) {
+                grid-column: 1 / -1;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
+
+        /* 超小屏（<500px）：一行1个，自然居中 */
+        @media (max-width: 499px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: var(--radius-md);
+            transition: var(--transition-base);
+            border: 1px solid var(--color-light-gray);
             width: 100%;
-            height: auto;
+            max-width: 200px;
+        }
+
+        .category-card:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .category-card i {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            transition: var(--transition-fast);
+        }
+
+        .category-card:hover i {
+            color: var(--color-white);
+            transform: scale(1.1);
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .category-card a {
+            text-decoration: none;
+            color: inherit;
             display: block;
         }
-        
-        .about-text {
-            flex: 1;
+
+        /* 页脚：优化语义化、响应式 */
+        footer {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            padding: 80px 0 30px;
         }
-        
-        .about-text h2 {
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
         }
-        
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--color-accent);
+        }
+
+        .footer-col p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
         .social-links {
             display: flex;
-            margin-top: 20px;
             gap: 15px;
         }
-        
+
         .social-links a {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: var(--gray-color);
             border-radius: 50%;
-            transition: var(--transition);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-white);
+            transition: var(--transition-base);
         }
-        
+
         .social-links a:hover {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--color-accent);
             transform: translateY(-3px);
         }
-        
-        /* 页脚样式 */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column {
-            flex: 1;
-            padding: 0 15px;
-        }
-        
-        .footer-column h3 {
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background-color: var(--secondary-color);
-            bottom: 0;
-            left: 0;
-        }
-        
-        .footer-links {
+
+        .footer-col ul {
             list-style: none;
         }
-        
-        .footer-links li {
+
+        .footer-col ul li {
             margin-bottom: 10px;
         }
-        
-        .footer-links a {
-            color: #adb5bd;
-            transition: var(--transition);
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
-        .footer-links a:hover {
-            color: white;
+
+        .footer-col ul li a:hover {
+            color: var(--color-accent);
             padding-left: 5px;
         }
-        
+
         .copyright {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
-            color: #adb5bd;
+            opacity: 0.7;
         }
-        
-        /* 动画 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        /* 回到顶部按钮：优化样式、交互 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            transition: var(--transition-base);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+            border: none;
         }
-        
-        /* 响应式设计 */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-image, .about-text {
-                flex: none;
-                width: 100%;
-            }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
         }
-        
+
+        .back-to-top:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-5px);
+        }
+
+        /* 响应式优化：断点精简、逻辑清晰 */
         @media (max-width: 768px) {
-            .hamburger {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--color-white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                border-radius: var(--radius-sm);
+                margin: 10px;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
                 display: block;
             }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 80px);
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 50px;
-                transition: var(--transition);
+
+            .nav-links.show {
+                display: flex;
             }
-            
-            .nav-links.active {
-                left: 0;
-            }
-            
-            .nav-links li {
-                margin: 15px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-        }
-        
-        @media (max-width: 576px) {
+
             .hero {
                 padding: 80px 0;
             }
-            
-            .hero h1 {
-                font-size: 2rem;
+
+            .posts-grid {
+                grid-template-columns: 1fr;
             }
-            
-            .contact-form {
-                padding: 30px 20px;
+        }
+
+        @media (max-width: 576px) {
+            .post-image {
+                height: 180px;
+            }
+
+            .footer-grid {
+                gap: 30px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 头部导航 -->
-    <header>
+    <header id="main-header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">hyper的<span>Vlog</span></a>
-                <ul class="nav-links">
+                <a href="#" class="logo" aria-label="hyper的个人Vlog首页">
+                    <i class="fas fa-camera-retro" aria-hidden="true"></i>
+                    hyper的<span>Vlog</span>
+                </a>
+                
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#home">首页</a></li>
-                    <li><a href="#videos">视频</a></li>
+                    <li><a href="#categories">分类</a></li>
                     <li><a href="#blog">博客</a></li>
                     <li><a href="#about">关于hyper</a></li>
+                    <li><a href="#contact">联系我</a></li>
                 </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="移动端菜单按钮">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- 英雄区域 -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>记录生活，分享故事</h1>
-            <p>欢迎来到hyper的个人Vlog空间，这里记录了hyper的日常生活、旅行经历和思考感悟。希望通过视频和文字，与您分享hyper的故事。</p>
-            <a href="#videos" class="btn">观看最新视频</a>
+            <div class="hero-content">
+                <h1>记录生活，分享故事</h1>
+                <p>欢迎来到hyper的个人Vlog空间，这里记录了hyper的日常生活、旅行经历和思考感悟。</p>
+                <a href="#blog" class="hero-btn" aria-label="浏览更多博客内容">
+                    <i class="fas fa-book-open" aria-hidden="true"></i> 浏览更多内容
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- 最新视频 -->
-    <section class="latest-video" id="videos">
+    <section class="categories" id="categories">
         <div class="container">
-            <h2 class="section-title">最新视频</h2>
-            <div class="video-container">
-                <iframe src="./video/聚是一团火，散是满天星.mp4" title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="section-title">
+                <h2>内容分类</h2>
+                <p>探索我的Vlog世界，发现不同的生活片段和故事</p>
             </div>
-            <div class="video-info">
-                <h3>聚是一团火，散是满天星</h3>
-                <h3>(别下载，会卡爆的)</h3>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <a href="/pages/people/高中/" aria-label="查看人物志分类内容">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <h3>人物志</h3>
+                        <p>记录身边的人和事</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/pages/travel/" aria-label="查看旅游记录分类内容">
+                        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                        <h3>旅游记录</h3>
+                        <p>走遍山河，记录美好</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/pages/diy/" aria-label="查看装机记录分类内容">
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
+                        <h3>装机记录</h3>
+                        <p>数码爱好者的装机分享</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/pages/觉醒年代/" aria-label="查看觉醒年代分类内容">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        <h3>觉醒年代</h3>
+                        <p>思考与感悟</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/pages/2班战狼班班务日志/" aria-label="查看班务日志分类内容">
+                        <i class="fas fa-clipboard" aria-hidden="true"></i>
+                        <h3>班务日志</h3>
+                        <p>班级生活记录</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/talk/" aria-label="查看留言板">
+                        <i class="fas fa-comments" aria-hidden="true"></i>
+                        <h3>留言板</h3>
+                        <p>互动交流，分享想法</p>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 博客文章 -->
     <section class="blog-posts" id="blog">
         <div class="container">
-            <h2 class="section-title">动态</h2>
+            <div class="section-title">
+                <h2>最新动态</h2>
+                <p>记录生活中的点点滴滴，分享每一个精彩瞬间</p>
+            </div>
+            
             <div class="posts-grid">
                 <article class="post-card">
                     <div class="post-image">
-                        <img src="../旅游记录/2025.6.16-2025.6.18上海交通大学面试记/shanghai (6).jpg" alt="旅行文章">
+                        <span class="post-category">旅行</span>
+                        <img src="/pages/travel/2025.6.16-2025.6.18上海交通大学面试记/shanghai (6).jpg" alt="上海交通大学面试记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>我的第一次独自旅行经历(上交面试记)</h3>
+                        <p>独自旅行是一次与自己对话的旅程，在上海的这段经历让我收获了很多，也对未来有了更清晰的认识。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar"></i> 2024.7.28-2024.7.30</span>
-                            <span><i class="far fa-comment"></i> 0条评论</span>
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.18</span>
+                            <a href="/pages/travel/2025.6.16-2025.6.18上海交通大学面试记/" class="read-more" aria-label="阅读更多关于上海交通大学面试记的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p>独自旅行是一次与自己对话的旅程。在这次旅行中，我学会了独立，也遇到了许多有趣的人和事,还有被做局的面试</p>
-                        <a href="http://0o0hyper0o0.cyou/%E6%97%85%E6%B8%B8%E8%AE%B0%E5%BD%95/2025.6.16-2025.6.18%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%9D%A2%E8%AF%95%E8%AE%B0/" class="read-more">阅读更多</a>
                     </div>
                 </article>
                 
                 <article class="post-card">
                     <div class="post-image">
-                        <img src="../装机记录/zj (4).jpg" alt="实践文章">
+                        <span class="post-category">旅行</span>
+                        <img src="/pages/travel/2025.7.24百丈漈/b百丈漈.jpg" alt="百丈漈旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
-                        <h3>自主DIY电脑记</h3>
+                        <h3>水帘洞穿越记 - 百丈漈之行</h3>
+                        <p>百丈漈的瀑布如银河倒泻，身临其境仿佛穿越到了水帘洞，大自然的鬼斧神工令人叹为观止。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar"></i> 2023年</span>
-                            <span><i class="far fa-comment"></i> 0条评论</span>
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.07.24</span>
+                            <a href="/pages/travel/2025.7.24百丈漈/" class="read-more" aria-label="阅读更多关于百丈漈之行的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p>尝试自己DIY电脑，过程中遭遇了很多挫折，但最后还是获得了成功</p>
-                        <a href="http://0o0hyper0o0.cyou/%E8%A3%85%E6%9C%BA%E8%AE%B0%E5%BD%95/" class="read-more">阅读更多</a>
                     </div>
                 </article>
                 
                 <article class="post-card">
                     <div class="post-image">
-                        <img src="../home/img/love.png" alt="创作">
+                        <span class="post-category">旅行</span>
+                        <img src="/pages/travel/2025.8.17雁荡山/雁荡山.jpg" alt="雁荡山旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
-                        <h3>love u</h3>
+                        <h3>雁荡山旅游记 - 奇峰异石间的行走</h3>
+                        <p>雁荡山的奇峰怪石、飞泉瀑布，每一处都充满了诗意，一步一景，流连忘返。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar"></i> 2025年6月10日</span>
-                            <span><i class="far fa-comment"></i> 0条评论</span>
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.08.17</span>
+                            <a href="/pages/travel/2025.8.17雁荡山/" class="read-more" aria-label="阅读更多关于雁荡山旅游记的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p>love you forever</p>
-                        <a href="http://love.0o0hyper0o0.cyou" class="read-more">阅读更多</a>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <div class="post-image">
+                        <span class="post-category">旅行</span>
+                        <img src="/pages/travel/2025.6.15-2025.6.16南京大学强基记/南大.jpg" alt="南京大学强基记" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <h3>南京大学强基记 - 名校之旅</h3>
+                        <p>走进南京大学，感受百年名校的文化底蕴，强基计划的面试经历让我受益匪浅。</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.16</span>
+                            <a href="/pages/travel/2025.6.15-2025.6.16南京大学强基记/" class="read-more" aria-label="阅读更多关于南京大学强基记的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <div class="post-image">
+                        <span class="post-category">数码</span>
+                        <img src="/home/img/装机.jpg" alt="装机记录" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <h3>装机记录 - 我的DIY电脑搭建之旅</h3>
+                        <p>从配件选购到组装调试，一步步搭建属于自己的电脑，体验DIY的乐趣和成就感。</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.05.10</span>
+                            <a href="/pages/diy/" class="read-more" aria-label="阅读更多关于装机记录的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <div class="post-image">
+                        <span class="post-category">生活</span>
+                        <img src="/home/img/人物志.jpg" alt="人物志" loading="lazy">
+                    </div>
+                    <div class="post-content">
+                        <h3>人物志 - 记录身边的可爱的人们</h3>
+                        <p>每个人都有自己的故事，记录下高中时期身边的老师和同学们，留住青春的记忆。</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.04.20</span>
+                            <a href="/pages/people/高中/" class="read-more" aria-label="阅读更多关于人物志的内容">
+                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- 关于我 -->
-    <section class="about" id="about">
+    <footer id="contact">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="../人物志/hyp.jpg" alt="关于我">
-                </div>
-                <div class="about-text">
-                    <h2>你好，我是hyper</h2>
-                    <p>我是一名热爱生活的内容创作者，喜欢通过视频和文字记录生活中的美好瞬间。从2022年开始制作Vlog，至今已经发布了超过80个视频。</p>
-                    <p>我的内容主要涵盖旅行、美食、个人成长和日常生活。希望通过我的分享，能够给大家带来一些启发和快乐。</p>
-                    <p>除了制作视频，我还喜欢摄影、阅读和户外运动。我相信生活中有无数值得记录的瞬间，而我的使命就是捕捉这些瞬间并与大家分享。</p>
-                    <p>还会python编程</p>
-                    <p>能够运行minecraft和terraria的服务器</p>
-                    <p>玩cs，lol，valorant,apex，mc，terraria可以找我</p>
-                    <p>QQ:2361542526</p>
-                    <p>wx:Hyper20070129</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我</h3>
+                    <p>热爱生活，喜欢旅行和记录，用Vlog的形式分享生活中的美好瞬间和成长感悟。</p>
                     <div class="social-links">
-                        <a href="https://space.bilibili.com/1689598128?spm_id_from=333.1387.0.0"><i class="fab fa-bilibili"></i></a>
+                        <a href="#" aria-label="微信"><i class="fab fa-weixin" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="#" aria-label="哔哩哔哩"><i class="fab fa-bilibili" aria-hidden="true"></i></a>
+                        <a href="mailto:2361542526@qq.com" aria-label="邮箱"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>hyper的Vlog</h3>
-                    <p>记录生活，分享故事。希望通过我的视频和文字，为您带来启发和快乐。</p>
-                </div>
-                <div class="footer-column">
+                
+                <div class="footer-col">
                     <h3>快速链接</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">首页</a></li>
-                        <li><a href="#videos">视频</a></li>
-                        <li><a href="#blog">博客</a></li>
-                        <li><a href="#about">关于我</a></li>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home" aria-hidden="true"></i> 首页</a></li>
+                        <li><a href="#categories"><i class="fas fa-th-list" aria-hidden="true"></i> 内容分类</a></li>
+                        <li><a href="#blog"><i class="fas fa-blog" aria-hidden="true"></i> 最新动态</a></li>
+                        <li><a href="/talk/"><i class="fas fa-comment-dots" aria-hidden="true"></i> 留言板</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>关注我</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://space.bilibili.com/1689598128?spm_id_from=333.1387.0.0"><i class="fab fa-bilibili"></i> Bilibili</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>更多内容</h3>
-                    <ul class="footer-links">
-                        <li><a href="../旅游记录/">旅游记录</a></li>
-                        <li><a href="../人物志/">人物志</a></li>
-                        <li><a href="../觉醒年代/">觉醒年代</a></li>
-                        <li><a href="../2班战狼班班务日志/">2班战狼班班务日志</a></li>
-                        <li><a href="http://py.0o0hyper0o0.cyou">留言板</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 我的个人Vlog. 保留所有权利.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // 移动端菜单切换
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
                 
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+                <div class="footer-col">
+                    <h3>内容分类</h3>
+                    <ul>
+                        <li><a href="/pages/people/高中/"><i class="fas fa-users" aria-hidden="true"></i> 人物志</a></li>
+                        <li><a href="/pages/travel/"><i class="fas fa-map" aria-hidden="true"></i> 旅游记录</a></li>
+                        <li><a href="/pages/diy/"><i class="fas fa-laptop" aria-hidden="true"></i> 装机记录</a></li>
+                        <li><a href="/pages/觉醒年代/"><i class="fas fa-lightbulb" aria-hidden="true"></i> 觉醒年代</a></li>
+                    </ul>
+                </div>
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // 关闭移动端菜单
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                <div class="footer-col">
+                    <h3>联系我</h3>
+                    <ul>
+                        <li><a href="mailto:2361542526@qq.com"><i class="
