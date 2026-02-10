@@ -11,7 +11,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     >
-    <!-- 内联CSS（适配移除人物志后的布局） -->
+    <!-- 内联CSS（适配移除人物志后的布局 + 访问计数样式） -->
     <style>
         :root {
             /* 语义化变量命名 */
@@ -55,6 +55,39 @@
             width: min(1200px, 90%);
             margin: 0 auto;
             padding: 0 15px;
+        }
+
+        /* 访问计数样式 - 新增核心样式 */
+        .visit-counter-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(106, 90, 205, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-md);
+            z-index: 1001; /* 高于头部导航 */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition-fast);
+        }
+        
+        .visit-counter-box:hover {
+            background: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .visit-counter-box i {
+            font-size: 1rem;
+        }
+        
+        .visit-counter-number {
+            font-weight: bold;
+            color: #fff;
         }
 
         /* 头部导航：优化粘性定位、性能 */
@@ -146,7 +179,7 @@
 
         /* 英雄区：优化背景性能、语义化 */
         .hero {
-            background: linear-gradient(rgba(106, 90, 205, 0.85), rgba(255, 107, 107, 0.85)), url('/home/img/bg.jpg');
+            background: linear-gradient(rgba(106, 90, 205, 0.85), rgba(255, 107, 107, 0.85)), url('img/bg.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: scroll; /* 移动端优化，取消fixed避免性能问题 */
@@ -400,6 +433,14 @@
             .category-grid {
                 grid-template-columns: 1fr;
             }
+            /* 移动端调整访问计数位置 */
+            .visit-counter-box {
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
         }
 
         .category-card {
@@ -528,6 +569,14 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             opacity: 0.7;
+            position: relative;
+        }
+        
+        /* 页脚也展示访问计数（可选） */
+        .copyright .visit-count-footer {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            color: var(--color-secondary);
         }
 
         /* 回到顶部按钮：优化样式、交互 */
@@ -619,6 +668,14 @@
     </style>
 </head>
 <body>
+    <!-- 访问计数展示框 - 新增核心元素 -->
+    <div class="visit-counter-box" id="visitCounterBox">
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <span>总访问量：</span>
+        <span class="visit-counter-number" id="visitCounterNumber">0</span>
+        <span>次</span>
+    </div>
+
     <header id="main-header">
         <div class="container">
             <nav class="navbar">
@@ -794,13 +851,13 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">数码</span>
-                        <img src="\pages\diy\zj (4).jpg" alt="装机记录" loading="lazy">
+                        <img src="\pages\diy\RTX2060裸机.jpg" alt="装机记录" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>装机记录 - 我的DIY电脑搭建之旅</h3>
                         <p>从配件选购到组装调试，一步步搭建属于自己的电脑，体验DIY的乐趣和成就感。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.05.10</span>
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2020-至今</span>
                             <a href="/pages/diy/" class="read-more" aria-label="阅读更多关于装机记录的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
@@ -875,6 +932,8 @@
             </div>
             
             <div class="copyright">
+                <!-- 页脚也展示访问计数 -->
+                <div class="visit-count-footer" id="visitCountFooter">总访问量：<span id="footerVisitNumber">0</span> 次</div>
                 <p>&copy; 2025 hyper的个人Vlog | 保留所有权利</p>
             </div>
         </div>
@@ -884,7 +943,7 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- JavaScript 功能实现 -->
+    <!-- JavaScript 功能实现 + 访问计数获取 -->
     <script>
         // 移动端菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -947,6 +1006,45 @@
                     icon.classList.add('fa-bars');
                 }
             });
+        });
+
+        // ===================== 访问计数功能 - 新增核心代码 =====================
+        // 获取访问次数并更新页面显示
+        async function loadVisitCount() {
+            try {
+                // 请求访问计数接口
+                const response = await fetch('/visit-count');
+                if (!response.ok) {
+                    throw new Error(`HTTP错误，状态码：${response.status}`);
+                }
+                
+                const data = await response.json();
+                if (data.code === 200 && data.data) {
+                    const totalVisits = data.data.total_visits;
+                    
+                    // 更新页面上的访问计数显示
+                    const counterNumber = document.getElementById('visitCounterNumber');
+                    const footerNumber = document.getElementById('footerVisitNumber');
+                    
+                    if (counterNumber) counterNumber.textContent = totalVisits;
+                    if (footerNumber) footerNumber.textContent = totalVisits;
+                    
+                    console.log(`✅ 成功获取访问计数：${totalVisits} 次`);
+                } else {
+                    console.warn(`⚠️ 获取访问计数失败：${data.message}`);
+                }
+            } catch (error) {
+                console.error(`❌ 获取访问计数出错：${error.message}`);
+                // 降级处理：显示默认值或隐藏计数框
+                const counterBox = document.getElementById('visitCounterBox');
+                if (counterBox) counterBox.style.opacity = '0.7';
+            }
+        }
+
+        // 页面加载完成后立即获取访问计数
+        document.addEventListener('DOMContentLoaded', () => {
+            loadVisitCount();
+            
         });
     </script>
 </body>
