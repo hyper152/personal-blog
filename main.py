@@ -2,6 +2,7 @@
 """
 个人Vlog HTTP服务端（带美化目录列表+home为首页）
 支持根路径跳转到/home/，home目录为站点首页
+HTML模板已分离为独立文件
 """
 import socket
 import sys
@@ -19,201 +20,35 @@ from urllib.parse import unquote, urlparse
 class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
     """自定义美化目录列表处理器（新增首页跳转逻辑）"""
     
-    # 目录列表页面模板（和之前一致，无需修改）
-    DIRECTORY_TEMPLATE = """
+    @staticmethod
+    def get_template():
+        """读取外部HTML模板文件"""
+        # 获取模板文件路径（和当前py文件同目录）
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        template_path = os.path.join(script_dir, 'directory_template.html')
+        
+        # 读取模板内容
+        try:
+            with open(template_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except FileNotFoundError:
+            # 降级方案：如果模板文件不存在，使用极简模板
+            print(f"警告：未找到模板文件 {template_path}，使用极简模板", file=sys.stderr)
+            return """
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
-    <style>
-        :root {{
-            --primary: #6a5acd;
-            --accent: #ff6b6b;
-            --light: #f8f9fa;
-            --dark: #2d3436;
-            --gray: #495057;
-            --light-gray: #e9ecef;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }}
-        
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Microsoft YaHei', sans-serif;
-        }}
-        
-        body {{
-            background-color: var(--light);
-            color: var(--gray);
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }}
-        
-        header {{
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--light-gray);
-        }}
-        
-        .breadcrumb {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }}
-        
-        .breadcrumb a {{
-            color: var(--primary);
-            text-decoration: none;
-        }}
-        
-        .breadcrumb a:hover {{
-            color: var(--accent);
-            text-decoration: underline;
-        }}
-        
-        .breadcrumb span {{
-            color: var(--gray);
-        }}
-        
-        h1 {{
-            color: var(--dark);
-            font-size: 1.8rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }}
-        
-        h1 i {{
-            color: var(--primary);
-        }}
-        
-        .directory-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }}
-        
-        @media (max-width: 768px) {{
-            .directory-grid {{
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }}
-        }}
-        
-        @media (max-width: 480px) {{
-            .directory-grid {{
-                grid-template-columns: 1fr;
-            }}
-        }}
-        
-        .item {{
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-        }}
-        
-        .item:hover {{
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            border-color: var(--primary);
-        }}
-        
-        .item.folder {{
-            border: 2px solid var(--primary);
-        }}
-        
-        .item.file {{
-            border: 2px solid var(--light-gray);
-        }}
-        
-        .item i {{
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }}
-        
-        .item.folder i {{
-            color: var(--accent);
-        }}
-        
-        .item-name {{
-            font-weight: 500;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 100%;
-        }}
-        
-        .back-btn {{
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-bottom: 20px;
-            transition: all 0.2s ease;
-        }}
-        
-        .back-btn:hover {{
-            background: var(--accent);
-            transform: translateX(-3px);
-        }}
-        
-        footer {{
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--light-gray);
-            text-align: center;
-            color: #6c757d;
-            font-size: 0.9rem;
-        }}
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body{{font-family:Arial;margin:20px;}}</style>
 </head>
 <body>
-    <header>
-        <div class="breadcrumb">
-            {breadcrumb}
-        </div>
-        <h1>
-            <i class="fas fa-folder-open"></i>
-            目录列表: {path}
-        </h1>
-    </header>
-    
-    <main>
-        {back_button}
-        <div class="directory-grid">
-            {items}
-        </div>
-    </main>
-    
-    <footer>
-        <p>hyper的个人Vlog | 目录浏览</p>
-    </footer>
+    <h1>目录列表: {path}</h1>
+    {back_button}
+    <div>{items}</div>
 </body>
 </html>
-    """
+            """
 
     def do_GET(self):
         """重写GET请求处理，实现根路径跳转到/home/"""
@@ -233,7 +68,7 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
         super().do_GET()
 
     def list_directory(self, path):
-        """重写目录列表方法，返回美化后的HTML（和之前一致）"""
+        """重写目录列表方法，使用外部模板生成美化后的HTML"""
         try:
             list_dir = os.listdir(path)
         except OSError:
@@ -306,8 +141,9 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
                 </a>
                 ''')
         
-        # 渲染模板
-        html = self.DIRECTORY_TEMPLATE.format(
+        # 获取外部模板并渲染
+        template = self.get_template()
+        html = template.format(
             title=f'目录列表 - {cur_path}',
             path=cur_path,
             breadcrumb=''.join(breadcrumb_html),

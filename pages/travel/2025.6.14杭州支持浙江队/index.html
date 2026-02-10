@@ -1,3 +1,424 @@
-<!doctype html>
-<meta charset="UTF-8">
-<p style="text-align:center;font-size:80px;">杭州支持浙江队</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海交通大学面试记 | hyper的个人Vlog</title>
+    <!-- 外部资源 -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+    >
+    <style>
+        :root {
+            --primary: #6a5acd;
+            --accent: #ff6b6b;
+            --dark: #2d3436;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #495057;
+            --light-gray: #e9ecef;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+            transform: translateX(-3px);
+        }
+
+        /* 文章头部 */
+        .article-header {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 60px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .article-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 20px;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* 文章内容 */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .content-block {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .content-block:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .content-block h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+            position: relative;
+        }
+
+        .content-block h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 80px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .content-block p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-block ul {
+            margin: 15px 0 15px 25px;
+        }
+
+        .content-block li {
+            margin-bottom: 10px;
+        }
+
+        /* 图片展示 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 10px 15px;
+            background-color: var(--white);
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        /* 引用样式 */
+        .quote {
+            background-color: rgba(106, 90, 205, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote p {
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0 !important;
+        }
+
+        /* 心得总结 */
+        .summary {
+            background: linear-gradient(135deg, rgba(106, 90, 205, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid var(--light-gray);
+        }
+
+        .summary h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .content-block {
+                padding: 25px;
+            }
+
+            .article-header {
+                padding: 40px 0;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .gallery-item img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                gap: 10px;
+            }
+
+            .content-block {
+                padding: 20px 15px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="/home/" class="logo">
+                <i class="fas fa-camera-retro"></i> hyper的Vlog
+            </a>
+            <a href="/pages/travel/" class="back-btn">
+                <i class="fas fa-arrow-left"></i> 返回旅游记录
+            </a>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="article-header">
+        <div class="container">
+            <h1 class="article-title">上海交通大学面试记</h1>
+            <p>2025.6.16-2025.6.18 | 一次难忘的名校面试之旅</p>
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> 记录时间：2025年6月19日</span>
+                <span><i class="fas fa-map-marker-alt"></i> 地点：上海交通大学</span>
+                <span><i class="fas fa-tag"></i> 标签：旅行、面试、成长</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章主体内容 -->
+    <main class="article-content">
+        <!-- 行程概述 -->
+        <section class="content-block">
+            <h2>行程概述</h2>
+            <p>为了参加上海交通大学的强基计划面试，我在2025年6月16日独自踏上了前往上海的旅程，这是我第一次独自出远门，既紧张又充满期待。整个行程历时3天，从前期准备、路途奔波到面试过程，每一个环节都让我收获满满。</p>
+            <p>行程安排：</p>
+            <ul>
+                <li><strong>6月16日</strong>：从家乡出发，乘坐高铁前往上海，办理酒店入住，熟悉考场周边环境</li>
+                <li><strong>6月17日</strong>：参加上海交通大学强基计划笔试+面试</li>
+                <li><strong>6月18日</strong>：参观上海交通大学校园，返程</li>
+            </ul>
+        </section>
+
+        <!-- 面试前准备 -->
+        <section class="content-block">
+            <h2>面试前的准备</h2>
+            <p>为了这次面试，我提前一个月就开始了准备工作：</p>
+            <ul>
+                <li>深入了解上海交通大学的校史、办学理念和目标专业（XX专业）的培养方案</li>
+                <li>梳理高中阶段的学习成果、竞赛经历、科研实践等个人亮点</li>
+                <li>准备中英文自我介绍，模拟常见的面试问题（如个人规划、专业理解、社会热点分析等）</li>
+                <li>提前规划行程路线，预订考场附近的酒店，准备好各类证件和面试材料</li>
+            </ul>
+            <div class="quote">
+                <p>“机会总是留给有准备的人，充分的准备不仅能提升自信，也能让自己在面试中发挥出最佳水平。”</p>
+            </div>
+        </section>
+
+        <!-- 面试过程 -->
+        <section class="content-block">
+            <h2>面试过程实录</h2>
+            <p>面试当天早上7点半，我就到达了上海交通大学的面试场地，现场已经有不少考生和家长。首先进行的是笔试环节，主要考察学科基础知识和思维能力，题目难度适中但注重灵活应用。</p>
+            <p>下午的面试环节分为个人面试和小组面试：</p>
+            <ul>
+                <li><strong>个人面试（15分钟）</strong>：5位面试官围绕我的个人陈述、专业兴趣、学科特长等方面进行提问，印象最深的是面试官问我“为什么选择上海交通大学？”和“对XX专业的发展前景有什么看法？”</li>
+                <li><strong>小组面试（30分钟）</strong>：6人一组围绕指定话题（XX社会热点）进行讨论，考察团队协作、逻辑思维和表达能力</li>
+            </ul>
+            <p>整个面试过程虽然紧张，但面试官都非常和蔼，营造了轻松的交流氛围。我尽量保持冷静，坦诚地表达自己的想法，即使遇到不会的问题也如实说明，展现自己真实的一面。</p>
+        </section>
+
+        <!-- 校园印象 -->
+        <section class="content-block">
+            <h2>上海交大校园印象</h2>
+            <p>面试结束后，我特意留出时间参观了上海交通大学的校园。漫步在百年名校的校园里，随处可见浓厚的学术氛围和优美的校园环境：</p>
+            <ul>
+                <li>古朴的教学楼与现代化的科研楼交相辉映，既有历史的厚重感，又有创新的活力</li>
+                <li>校园里的梧桐大道、思源湖等景观美不胜收，让人心旷神怡</li>
+                <li>偶遇的学长学姐都非常热情，耐心解答我的各种问题，让我感受到交大的人文关怀</li>
+            </ul>
+            
+            <!-- 图片展示区 -->
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="shanghai (1).jpg" alt="上海交大校门">
+                    <div class="gallery-caption">上海交通大学校门</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="shanghai (2).jpg" alt="思源湖">
+                    <div class="gallery-caption">思源湖风光</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="shanghai (3).jpg" alt="教学楼">
+                    <div class="gallery-caption">古朴的教学楼</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="shanghai (4).jpg" alt="校园梧桐大道">
+                    <div class="gallery-caption">梧桐大道</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="shanghai (5).jpg" alt="面试考场外">
+                    <div class="gallery-caption">面试考场外留影</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="shanghai (6).jpg" alt="校园一角">
+                    <div class="gallery-caption">交大校园一角</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 心得感悟 -->
+        <section class="summary">
+            <h3><i class="fas fa-lightbulb"></i> 面试心得与成长感悟</h3>
+            <p>这次上海交大的面试之旅，不仅仅是一次升学机会的争取，更是一次宝贵的成长经历：</p>
+            <ul>
+                <li><strong>独立能力的提升</strong>：独自出行让我学会了规划行程、处理突发情况，变得更加独立和成熟</li>
+                <li><strong>视野的拓展</strong>：走进名校，接触优秀的老师和同学，让我看到了更广阔的世界，也明确了自己的努力方向</li>
+                <li><strong>心态的成长</strong>：面试的过程让我学会了从容面对压力，即使结果不如预期，过程中的收获也足以让我受益匪浅</li>
+                <li><strong>明确目标</strong>：无论面试结果如何，这次经历让我更加清楚自己想要的未来，也更加坚定了努力学习的决心</li>
+            </ul>
+            <p>最后，我想说：结果固然重要，但更重要的是在这个过程中付出的努力和收获的成长。这次上海交大之行，会成为我高中生涯中一段珍贵的回忆，也会激励我在未来的道路上继续前行。</p>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 hyper的个人Vlog | 记录生活，分享成长</p>
+            <p style="margin-top: 10px;">
+                <a href="/home/" style="color: #ff6b6b; text-decoration: none;">返回首页</a> | 
+                <a href="/talk/" style="color: #ff6b6b; text-decoration: none;">留言交流</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

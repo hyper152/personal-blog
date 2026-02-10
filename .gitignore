@@ -1,22 +1,35 @@
-# 排除视频文件（所有格式）
+*.rar
+*.zip
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+*.iso
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.svg
+*.ico
+*.heic
+*.heif
 *.mp4
 *.avi
 *.mov
+*.wmv
 *.flv
 *.mkv
-
-# 排除大文档/压缩包
-*.pdf
-*.zip
-*.rar
-*.7z
-*.iso
-
-# 排除你这两个大文件夹（精准排除）
-data/
-
-# 排除系统/编辑器缓存文件（通用，避免冗余）
-.DS_Store
-Thumbs.db
-*.tmp
-*.log
+*.webm
+*.mpeg
+*.mpg
+*.m4v
+*.3gp
+*.ogv
+*.ts
+*.mts
+*.f4v
+data/video/
