@@ -11,7 +11,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     >
-    <!-- 内联CSS（含留言板居中布局优化） -->
+    <!-- 内联CSS（适配移除人物志后的布局） -->
     <style>
         :root {
             /* 语义化变量命名 */
@@ -346,7 +346,7 @@
             transform: translateX(5px);
         }
 
-        /* 分类导航：核心优化 - 留言板第二行居中 */
+        /* 分类导航：适配移除人物志后的布局（留言板仍居中） */
         .categories {
             background-color: var(--color-white);
             padding: 60px 0;
@@ -365,10 +365,6 @@
         @media (min-width: 1200px) {
             .category-grid {
                 grid-template-columns: repeat(5, 1fr);
-            }
-            /* 第6个元素（留言板）跨所有列并居中 */
-            .category-grid > div:nth-child(5) {
-                grid-column: 5 / 6;
             }
             .category-grid > div:nth-child(6) {
                 grid-column: 1 / -1;
@@ -666,14 +662,7 @@
             </div>
             
             <div class="category-grid">
-                <div class="category-card">
-                    <a href="/pages/people/" aria-label="查看人物志分类内容">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                        <h3>人物志</h3>
-                        <p>记录身边的人和事</p>
-                    </a>
-                </div>
-                
+                <!-- 移除人物志分类卡片 -->
                 <div class="category-card">
                     <a href="/pages/travel/" aria-label="查看旅游记录分类内容">
                         <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
@@ -699,7 +688,24 @@
                 </div>
                 
                 <div class="category-card">
-                    <a href="/talk/" aria-label="查看留言板">
+                    <a href="/pages/video/" aria-label="查看视频创作分类内容">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                        <h3>视频创作</h3>
+                        <p>记录生活的视频作品</p>
+                    </a>
+                </div>
+                
+                <!-- 替换：其他 → 开发日志 -->
+                <div class="category-card">
+                    <a href="/pages/devlog/" aria-label="查看开发日志分类内容">
+                        <i class="fas fa-code" aria-hidden="true"></i>
+                        <h3>开发日志</h3>
+                        <p>技术探索与网站搭建记录</p>
+                    </a>
+                </div>
+                
+                <div class="category-card">
+                    <a href="/talk" aria-label="查看留言板">
                         <i class="fas fa-comments" aria-hidden="true"></i>
                         <h3>留言板</h3>
                         <p>互动交流，分享想法</p>
@@ -719,15 +725,15 @@
             <div class="posts-grid">
                 <article class="post-card">
                     <div class="post-image">
-                        <span class="post-category">旅行</span>
-                        <img src="/pages/travel/2025.6.16-2025.6.18上海交通大学面试记/shanghai (6).jpg" alt="上海交通大学面试记" loading="lazy">
+                        <span class="post-category">学习</span>
+                        <img src="/pages/travel/2025.6.16-上海交通大学面试记-3days/上海交通大学欢迎您.jpg" alt="上海交通大学面试记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>我的第一次独自旅行经历(上交面试记)</h3>
                         <p>独自旅行是一次与自己对话的旅程，在上海的这段经历让我收获了很多，也对未来有了更清晰的认识。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.18</span>
-                            <a href="/pages/travel/2025.6.16-2025.6.18上海交通大学面试记/" class="read-more" aria-label="阅读更多关于上海交通大学面试记的内容">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.16</span>
+                            <a href="/pages/travel/2025.6.16-上海交通大学面试记-3days/" class="read-more" aria-label="阅读更多关于上海交通大学面试记的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -737,14 +743,14 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">旅行</span>
-                        <img src="/pages/travel/2025.7.24百丈漈/b百丈漈.jpg" alt="百丈漈旅游记" loading="lazy">
+                        <img src="\pages\travel\2025.7.24-百丈漈\在百丈一漈的合影.jpg" alt="百丈漈旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>水帘洞穿越记 - 百丈漈之行</h3>
                         <p>百丈漈的瀑布如银河倒泻，身临其境仿佛穿越到了水帘洞，大自然的鬼斧神工令人叹为观止。</p>
                         <div class="post-meta">
                             <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.07.24</span>
-                            <a href="/pages/travel/2025.7.24百丈漈/" class="read-more" aria-label="阅读更多关于百丈漈之行的内容">
+                            <a href="/pages/travel/2025.7.24-百丈漈/" class="read-more" aria-label="阅读更多关于百丈漈之行的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -754,14 +760,14 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">旅行</span>
-                        <img src="/pages/travel/2025.8.17雁荡山/雁荡山.jpg" alt="雁荡山旅游记" loading="lazy">
+                        <img src="\pages\travel\2025.8.17-雁荡山\山洞里的地瓜.jpg" alt="雁荡山旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>雁荡山旅游记 - 奇峰异石间的行走</h3>
                         <p>雁荡山的奇峰怪石、飞泉瀑布，每一处都充满了诗意，一步一景，流连忘返。</p>
                         <div class="post-meta">
                             <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.08.17</span>
-                            <a href="/pages/travel/2025.8.17雁荡山/" class="read-more" aria-label="阅读更多关于雁荡山旅游记的内容">
+                            <a href="/pages/travel/2025.8.17-雁荡山/" class="read-more" aria-label="阅读更多关于雁荡山旅游记的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -770,15 +776,15 @@
                 
                 <article class="post-card">
                     <div class="post-image">
-                        <span class="post-category">旅行</span>
-                        <img src="/pages/travel/2025.6.15-2025.6.16南京大学强基记/南大.jpg" alt="南京大学强基记" loading="lazy">
+                        <span class="post-category">学习</span>
+                        <img src="\pages\travel\2025.6.15-南京大学强基记-2days\南京大学2.jpg"alt="南京大学强基记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>南京大学强基记 - 名校之旅</h3>
                         <p>走进南京大学，感受百年名校的文化底蕴，强基计划的面试经历让我受益匪浅。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.16</span>
-                            <a href="/pages/travel/2025.6.15-2025.6.16南京大学强基记/" class="read-more" aria-label="阅读更多关于南京大学强基记的内容">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.15</span>
+                            <a href="/pages/travel/2025.6.15-南京大学强基记-2days/" class="read-more" aria-label="阅读更多关于南京大学强基记的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -788,7 +794,7 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">数码</span>
-                        <img src="/home/img/装机.jpg" alt="装机记录" loading="lazy">
+                        <img src="\pages\diy\zj (4).jpg" alt="装机记录" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>装机记录 - 我的DIY电脑搭建之旅</h3>
@@ -802,17 +808,18 @@
                     </div>
                 </article>
                 
+                <!-- 补充的博客卡片，填补空缺 -->
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">生活</span>
-                        <img src="/home/img/人物志.jpg" alt="人物志" loading="lazy">
+                        <img src="\pages\travel\2024.7.28-上海旅游-3days\外滩.jpg" alt="" loading="lazy">
                     </div>
                     <div class="post-content">
-                        <h3>人物志 - 记录身边的可爱的人们</h3>
-                        <p>每个人都有自己的故事，记录下高中时期身边的老师和同学们，留住青春的记忆。</p>
+                        <h3>上海旅游记 - 大城市的探索</h3>
+                        <p>和同学们一起去上海旅行，在高考前见见世面，也去了未来有可能能上的上海交通大学（虽然没考上）</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.04.20</span>
-                            <a href="/pages/people" class="read-more" aria-label="阅读更多关于人物志的内容">
+                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2024.7.28</span>
+                            <a href="\pages\travel\2024.7.28-上海旅游-3days\" class="read-more" aria-label="阅读更多关于班级篮球赛记的内容">
                                 阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -829,9 +836,8 @@
                     <h3>关于我</h3>
                     <p>热爱生活，喜欢旅行和记录，用Vlog的形式分享生活中的美好瞬间和成长感悟。</p>
                     <div class="social-links">
-                        <a href="#" aria-label="微信"><i class="fab fa-weixin" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="#" aria-label="哔哩哔哩"><i class="fab fa-bilibili" aria-hidden="true"></i></a>
+                        <a href="https://github.com/hyper152" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="https://space.bilibili.com/1689598128?spm_id_from=333.1007.0.0" aria-label="哔哩哔哩"><i class="fab fa-bilibili" aria-hidden="true"></i></a>
                         <a href="mailto:2361542526@qq.com" aria-label="邮箱"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -842,24 +848,28 @@
                         <li><a href="#home"><i class="fas fa-home" aria-hidden="true"></i> 首页</a></li>
                         <li><a href="#categories"><i class="fas fa-th-list" aria-hidden="true"></i> 内容分类</a></li>
                         <li><a href="#blog"><i class="fas fa-blog" aria-hidden="true"></i> 最新动态</a></li>
-                        <li><a href="/talk/"><i class="fas fa-comment-dots" aria-hidden="true"></i> 留言板</a></li>
+                        <li><a href="/talk"><i class="fas fa-comment-dots" aria-hidden="true"></i> 留言板</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>内容分类</h3>
                     <ul>
-                        <li><a href="/pages/people"><i class="fas fa-users" aria-hidden="true"></i> 人物志</a></li>
+                        <!-- 同步替换：其他 → 开发日志 -->
                         <li><a href="/pages/travel/"><i class="fas fa-map" aria-hidden="true"></i> 旅游记录</a></li>
                         <li><a href="/pages/diy/"><i class="fas fa-laptop" aria-hidden="true"></i> 装机记录</a></li>
                         <li><a href="/pages/YY往事/"><i class="fas fa-history" aria-hidden="true"></i> YY往事</a></li>
+                        <li><a href="/pages/video/"><i class="fas fa-video" aria-hidden="true"></i> 视频创作</a></li>
+                        <li><a href="/pages/devlog/"><i class="fas fa-code" aria-hidden="true"></i> 开发日志</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>联系我</h3>
                     <ul>
-                        <li><a href="mailto:2361542526@qq.com"><i class="fas fa-envelope" aria-hidden="true"></i> 2361542526@qq.com</a></li>
+                        <!-- 核心修改：替换为QQ和微信 -->
+                        <li><a href="tencent://message/?uin=2361542526&Site=&Menu=yes" aria-label="QQ联系"><i class="fab fa-qq" aria-hidden="true"></i> QQ：2361542526</a></li>
+                        <li><a href="#" aria-label="微信联系" onclick="alert('微信：hyper20070129')"><i class="fab fa-weixin" aria-hidden="true"></i> 微信：hyper20070129</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gsing战队 开发记录</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        :root {
+            --primary: #165DFF;
+            --accent: #FF7D00;
+            --light: #f8f9fa;
+            --dark: #2d3436;
+            --gray: #495057;
+            --light-gray: #e9ecef;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        body {
+            background: var(--light);
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            box-shadow: var(--shadow);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .github-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .github-link:hover {
+            background: #444;
+            transform: translateY(-2px);
+        }
+
+        .project-info {
+            text-align: right;
+        }
+
+        .project-name {
+            font-size: 1.2rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .project-dates {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .dev-log {
+            padding: 20px 0 60px;
+        }
+
+        .dev-title {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .dev-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .dev-intro {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tech-item {
+            background: var(--light);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tech-item i {
+            color: var(--accent);
+        }
+
+        .dev-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .dev-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--primary);
+        }
+
+        .timeline-date {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            background: var(--light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .timeline-tag {
+            font-size: 0.9rem;
+            color: white;
+            background: var(--primary);
+            padding: 3px 10px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+
+        .timeline-content {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-content h4 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .timeline-content ul {
+            padding-left: 20px;
+        }
+
+        .media-preview {
+            margin: 12px 0;
+        }
+
+        .media-preview video,
+        .media-preview img {
+            max-width: 100%;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            object-fit: contain;
+            background: #000;
+        }
+
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .version-card {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .version-name {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .version-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .challenge-list,
+        .summary-list {
+            padding-left: 20px;
+        }
+
+        .challenge-item,
+        .summary-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .challenge-item::before,
+        .summary-item::before {
+            content: '✦';
+            position: absolute;
+            left: -15px;
+            color: var(--accent);
+        }
+
+        .challenge-title {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .challenge-solution {
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+
+        .note-box {
+            background: #e8f4f8;
+            border-left: 4px solid #4299e1;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            border-top: 1px solid var(--light-gray);
+            padding: 30px 0;
+            text-align: center;
+            color: #6c757d;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .header-actions {
+                margin-top: 10px;
+            }
+            .project-info {
+                text-align: center;
+            }
+            .dev-card {
+                padding: 25px;
+            }
+            .media-preview video,
+            .media-preview img {
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <a href="#" class="logo">Gsing<span>Team</span></a>
+        <div class="header-actions">
+            <div class="project-info">
+                <div class="project-name">Gsing战队 视觉&电控开发</div>
+                <div class="project-dates">2025.11.30 – 2026.01.31</div>
+            </div>
+            <a href="https://github.com/hyper152/Gsing-log" target="_blank" class="github-link">
+                <i class="fab fa-github"></i>
+                <span>查看源码</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="container dev-log">
+    <h1 class="dev-title">Gsing战队 开发记录</h1>
+
+    <section class="dev-intro">
+        <p>Gsing战队项目聚焦于机器人视觉与电控融合开发，从基础的机械臂、OLED硬件调试起步，完成电控到视觉的技术转型，基于YOLO实现目标识别，最终完成算题识别与自动计算功能，形成完整的视觉识别-数据处理-结果输出技术链路。</p>
+        <div class="tech-stack">
+            <div class="tech-item"><i class="fas fa-robot"></i> 机械臂控制</div>
+            <div class="tech-item"><i class="fas fa-display"></i> OLED显示</div>
+            <div class="tech-item"><i class="fas fa-eye"></i> 机器视觉</div>
+            <div class="tech-item"><i class="fas fa-brain"></i> YOLO算法</div>
+            <div class="tech-item"><i class="fas fa-calculator"></i> 算题识别</div>
+            <div class="tech-item"><i class="fas fa-code"></i> 环境搭建</div>
+        </div>
+    </section>
+
+    <section class="dev-card">
+        <h3><i class="fas fa-code-branch"></i> 开发迭代记录</h3>
+        <div class="timeline">
+            <!-- 2025.11.30 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025.11.30 <span class="timeline-tag">机械臂调试</span></div>
+                <div class="timeline-content">
+                    <h4>完成机械臂全功能调试</h4>
+                    <ul>
+                        <li>机械臂关节角度校准与限位设置</li>
+                        <li>舵机驱动程序优化，提升控制精度</li>
+                        <li>完成机械臂抓取、移动、放置全流程调试</li>
+                        <li>测试不同负载下的稳定性与响应速度</li>
+                    </ul>
+                </div>
+                <div class="media-preview">
+                    <video controls src="2025年11月30日-完成机械臂调试.mp4"></video>
+                </div>
+            </div>
+
+            <!-- 2025.12.09 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025.12.09 <span class="timeline-tag">OLED调试</span></div>
+                <div class="timeline-content">
+                    <h4>完成OLED显示屏功能调试</h4>
+                    <ul>
+                        <li>OLED屏幕初始化与通信协议调试</li>
+                        <li>实现文字、数字、简单图形显示功能</li>
+                        <li>优化显示刷新率，解决闪烁问题</li>
+                        <li>完成与主控芯片的数据交互联调</li>
+                    </ul>
+                </div>
+                <div class="media-preview">
+                    <video controls src="2025年12月9日-完成OLED调试.mp4"></video>
+                </div>
+            </div>
+
+            <!-- 2025.12.17 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025.12.17 <span class="timeline-tag">视觉开发</span></div>
+                <div class="timeline-content">
+                    <h4>电控转视觉 - YOLO环境搭建与模型调用</h4>
+                    <ul>
+                        <li>完成从电控开发到机器视觉的技术转型</li>
+                        <li>搭建YOLO算法运行环境，解决依赖库兼容问题</li>
+                        <li>成功调用官方预训练模型进行目标识别</li>
+                        <li>测试不同分辨率下的识别精度与速度</li>
+                    </ul>
+                </div>
+                <div class="media-preview">
+                    <video controls src="2025年12月17日-电控转视觉后完成YOLO环境搭建和官方模型的调用.mp4"></video>
+                </div>
+            </div>
+
+            <!-- 2026.01.31 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2026.01.31 <span class="timeline-tag">算题识别</span></div>
+                <div class="timeline-content">
+                    <h4>完成算题识别与自动计算</h4>
+                    <ul>
+                        <li>基于YOLO优化数字与运算符识别算法</li>
+                        <li>实现题目图像的字符分割与识别</li>
+                        <li>开发计算逻辑，自动完成算术题求解</li>
+                        <li>验证不同题型、字体下的识别准确率</li>
+                    </ul>
+                </div>
+                <div class="media-preview">
+                    <img src="2026年1月31日-完成算题识别并计算.jpg" alt="算题识别计算效果展示">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dev-card">
+        <h3><i class="fas fa-bug"></i> 核心技术难点</h3>
+        <ul class="challenge-list">
+            <li class="challenge-item">
+                <span class="challenge-title">1. 机械臂控制精度与稳定性问题</span>
+                <div class="challenge-solution">解决方案：通过PID算法优化舵机控制信号，增加关节角度闭环反馈，校准机械臂零点偏移，优化机械结构减少传动间隙，提升复杂动作下的稳定性。</div>
+            </li>
+            <li class="challenge-item">
+                <span class="challenge-title">2. YOLO环境搭建兼容性问题</span>
+                <div class="challenge-solution">解决方案：梳理不同版本依赖库的兼容关系，搭建虚拟环境隔离依赖冲突，编译优化底层库文件，针对硬件平台进行算子适配，提升模型运行效率。</div>
+            </li>
+            <li class="challenge-item">
+                <span class="challenge-title">3. 算题识别准确率低的问题</span>
+                <div class="challenge-solution">解决方案：扩充算题数据集，针对不同字体、光照、角度进行数据增强，优化字符分割算法，增加识别结果校验逻辑，通过规则引擎修正识别错误。</div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="dev-card">
+        <h3><i class="fas fa-tachometer-alt"></i> 技术能力迭代</h3>
+        <div class="version-grid">
+            <div class="version-card">
+                <div class="version-name">机械臂阶段</div>
+                <i class="fas fa-robot"></i>
+                <div class="version-value">98%</div>
+                <div class="version-label">控制精度</div>
+            </div>
+            <div class="version-card">
+                <div class="version-name">OLED阶段</div>
+                <i class="fas fa-display"></i>
+                <div class="version-value">60fps</div>
+                <div class="version-label">显示刷新率</div>
+            </div>
+            <div class="version-card">
+                <div class="version-name">YOLO阶段</div>
+                <i class="fas fa-eye"></i>
+                <div class="version-value">30ms</div>
+                <div class="version-label">单帧识别耗时</div>
+            </div>
+            <div class="version-card">
+                <div class="version-name">算题识别阶段</div>
+                <i class="fas fa-calculator"></i>
+                <div class="version-value">95%</div>
+                <div class="version-label">识别准确率</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dev-card">
+        <h3><i class="fas fa-book-open"></i> 开发总结</h3>
+        <ul class="summary-list">
+            <li>完成从传统电控开发到机器视觉的技术转型，掌握YOLO算法的环境搭建与模型应用。</li>
+            <li>实现硬件控制（机械臂）、显示输出（OLED）、视觉识别（YOLO）、数据处理（算题计算）的全链路开发。</li>
+            <li>解决了跨领域开发中的环境兼容、算法优化、硬件调试等核心问题。</li>
+            <li>形成了从需求分析→技术选型→功能实现→优化迭代的完整开发流程。</li>
+        </ul>
+        <div class="note-box">
+            <strong>核心收获：</strong> 跨领域技术融合是机器人开发的关键，硬件基础决定功能落地，算法优化提升实际效果，持续迭代才能实现从功能可用到性能优秀的跨越。
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2026 Gsing战队 | 机器视觉 & 电控开发</p>
+    <p style="margin-top: 10px;">
+        <a href="https://github.com/hyper152/Gsing-log" target="_blank" style="color: var(--primary); text-decoration: none;">
+            <i class="fab fa-github"></i> GitHub 仓库
+        </a>
+    </p>
+</footer>
+
+</body>
+</html>

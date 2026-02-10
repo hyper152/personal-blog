@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-个人Vlog HTTP服务端（带美化目录列表+home为首页）
-支持根路径跳转到/home/，home目录为站点首页
-HTML模板已分离为独立文件
+个人Vlog HTTP服务端（最终稳定版）
+✅ 修复POST数据seek失败问题
+✅ 修复/talk 500错误
+✅ 适配Conda环境
+✅ 支持IPv4/IPv6双栈
+✅ 自动创建home目录
+留言板路由：/talk | 模板目录：talk/
 """
 import socket
 import sys
@@ -10,75 +14,188 @@ import os
 import contextlib
 from functools import partial
 from http.server import (
-    SimpleHTTPRequestHandler,
     CGIHTTPRequestHandler,
     ThreadingHTTPServer
 )
 from urllib.parse import unquote, urlparse
 
+# 确保当前目录加入Python路径（适配Conda环境）
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    import message_board
+    FLASK_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️  留言板模块导入失败：{e}", file=sys.stderr)
+    print("⚠️  请先安装依赖：pip install flask werkzeug", file=sys.stderr)
+    print("⚠️  留言板功能将不可用，仅提供静态文件服务", file=sys.stderr)
+    FLASK_AVAILABLE = False
 
 class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
-    """自定义美化目录列表处理器（新增首页跳转逻辑）"""
+    """自定义美化目录列表处理器"""
     
     @staticmethod
     def get_template():
-        """读取外部HTML模板文件"""
-        # 获取模板文件路径（和当前py文件同目录）
+        """读取directory_template.html模板，不存在则使用内置极简模板"""
         script_dir = os.path.dirname(os.path.abspath(__file__))
         template_path = os.path.join(script_dir, 'directory_template.html')
         
-        # 读取模板内容
         try:
             with open(template_path, 'r', encoding='utf-8') as f:
                 return f.read()
         except FileNotFoundError:
-            # 降级方案：如果模板文件不存在，使用极简模板
-            print(f"警告：未找到模板文件 {template_path}，使用极简模板", file=sys.stderr)
+            print(f"提示：未找到模板文件 {template_path}，使用内置美化模板", file=sys.stderr)
             return """
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>{title}</title>
-    <style>body{{font-family:Arial;margin:20px;}}</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Microsoft YaHei', sans-serif; }}
+        body {{ background: #f8f9fa; padding: 40px; }}
+        .container {{ max-width: 1000px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
+        h1 {{ color: #6a5acd; margin-bottom: 20px; font-size: 2rem; }}
+        .breadcrumb {{ margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }}
+        .breadcrumb a {{ color: #6a5acd; text-decoration: none; }}
+        .breadcrumb span {{ color: #6c757d; }}
+        .back-btn {{ display: inline-block; margin-bottom: 20px; padding: 8px 16px; background: #6a5acd; color: white; text-decoration: none; border-radius: 8px; }}
+        .back-btn:hover {{ background: #5a4bc8; }}
+        .items {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }}
+        .item {{ display: flex; align-items: center; padding: 12px 15px; border-radius: 8px; text-decoration: none; color: #495057; transition: all 0.3s ease; }}
+        .item:hover {{ background: #f8f9fa; transform: translateY(-2px); }}
+        .item i {{ font-size: 1.2rem; margin-right: 10px; width: 24px; text-align: center; }}
+        .folder i {{ color: #ffc107; }}
+        .file i {{ color: #6a5acd; }}
+        .item-name {{ flex: 1; }}
+    </style>
 </head>
 <body>
-    <h1>目录列表: {path}</h1>
-    {back_button}
-    <div>{items}</div>
+    <div class="container">
+        <h1>📂 目录列表: {path}</h1>
+        <div class="breadcrumb">{breadcrumb}</div>
+        {back_button}
+        <div class="items">{items}</div>
+    </div>
 </body>
 </html>
             """
 
     def do_GET(self):
-        """重写GET请求处理，实现根路径跳转到/home/"""
-        # 解析请求路径
+        """重写GET请求处理：优先转发 /talk 路由，再处理首页跳转"""
         parsed_path = urlparse(self.path)
         path = parsed_path.path
         
-        # 1. 根路径（/）自动跳转到/home/
+        # 匹配留言板路由
+        message_routes = ['/talk']
+        if FLASK_AVAILABLE and any(path.startswith(route) for route in message_routes):
+            self._forward_to_flask()
+            return
+        
+        # 根路径自动跳转到 /home/，先确保home目录存在
         if path == '/' or path == '':
-            self.send_response(301)  # 永久重定向
+            home_dir = os.path.join(os.getcwd(), 'home')
+            if not os.path.exists(home_dir):
+                os.makedirs(home_dir)
+                print(f"✅ 自动创建home目录：{home_dir}")
+            self.send_response(301)
             self.send_header('Location', '/home/')
             self.end_headers()
             return
         
-        # 2. 访问/home/时优先加载index.html（默认行为，无需额外处理）
-        # 3. 其他路径正常处理（目录列表/文件访问）
         super().do_GET()
 
+    def do_POST(self):
+        """重写POST请求处理：转发所有留言板相关POST请求"""
+        parsed_path = urlparse(self.path)
+        path = parsed_path.path
+        message_routes = ['/talk']
+        if FLASK_AVAILABLE and any(path.startswith(route) for route in message_routes):
+            self._forward_to_flask()
+            return
+        super().do_POST()
+
+    def _forward_to_flask(self):
+        """极简版Flask请求转发（彻底修复500错误+POST数据丢失）"""
+        if not FLASK_AVAILABLE:
+            self.send_error(500, "留言板模块未加载，请检查依赖和文件")
+            return
+            
+        try:
+            # 1. 基础请求信息
+            path = self.path
+            method = self.command
+            headers = {k: v for k, v in self.headers.items()}
+            
+            # 2. 读取POST数据（适配socket流，不使用seek）
+            data = b""
+            if method == "POST":
+                try:
+                    content_length = int(self.headers.get('Content-Length', 0))
+                    if content_length > 0 and content_length < 1024 * 1024:
+                        data = self.rfile.read(content_length)
+                        print(f"📤 转发POST数据：{data.decode('utf-8', errors='ignore')}")
+                except Exception as e:
+                    print(f"读取POST数据警告：{e}", file=sys.stderr)
+                    data = b""
+            
+            # 3. 使用Flask test_client转发（最稳定的方式）
+            with message_board.app.test_client() as client:
+                if method == "GET":
+                    response = client.get(path, headers=headers)
+                elif method == "POST":
+                    # 显式指定Content-Type，确保表单数据解析正常
+                    content_type = self.headers.get('Content-Type', 'application/x-www-form-urlencoded')
+                    response = client.post(path, data=data, headers=headers, content_type=content_type)
+                else:
+                    self.send_error(405, "Method Not Allowed")
+                    return
+            
+            # 4. 发送Flask响应给客户端
+            self.send_response(response.status_code)
+            # 转发所有响应头
+            for k, v in response.headers.items():
+                self.send_header(k, v)
+            self.end_headers()
+            # 发送响应体
+            self.wfile.write(response.data)
+            
+        except Exception as e:
+            error_msg = f"转发请求失败: {str(e)}"
+            print(f"❌ 500错误详情：{error_msg}", file=sys.stderr)
+            # 返回友好的错误页面
+            self.send_response(500)
+            self.send_header("Content-type", "text/html; charset=utf-8")
+            self.end_headers()
+            error_html = f"""
+            <html>
+            <head><title>500 服务器内部错误</title></head>
+            <body style="font-family: 'Microsoft YaHei'; padding: 40px;">
+                <h1 style="color: #dc3545;">500 Internal Server Error</h1>
+                <p style="font-size: 16px; margin: 20px 0;">错误详情：{error_msg}</p>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+                    <h3 style="color: #6a5acd;">排查步骤：</h3>
+                    <ol style="font-size: 14px; line-height: 1.8;">
+                        <li>确认已安装依赖：<code>pip install flask werkzeug</code></li>
+                        <li>确认message_board.py在当前目录</li>
+                        <li>确认talk/comment.html模板文件存在</li>
+                        <li>检查终端日志，查看具体错误原因</li>
+                    </ol>
+                </div>
+            </body>
+            </html>
+            """
+            self.wfile.write(error_html.encode('utf-8'))
+
     def list_directory(self, path):
-        """重写目录列表方法，使用外部模板生成美化后的HTML"""
+        """重写目录列表方法，生成美化的HTML页面"""
         try:
             list_dir = os.listdir(path)
         except OSError:
             self.send_error(404, "无法列出目录")
             return None
         
-        # 排序：文件夹在前，文件在后，按名称排序
         list_dir.sort(key=lambda x: (not os.path.isdir(os.path.join(path, x)), x.lower()))
-        
-        # 当前请求路径
         cur_path = unquote(self.path)
         if not cur_path.endswith('/'):
             cur_path += '/'
@@ -87,7 +204,6 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
         breadcrumb_parts = cur_path.strip('/').split('/')
         breadcrumb_html = []
         breadcrumb_path = ''
-        
         breadcrumb_html.append(f'<a href="/"><i class="fas fa-home"></i> 首页</a>')
         for part in breadcrumb_parts:
             if part:
@@ -103,14 +219,12 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
                 parent_path = '/'
             back_button = f'<a href="{parent_path}" class="back-btn"><i class="fas fa-arrow-left"></i> 返回上一级</a>'
         
-        # 生成目录/文件项
+        # 生成文件/目录项
         items_html = []
         for name in list_dir:
-            # 处理路径分隔符（兼容Windows）
             full_path = os.path.join(path, name)
             rel_url = self.path + name
             if os.path.isdir(full_path):
-                # 文件夹
                 items_html.append(f'''
                 <a href="{rel_url}/" class="item folder">
                     <i class="fas fa-folder"></i>
@@ -118,14 +232,13 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
                 </a>
                 ''')
             else:
-                # 文件（简单识别常见类型图标）
                 file_ext = os.path.splitext(name)[1].lower()
                 icon = 'fas fa-file'
                 if file_ext in ['.html', '.htm']:
                     icon = 'fas fa-file-html'
                 elif file_ext in ['.jpg', '.jpeg', '.png', '.gif', '.webp']:
                     icon = 'fas fa-file-image'
-                elif file_ext in ['.mp4', '.avi', '.mov']:
+                elif file_ext in ['.mp4', '.avi', '.mov', '.mkv']:
                     icon = 'fas fa-file-video'
                 elif file_ext in ['.css']:
                     icon = 'fas fa-file-css'
@@ -133,6 +246,8 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
                     icon = 'fas fa-file-js'
                 elif file_ext in ['.pdf']:
                     icon = 'fas fa-file-pdf'
+                elif file_ext in ['.mp3', '.wav']:
+                    icon = 'fas fa-file-audio'
                 
                 items_html.append(f'''
                 <a href="{rel_url}" class="item file">
@@ -141,7 +256,6 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
                 </a>
                 ''')
         
-        # 获取外部模板并渲染
         template = self.get_template()
         html = template.format(
             title=f'目录列表 - {cur_path}',
@@ -151,7 +265,6 @@ class BeautifulDirectoryHandler(CGIHTTPRequestHandler):
             items=''.join(items_html)
         )
         
-        # 发送响应
         self.send_response(200)
         self.send_header("Content-type", "text/html; charset=utf-8")
         self.send_header("Content-Length", str(len(html.encode('utf-8'))))
@@ -164,92 +277,66 @@ class DualStackServer(ThreadingHTTPServer):
     """支持IPv4/IPv6双栈的多线程HTTP服务端"""
     
     def server_bind(self):
-        """重写绑定方法，实现双栈监听"""
-        # 设置套接字可重用地址，避免端口占用问题
         self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        
-        # 尝试启用IPv6兼容模式（兼容IPv4）
         with contextlib.suppress(Exception):
-            self.socket.setsockopt(
-                socket.IPPROTO_IPV6,
-                socket.IPV6_V6ONLY,
-                0  # 关闭IPv6独用，允许同一端口监听IPv4
-            )
-        
-        # 执行父类绑定逻辑
+            self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
         super().server_bind()
 
 
-def run_server(
-    server_class=DualStackServer,
-    handler_class=BeautifulDirectoryHandler,  # 使用美化处理器
-    port=8000,
-    directory=None
-):
-    """
-    启动HTTP服务端
-    :param server_class: 服务端类
-    :param handler_class: 请求处理器类
-    :param port: 监听端口
-    :param directory: 静态文件根目录
-    """
-    # 确定服务根目录（优先自定义，否则用当前工作目录）
-    server_dir = directory or os.getcwd()
+def run_server(port=8000, directory=None):
+    """启动HTTP服务端（简化版，适配Conda环境）"""
+    # 初始化留言板
+    if FLASK_AVAILABLE:
+        try:
+            message_board.init_db()
+            print("✅ 留言板初始化成功")
+        except Exception as e:
+            print(f"⚠️  留言板初始化警告：{e}", file=sys.stderr)
     
-    # 检查目录是否存在，不存在则自动创建
+    # 确定服务根目录
+    server_dir = directory or os.getcwd()
     if not os.path.exists(server_dir):
         os.makedirs(server_dir)
-        print(f"目录不存在，已自动创建：{os.path.abspath(server_dir)}")
+    
+    # 确保home目录存在
+    home_dir = os.path.join(server_dir, 'home')
+    if not os.path.exists(home_dir):
+        os.makedirs(home_dir)
     
     os.chdir(server_dir)
-    
-    # 绑定处理器与根目录
-    handler = partial(handler_class, directory=server_dir)
-    
-    # 配置服务端地址（0.0.0.0表示监听所有网卡）
+    handler = partial(BeautifulDirectoryHandler, directory=server_dir)
     server_address = ('', port)
     
     try:
-        # 创建服务端实例
-        httpd = server_class(server_address, handler)
-        print(f"服务启动成功 🚀")
+        httpd = DualStackServer(server_address, handler)
+        print(f"\n🚀 服务启动成功！")
         print(f"首页地址: http://localhost:{port} (自动跳转到 /home/)")
-        print(f"直接访问首页: http://localhost:{port}/home/")
+        if FLASK_AVAILABLE:
+            print(f"留言板地址: http://localhost:{port}/talk")
         print(f"服务根目录: {os.path.abspath(server_dir)}")
-        print(f"支持协议: IPv4 + IPv6 (双栈)")
+        print(f"Python环境: {sys.executable}")
+        print("="*60)
         print("按 Ctrl+C 停止服务")
         
-        # 持续运行服务
         httpd.serve_forever()
     
     except socket.error as e:
-        print(f"端口绑定失败 ❌: {e}", file=sys.stderr)
-        print(f"请检查端口 {port} 是否被占用，或尝试使用其他端口", file=sys.stderr)
+        print(f"\n❌ 端口绑定失败：{e}", file=sys.stderr)
+        print(f"建议：换端口启动，例如：python main.py -p 8080", file=sys.stderr)
         sys.exit(1)
     
     except KeyboardInterrupt:
-        print("\n服务正在停止... 🛑")
+        print("\n🛑 服务正在停止...")
         httpd.server_close()
-        print("服务已停止 ✅")
+        print("✅ 服务已停止")
         sys.exit(0)
 
 
 if __name__ == "__main__":
-    # 命令行参数解析（支持自定义端口和目录）
     import argparse
-    parser = argparse.ArgumentParser(description="个人Vlog HTTP服务端（带美化目录列表+home为首页）")
-    parser.add_argument(
-        "-p", "--port",
-        type=int,
-        default=8000,
-        help="监听端口（默认：8000）"
-    )
-    parser.add_argument(
-        "-d", "--directory",
-        type=str,
-        default=".",  # 默认当前目录
-        help="静态文件根目录（默认：当前目录）"
-    )
+    parser = argparse.ArgumentParser(description="个人Vlog HTTP服务端（稳定版）")
+    parser.add_argument("-p", "--port", type=int, default=8000, help="监听端口（默认：8000）")
+    parser.add_argument("-d", "--directory", type=str, default=".", help="静态文件根目录（默认：当前目录）")
     args = parser.parse_args()
     
     # 启动服务

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海交通大学面试记 | hyper的个人Vlog</title>
+    <!-- 外部资源 -->
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous"
+    >
+    <style>
+        :root {
+            --primary: #6a5acd;
+            --accent: #ff6b6b;
+            --dark: #2d3436;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #495057;
+            --light-gray: #e9ecef;
+            --shadow: 0 2px 15px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            color: var(--accent);
+            transform: translateX(-3px);
+        }
+
+        /* 文章头部 */
+        .article-header {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 60px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .article-title {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 20px;
+        }
+
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* 文章内容 */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .content-block {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .content-block:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        }
+
+        .content-block h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+            position: relative;
+        }
+
+        .content-block h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 80px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .content-block p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-block ul {
+            margin: 15px 0 15px 25px;
+        }
+
+        .content-block li {
+            margin-bottom: 10px;
+        }
+
+        /* 图片展示 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 10px 15px;
+            background-color: var(--white);
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        /* 引用样式 */
+        .quote {
+            background-color: rgba(106, 90, 205, 0.05);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote p {
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 0 !important;
+        }
+
+        /* 心得总结 */
+        .summary {
+            background: linear-gradient(135deg, rgba(106, 90, 205, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid var(--light-gray);
+        }
+
+        .summary h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 页脚 */
+        .footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .content-block {
+                padding: 25px;
+            }
+
+            .article-header {
+                padding: 40px 0;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .gallery-item img {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-meta {
+                gap: 10px;
+            }
+
+            .content-block {
+                padding: 20px 15px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="/home/" class="logo">
+                <i class="fas fa-camera-retro"></i> hyper的Vlog
+            </a>
+            <a href="/pages/travel/" class="back-btn">
+                <i class="fas fa-arrow-left"></i> 返回旅游记录
+            </a>
+        </div>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header class="article-header">
+        <div class="container">
+            <h1 class="article-title">上海交通大学面试记</h1>
+            <p>2025.6.17-2025.6.18 | 从金陵到沪上，一场意外又珍贵的三一面试之旅</p>
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> 记录时间：2025年6月19日</span>
+                <span><i class="fas fa-map-marker-alt"></i> 地点：上海交通大学</span>
+                <span><i class="fas fa-tag"></i> 标签：三一计划、面试、成长、双城逐梦</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 文章主体内容 -->
+    <main class="article-content">
+        <!-- 行程概述 -->
+        <section class="content-block">
+            <h2>行程概述</h2>
+            <p>结束南京大学强基计划校测后，我在南京逛街途中意外接到上海交通大学“三位一体”综合评价面试通知，来不及休整便从南京奔赴上海，开启了这场匆忙却意义非凡的面试之旅。这是一场说走就走的逐梦之行，既有旅途的奔波，更有成长的收获。</p>
+            <p>行程安排：</p>
+            <ul>
+                <li><strong>6月17日</strong>：与地瓜在南京告别，乘坐高铁抵达上海南站，办理酒店入住，连夜熟悉面试讲义，准备面试材料</li>
+                <li><strong>6月18日</strong>：前往上海交通大学参加“三位一体”综合评价面试，面试结束后简单参观校园</li>
+                <li><strong>6月19日</strong>：整理面试心得，返程</li>
+            </ul>
+        </section>
+
+        <!-- 面试前准备 -->
+        <section class="content-block">
+            <h2>面试前的紧急准备</h2>
+            <p>由于是接到通知后临时奔赴上海，我只能利用旅途和夜晚的时间紧急准备：</p>
+            <ul>
+                <li>高铁上快速梳理上海交通大学校史、办学理念和目标专业的核心培养方向</li>
+                <li>结合南大强基备考的积累，调整个人陈述重点，突出学科特长和综合素养</li>
+                <li>抵达酒店后连夜研读面试讲义，模拟常见的三一面试问题（专业认知、个人规划、学科拓展等）</li>
+                <li>核对并整理面试准考证、身份证等证件，规划从酒店到交大的路线和时间</li>
+            </ul>
+            <div class="quote">
+                <p>“仓促的准备或许不够完美，但每一分努力都不会白费，保持从容和真诚就是最好的状态。”</p>
+            </div>
+        </section>
+
+        <!-- 面试过程 -->
+        <section class="content-block">
+            <h2>面试过程实录</h2>
+            <p>面试当天一早，我准时抵达上海交通大学，在考生报到处完成签到后，怀着既紧张又期待的心情等待面试开始。与南大强基不同，上交“三位一体”面试更注重综合能力和思维深度的考察。</p>
+            <p>面试核心环节：</p>
+            <ul>
+                <li><strong>材料审核（30分钟）</strong>：工作人员核对面试准考证和个人材料，确认面试分组和顺序</li>
+                <li><strong>个人面试（20分钟）</strong>：5位面试官围绕学科知识、专业兴趣、创新思维、社会认知等维度提问，印象最深的是“如何平衡学科深度与广度”“对交大工科优势的理解”等问题</li>
+                <li><strong>综合问答（10分钟）</strong>：面试官结合我的回答进行延伸提问，考察临场反应和逻辑表达能力</li>
+            </ul>
+            <p>整个面试过程节奏紧凑，面试官专业且亲和，我尽量放平心态，结合自己的真实经历和思考作答，即使遇到超出准备范围的问题，也坦诚表达自己的理解和思考过程。</p>
+        </section>
+
+        <!-- 校园印象 -->
+        <section class="content-block">
+            <h2>上海交大校园印象</h2>
+            <p>面试结束后，我趁着短暂的时间漫步上海交大校园，虽然行程匆忙，但依然能感受到这所百年名校的独特魅力：</p>
+            <ul>
+                <li>校门口“上海交通大学欢迎您”的标语格外亲切，古朴又大气的校门承载着百年校史的厚重</li>
+                <li>校园里随处可见兼具科技感与人文气息的建筑，工科优势的底蕴和创新活力扑面而来</li>
+                <li>面试间隙遇到的工作人员和学长学姐都十分友善，耐心指引路线、解答疑问，让人感受到交大的温度</li>
+            </ul>
+            
+            <!-- 图片展示区 -->
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="上交校门.jpg" alt="上海交通大学校门">
+                    <div class="gallery-caption">上海交通大学校门</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="上交面试准考证.jpg" alt="上交三一面试准考证">
+                    <div class="gallery-caption">上海交大“三位一体”面试准考证</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="上交面试讲义.jpg" alt="上交面试讲义">
+                    <div class="gallery-caption">连夜研读的面试讲义</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="上海交通大学欢迎您.jpg" alt="上海交大欢迎标语">
+                    <div class="gallery-caption">校园内的欢迎标语</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="上海南站.jpg" alt="上海南站">
+                    <div class="gallery-caption">抵达上海南站</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="上海南站建筑设计.jpg" alt="上海南站建筑">
+                    <div class="gallery-caption">上海南站特色建筑设计</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="准备面试.jpg" alt="酒店准备面试">
+                    <div class="gallery-caption">酒店里紧张准备面试</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="面试考生报到处.jpg" alt="面试报到处">
+                    <div class="gallery-caption">上海交大面试考生报到处</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 心得感悟 -->
+        <section class="summary">
+            <h3><i class="fas fa-lightbulb"></i> 面试心得与成长感悟</h3>
+            <p>这场从南京到上海的匆忙面试之旅，是我高中生涯中一段特别的经历，也让我收获了远超面试本身的成长：</p>
+            <ul>
+                <li><strong>应变能力的提升</strong>：临时的行程、仓促的准备，让我学会了快速调整状态、应对突发情况，变得更加从容</li>
+                <li><strong>视野的拓展</strong>：接连体验两所顶尖名校的选拔方式，让我对不同高校的育人理念和选拔标准有了更直观的认知</li>
+                <li><strong>心态的成熟</strong>：结果不再是唯一的追求，从备考到面试的全过程，每一次思考和表达都是宝贵的积累</li>
+                <li><strong>逐梦的意义</strong>：无论是南大强基还是上交三一，重要的不是最终的结果，而是为了目标全力以赴的过程</li>
+            </ul>
+            <p>最后，我想说：这场双城逐梦的旅程，让我深刻体会到“机会总是留给有准备的人”，也让我明白成长从来不是一蹴而就的。无论最终能否走进交大校园，这段从金陵到沪上的面试经历，都会成为我青春里最鲜活的记忆，激励我继续朝着目标前行。</p>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 hyper的个人Vlog | 记录生活，分享成长</p>
+            <p style="margin-top: 10px;">
+                <a href="/home/" style="color: #ff6b6b; text-decoration: none;">返回首页</a> | 
+                <a href="/talk/" style="color: #ff6b6b; text-decoration: none;">留言交流</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
