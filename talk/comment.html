@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板 | hyper的个人Vlog</title>
+    <!-- 引入FontAwesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局样式变量 */
+        :root {
+            --primary: #6a5acd;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --white: #ffffff;
+            --gray: #495057;
+            --light-gray: #e9ecef;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* 头部导航 */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* 留言板核心样式 */
+        .message-board {
+            padding: 20px 0 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #6c757d;
+        }
+
+        /* 提交表单（核心修复） */
+        .message-form {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(106, 90, 205, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* 留言列表 */
+        .messages-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .message-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .message-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .username {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .time {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .message-content {
+            line-height: 1.8;
+        }
+
+        /* 空留言提示 */
+        .empty-tip {
+            text-align: center;
+            padding: 60px 0;
+            color: #6c757d;
+        }
+
+        .empty-tip i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--light-gray);
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links a {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="/" class="logo">hyper的<span>Vlog</span></a>
+                <div class="nav-links">
+                    <a href="/">首页</a>
+                    <a href="/talk" style="color: var(--accent);">留言板</a>
+                    <a href="/#about">关于我</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 留言板核心区域 -->
+    <section class="message-board">
+        <div class="container">
+            <div class="section-title">
+                <h2>留言板</h2>
+                <p>分享你的想法，和我一起交流～</p>
+            </div>
+
+            <!-- 留言提交表单（修复所有提交问题） -->
+            <form class="message-form" method="POST" action="/talk" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="username">你的昵称</label>
+                    <input type="text" id="username" name="username" placeholder="请输入昵称（选填）" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label for="content">留言内容 <span style="color: var(--accent);">*</span></label>
+                    <textarea id="content" name="content" placeholder="请输入你的留言..." required maxlength="500"></textarea>
+                </div>
+                <!-- 隐藏字段，辅助验证表单提交 -->
+                <input type="hidden" name="submit_type" value="message">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> 提交留言
+                </button>
+            </form>
+
+            <!-- 留言列表 -->
+            <div class="messages-list">
+                {% if messages %}
+                    {% for msg in messages %}
+                        <div class="message-item">
+                            <div class="message-header">
+                                <div class="username">
+                                    <i class="fas fa-user"></i> {{ msg.username }}
+                                </div>
+                                <div class="time">
+                                    <i class="far fa-clock"></i> {{ msg.time }}
+                                </div>
+                            </div>
+                            <div class="message-content">
+                                {{ msg.content }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="empty-tip">
+                        <i class="fas fa-comment-dots"></i>
+                        <p>暂无留言，快来成为第一个留言的人吧～</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
