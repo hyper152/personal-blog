@@ -1,0 +1,87 @@
+2026-02-13 20:09:04 - INFO - 接收到发送验证码请求，邮箱：1706754028@qq.com
+2026-02-13 20:09:04 - INFO - 生成验证码：869696
+2026-02-13 20:09:04 - ERROR - 发送验证码未知错误：'ascii' codec can't encode characters in position 19-20: ordinal not in range(128)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 110, in send_verify_code
+    server.login(QQ_MAIL_USER, QQ_MAIL_AUTH_CODE)
+  File "e:\anaconda3\envs\web\lib\smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "e:\anaconda3\envs\web\lib\smtplib.py", line 641, in auth
+    response = encode_base64(initial_response.encode('ascii'), eol='')
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 19-20: ordinal not in range(128)
+2026-02-13 20:10:55 - INFO - 接收到发送验证码请求，邮箱：1706754028@qq.com
+2026-02-13 20:10:55 - INFO - 生成验证码：432463
+2026-02-13 20:10:55 - ERROR - 发送验证码未知错误：Cannot attach additional subparts to non-multipart/*
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 110, in send_verify_code
+    msg.attach(MIMEText(text_content, "plain", "utf-8"))
+  File "e:\anaconda3\envs\web\lib\email\mime\nonmultipart.py", line 21, in attach
+    raise errors.MultipartConversionError(
+email.errors.MultipartConversionError: Cannot attach additional subparts to non-multipart/*
+2026-02-13 20:12:41 - INFO - 接收到发送验证码请求，邮箱：1706754028@qq.com
+2026-02-13 20:12:41 - INFO - 生成验证码：560974
+2026-02-13 20:12:41 - ERROR - 邮件格式错误：'ascii' codec can't encode characters in position 19-20: ordinal not in range(128)
+2026-02-13 20:16:40 - INFO - 接收到发送验证码请求，邮箱：1706754028@qq.com
+2026-02-13 20:16:40 - INFO - 生成验证码：700236
+2026-02-13 20:16:41 - INFO - 验证码700236成功发送至邮箱：1706754028@qq.com
+2026-02-13 20:17:01 - INFO - 用户hyper(1706754028@qq.com)注册成功
+2026-02-13 20:20:06 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:44:39 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:44:51 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:11 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:22 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:23 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:41 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:43 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:50 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:51 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 21:06:28 - INFO - 用户匿名用户添加留言：1...
+2026-02-13 21:09:41 - ERROR - 校验登录状态异常：name 'check_login_status' is not defined
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 402, in check_login_status_api
+    is_login = check_login_status(session_id)
+NameError: name 'check_login_status' is not defined
+2026-02-13 21:09:45 - ERROR - 登录接口异常：name 'create_session' is not defined
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 282, in login
+    session_id = create_session(email)
+NameError: name 'create_session' is not defined
+2026-02-13 21:11:54 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：16bd917c...
+2026-02-13 21:12:12 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：c87d5b25...
+2026-02-13 21:12:22 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：f71d0c0d...

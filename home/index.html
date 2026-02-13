@@ -4,17 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hyper的个人Vlog | 记录生活，分享故事</title>
-    <!-- 外部资源CDN优化：添加跨域、异步加载 -->
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    >
-    <!-- 内联CSS（适配移除人物志后的布局 + 访问计数样式） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* 语义化变量命名 */
             --color-primary: #6a5acd;
             --color-accent: #ff6b6b;
             --color-secondary: #4ecdc4;
@@ -23,20 +15,16 @@
             --color-white: #ffffff;
             --color-gray: #495057;
             --color-light-gray: #e9ecef;
-            
             --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.08);
             --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.12);
-            
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 20px;
-            
             --transition-base: all 0.3s ease;
             --transition-fast: all 0.2s ease;
         }
 
-        /* 全局重置优化：保留box-sizing，精简默认样式 */
         * {
             margin: 0;
             padding: 0;
@@ -57,7 +45,7 @@
             padding: 0 15px;
         }
 
-        /* 访问计数样式 - 新增核心样式 */
+        /* 访问计数样式 */
         .visit-counter-box {
             position: fixed;
             top: 20px;
@@ -68,7 +56,7 @@
             border-radius: 20px;
             font-size: 0.9rem;
             box-shadow: var(--shadow-md);
-            z-index: 1001; /* 高于头部导航 */
+            z-index: 1001;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -81,16 +69,12 @@
             box-shadow: var(--shadow-lg);
         }
         
-        .visit-counter-box i {
-            font-size: 1rem;
-        }
-        
         .visit-counter-number {
             font-weight: bold;
             color: #fff;
         }
 
-        /* 头部导航：优化粘性定位、性能 */
+        /* 头部导航 */
         header {
             background-color: var(--color-white);
             box-shadow: var(--shadow-sm);
@@ -100,16 +84,11 @@
             transition: var(--transition-base);
         }
 
-        header.scrolled {
-            padding: 10px 0;
-            box-shadow: var(--shadow-md);
-        }
-
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 15px 0;
         }
 
         .logo {
@@ -134,6 +113,8 @@
         .nav-links {
             display: flex;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         .nav-links li {
@@ -168,6 +149,69 @@
             width: 100%;
         }
 
+        /* 用户状态样式 */
+        .user-status {
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .user-btn {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .user-btn:hover {
+            background: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+            min-width: 120px;
+            display: none;
+            z-index: 1000;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 15px;
+            color: var(--color-gray);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            border-bottom: 1px solid var(--color-light-gray);
+        }
+
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-item:hover {
+            background: var(--color-light);
+            color: var(--color-primary);
+        }
+
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
@@ -177,12 +221,11 @@
             background: none;
         }
 
-        /* 英雄区：优化背景性能、语义化 */
+        /* 英雄区 */
         .hero {
             background: linear-gradient(rgba(106, 90, 205, 0.85), rgba(255, 107, 107, 0.85)), url('img/bg.png');
             background-size: cover;
             background-position: center;
-            background-attachment: scroll; /* 移动端优化，取消fixed避免性能问题 */
             color: var(--color-white);
             text-align: center;
             padding: 120px 0;
@@ -190,17 +233,6 @@
             border-radius: 0 0 var(--radius-lg) var(--radius-lg);
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.2;
         }
 
         .hero-content {
@@ -211,9 +243,8 @@
         }
 
         .hero h1 {
-            font-size: clamp(1.8rem, 5vw, 3.5rem); /* 响应式字体 */
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
             margin-bottom: 20px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
@@ -241,7 +272,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* 通用区块标题：优化语义化 */
+        /* 通用区块标题 */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
@@ -252,12 +283,6 @@
             font-size: clamp(1.8rem, 3vw, 2.2rem);
             color: var(--color-dark);
             margin-bottom: 15px;
-        }
-
-        .section-title p {
-            color: var(--color-gray);
-            max-width: 600px;
-            margin: 0 auto;
         }
 
         .section-title::after {
@@ -272,7 +297,59 @@
             border-radius: 2px;
         }
 
-        /* 博客卡片网格：优化响应式、性能 */
+        /* 分类导航 */
+        .categories {
+            background-color: var(--color-white);
+            padding: 60px 0;
+            margin-bottom: 80px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: var(--radius-md);
+            transition: var(--transition-base);
+            border: 1px solid var(--color-light-gray);
+            width: 100%;
+            max-width: 200px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .category-card:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .category-card i {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            transition: var(--transition-fast);
+        }
+
+        .category-card:hover i {
+            color: var(--color-white);
+            transform: scale(1.1);
+        }
+
+        .category-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* 博客卡片 */
         .posts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -307,8 +384,6 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-base);
-            /* 懒加载优化 */
-            loading: lazy;
         }
 
         .post-card:hover .post-image img {
@@ -338,17 +413,6 @@
             color: var(--color-dark);
             font-size: 1.4rem;
             margin-bottom: 15px;
-            transition: var(--transition-fast);
-        }
-
-        .post-card:hover .post-content h3 {
-            color: var(--color-primary);
-        }
-
-        .post-content p {
-            color: var(--color-gray);
-            margin-bottom: 20px;
-            flex: 1;
         }
 
         .post-meta {
@@ -359,131 +423,16 @@
             color: #6c757d;
             border-top: 1px solid var(--color-light-gray);
             padding-top: 15px;
-        }
-
-        .post-meta i {
-            margin-right: 5px;
-            color: var(--color-primary);
+            margin-top: auto;
         }
 
         .read-more {
-            display: inline-block;
             color: var(--color-accent);
+            text-decoration: none;
             font-weight: 500;
-            text-decoration: none;
-            transition: var(--transition-fast);
         }
 
-        .read-more:hover {
-            color: var(--color-primary);
-            transform: translateX(5px);
-        }
-
-        /* 分类导航：适配移除人物志后的布局（留言板仍居中） */
-        .categories {
-            background-color: var(--color-white);
-            padding: 60px 0;
-            margin-bottom: 80px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
-        }
-
-        .category-grid {
-            display: grid;
-            gap: 20px;
-            justify-items: center;
-        }
-
-        /* 大屏（≥1200px）：一行5个，留言板跨列居中 */
-        @media (min-width: 1200px) {
-            .category-grid {
-                grid-template-columns: repeat(5, 1fr);
-            }
-            .category-grid > div:nth-child(6) {
-                grid-column: 1 / -1;
-                max-width: 200px;
-                margin: 0 auto;
-            }
-        }
-
-        /* 中屏（800px-1199px）：一行3个，留言板居中 */
-        @media (max-width: 1199px) and (min-width: 800px) {
-            .category-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .category-grid > div:nth-child(6) {
-                grid-column: 2 / 3;
-            }
-        }
-
-        /* 小屏（500px-799px）：一行2个，留言板跨列居中 */
-        @media (max-width: 799px) and (min-width: 500px) {
-            .category-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .category-grid > div:nth-child(6) {
-                grid-column: 1 / -1;
-                max-width: 200px;
-                margin: 0 auto;
-            }
-        }
-
-        /* 超小屏（<500px）：一行1个，自然居中 */
-        @media (max-width: 499px) {
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
-            /* 移动端调整访问计数位置 */
-            .visit-counter-box {
-                top: auto;
-                bottom: 20px;
-                right: 20px;
-                font-size: 0.8rem;
-                padding: 6px 12px;
-            }
-        }
-
-        .category-card {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: var(--radius-md);
-            transition: var(--transition-base);
-            border: 1px solid var(--color-light-gray);
-            width: 100%;
-            max-width: 200px;
-        }
-
-        .category-card:hover {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            transform: translateY(-5px);
-            border-color: var(--color-primary);
-        }
-
-        .category-card i {
-            font-size: 2.5rem;
-            color: var(--color-accent);
-            margin-bottom: 15px;
-            transition: var(--transition-fast);
-        }
-
-        .category-card:hover i {
-            color: var(--color-white);
-            transform: scale(1.1);
-        }
-
-        .category-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .category-card a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        /* 页脚：优化语义化、响应式 */
+        /* 页脚 */
         footer {
             background-color: var(--color-dark);
             color: var(--color-white);
@@ -514,33 +463,6 @@
             background-color: var(--color-accent);
         }
 
-        .footer-col p {
-            margin-bottom: 20px;
-            opacity: 0.8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--color-white);
-            transition: var(--transition-base);
-        }
-
-        .social-links a:hover {
-            background-color: var(--color-accent);
-            transform: translateY(-3px);
-        }
-
         .footer-col ul {
             list-style: none;
         }
@@ -563,23 +485,32 @@
             padding-left: 5px;
         }
 
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition-base);
+        }
+
+        .social-links a:hover {
+            color: var(--color-accent);
+            transform: translateY(-3px);
+        }
+
         .copyright {
             text-align: center;
             padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
             opacity: 0.7;
-            position: relative;
-        }
-        
-        /* 页脚也展示访问计数（可选） */
-        .copyright .visit-count-footer {
-            margin-bottom: 10px;
-            font-size: 0.8rem;
-            color: var(--color-secondary);
         }
 
-        /* 回到顶部按钮：优化样式、交互 */
+        /* 回到顶部按钮 */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -607,12 +538,7 @@
             visibility: visible;
         }
 
-        .back-to-top:hover {
-            background-color: var(--color-primary);
-            transform: translateY(-5px);
-        }
-
-        /* 响应式优化：断点精简、逻辑清晰 */
+        /* 响应式 */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -632,12 +558,12 @@
                 margin: 10px 0;
             }
 
-            .mobile-menu-btn {
-                display: block;
-            }
-
             .nav-links.show {
                 display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
             }
 
             .hero {
@@ -647,20 +573,9 @@
             .posts-grid {
                 grid-template-columns: 1fr;
             }
-        }
 
-        @media (max-width: 576px) {
-            .post-image {
-                height: 180px;
-            }
-
-            .footer-grid {
-                gap: 30px;
-            }
-
-            .back-to-top {
-                width: 45px;
-                height: 45px;
+            .visit-counter-box {
+                top: auto;
                 bottom: 20px;
                 right: 20px;
             }
@@ -668,19 +583,17 @@
     </style>
 </head>
 <body>
-    <!-- 访问计数展示框 - 新增核心元素 -->
+    <!-- 访问计数 -->
     <div class="visit-counter-box" id="visitCounterBox">
-        <i class="fas fa-eye" aria-hidden="true"></i>
-        <span>总访问量：</span>
-        <span class="visit-counter-number" id="visitCounterNumber">0</span>
-        <span>次</span>
+        <i class="fas fa-eye"></i>
+        <span>总访问量：<span class="visit-counter-number" id="visitCounterNumber">0</span>次</span>
     </div>
 
     <header id="main-header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo" aria-label="hyper的个人Vlog首页">
-                    <i class="fas fa-camera-retro" aria-hidden="true"></i>
+                <a href="#" class="logo">
+                    <i class="fas fa-camera-retro"></i>
                     hyper的<span>Vlog</span>
                 </a>
                 
@@ -691,9 +604,31 @@
                     <li><a href="#about">关于hyper</a></li>
                     <li><a href="#contact">联系我</a></li>
                 </ul>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="移动端菜单按钮">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
+
+                <!-- 用户状态显示 -->
+                <div class="user-status">
+                    <div class="user-dropdown">
+                        <button class="user-btn" id="userBtn">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="usernameDisplay">未登录</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="/login/index.html" class="dropdown-item" id="loginItem">
+                                <i class="fas fa-sign-in-alt"></i> 登录
+                            </a>
+                            <a href="/login/register.html" class="dropdown-item" id="registerItem">
+                                <i class="fas fa-user-plus"></i> 注册
+                            </a>
+                            <a href="javascript:void(0)" class="dropdown-item" id="logoutItem" onclick="handleLogout()" style="display: none;">
+                                <i class="fas fa-sign-out-alt"></i> 退出
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
                 </button>
             </nav>
         </div>
@@ -704,8 +639,8 @@
             <div class="hero-content">
                 <h1>记录生活，分享故事</h1>
                 <p>欢迎来到hyper的个人Vlog空间，这里记录了hyper的日常生活、旅行经历和思考感悟。</p>
-                <a href="#blog" class="hero-btn" aria-label="浏览更多博客内容">
-                    <i class="fas fa-book-open" aria-hidden="true"></i> 浏览更多内容
+                <a href="#blog" class="hero-btn">
+                    <i class="fas fa-book-open"></i> 浏览更多内容
                 </a>
             </div>
         </div>
@@ -719,55 +654,41 @@
             </div>
             
             <div class="category-grid">
-                <!-- 移除人物志分类卡片 -->
-                <div class="category-card">
-                    <a href="/pages/travel/" aria-label="查看旅游记录分类内容">
-                        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
-                        <h3>旅游记录</h3>
-                        <p>走遍山河，记录美好</p>
-                    </a>
-                </div>
+                <a href="/pages/travel/" class="category-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>旅游记录</h3>
+                    <p>走遍山河，记录美好</p>
+                </a>
                 
-                <div class="category-card">
-                    <a href="/pages/diy/" aria-label="查看装机记录分类内容">
-                        <i class="fas fa-desktop" aria-hidden="true"></i>
-                        <h3>装机记录</h3>
-                        <p>数码爱好者的装机分享</p>
-                    </a>
-                </div>
+                <a href="/pages/diy/" class="category-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>装机记录</h3>
+                    <p>数码爱好者的装机分享</p>
+                </a>
                 
-                <div class="category-card">
-                    <a href="/pages/YY往事/" aria-label="查看YY往事分类内容">
-                        <i class="fas fa-history" aria-hidden="true"></i>
-                        <h3>YY往事</h3>
-                        <p>班级生活与成长感悟</p>
-                    </a>
-                </div>
+                <a href="/pages/YY往事/" class="category-card">
+                    <i class="fas fa-history"></i>
+                    <h3>YY往事</h3>
+                    <p>班级生活与成长感悟</p>
+                </a>
                 
-                <div class="category-card">
-                    <a href="/pages/video/" aria-label="查看视频创作分类内容">
-                        <i class="fas fa-video" aria-hidden="true"></i>
-                        <h3>视频创作</h3>
-                        <p>记录生活的视频作品</p>
-                    </a>
-                </div>
+                <a href="/pages/video/" class="category-card">
+                    <i class="fas fa-video"></i>
+                    <h3>视频创作</h3>
+                    <p>记录生活的视频作品</p>
+                </a>
                 
-                <!-- 替换：其他 → 开发日志 -->
-                <div class="category-card">
-                    <a href="/pages/devlog/" aria-label="查看开发日志分类内容">
-                        <i class="fas fa-code" aria-hidden="true"></i>
-                        <h3>开发日志</h3>
-                        <p>技术探索与网站搭建记录</p>
-                    </a>
-                </div>
+                <a href="/pages/devlog/" class="category-card">
+                    <i class="fas fa-code"></i>
+                    <h3>开发日志</h3>
+                    <p>技术探索与网站搭建记录</p>
+                </a>
                 
-                <div class="category-card">
-                    <a href="/talk" aria-label="查看留言板">
-                        <i class="fas fa-comments" aria-hidden="true"></i>
-                        <h3>留言板</h3>
-                        <p>互动交流，分享想法</p>
-                    </a>
-                </div>
+                <a href="/talk" class="category-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>留言板</h3>
+                    <p>互动交流，分享想法</p>
+                </a>
             </div>
         </div>
     </section>
@@ -789,10 +710,8 @@
                         <h3>我的第一次独自旅行经历(上交面试记)</h3>
                         <p>独自旅行是一次与自己对话的旅程，在上海的这段经历让我收获了很多，也对未来有了更清晰的认识。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.16</span>
-                            <a href="/pages/travel/2025.6.16-上海交通大学面试记-3days/" class="read-more" aria-label="阅读更多关于上海交通大学面试记的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2025.06.16</span>
+                            <a href="/pages/travel/2025.6.16-上海交通大学面试记-3days/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
@@ -800,16 +719,14 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">旅行</span>
-                        <img src="\pages\travel\2025.7.24-百丈漈\在百丈一漈的合影.jpg" alt="百丈漈旅游记" loading="lazy">
+                        <img src="/pages/travel/2025.7.24-百丈漈/在百丈一漈的合影.jpg" alt="百丈漈旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>水帘洞穿越记 - 百丈漈之行</h3>
                         <p>百丈漈的瀑布如银河倒泻，身临其境仿佛穿越到了水帘洞，大自然的鬼斧神工令人叹为观止。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.07.24</span>
-                            <a href="/pages/travel/2025.7.24-百丈漈/" class="read-more" aria-label="阅读更多关于百丈漈之行的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2025.07.24</span>
+                            <a href="/pages/travel/2025.7.24-百丈漈/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
@@ -817,16 +734,14 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">旅行</span>
-                        <img src="\pages\travel\2025.8.17-雁荡山\山洞里的地瓜.jpg" alt="雁荡山旅游记" loading="lazy">
+                        <img src="/pages/travel/2025.8.17-雁荡山/山洞里的地瓜.jpg" alt="雁荡山旅游记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>雁荡山旅游记 - 奇峰异石间的行走</h3>
                         <p>雁荡山的奇峰怪石、飞泉瀑布，每一处都充满了诗意，一步一景，流连忘返。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.08.17</span>
-                            <a href="/pages/travel/2025.8.17-雁荡山/" class="read-more" aria-label="阅读更多关于雁荡山旅游记的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2025.08.17</span>
+                            <a href="/pages/travel/2025.8.17-雁荡山/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
@@ -834,16 +749,14 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">学习</span>
-                        <img src="\pages\travel\2025.6.15-南京大学强基记-2days\南京大学2.jpg"alt="南京大学强基记" loading="lazy">
+                        <img src="/pages/travel/2025.6.15-南京大学强基记-2days/南京大学2.jpg" alt="南京大学强基记" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>南京大学强基记 - 名校之旅</h3>
                         <p>走进南京大学，感受百年名校的文化底蕴，强基计划的面试经历让我受益匪浅。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2025.06.15</span>
-                            <a href="/pages/travel/2025.6.15-南京大学强基记-2days/" class="read-more" aria-label="阅读更多关于南京大学强基记的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2025.06.15</span>
+                            <a href="/pages/travel/2025.6.15-南京大学强基记-2days/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
@@ -851,34 +764,29 @@
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">数码</span>
-                        <img src="\pages\diy\RTX2060裸机.jpg" alt="装机记录" loading="lazy">
+                        <img src="/pages/diy/RTX2060裸机.jpg" alt="装机记录" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>装机记录 - 我的DIY电脑搭建之旅</h3>
                         <p>从配件选购到组装调试，一步步搭建属于自己的电脑，体验DIY的乐趣和成就感。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2020-至今</span>
-                            <a href="/pages/diy/" class="read-more" aria-label="阅读更多关于装机记录的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2020-至今</span>
+                            <a href="/pages/diy/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
                 
-                <!-- 补充的博客卡片，填补空缺 -->
                 <article class="post-card">
                     <div class="post-image">
                         <span class="post-category">生活</span>
-                        <img src="\pages\travel\2024.7.28-上海旅游-3days\外滩.jpg" alt="" loading="lazy">
+                        <img src="/pages/travel/2024.7.28-上海旅游-3days/外滩.jpg" alt="上海旅游" loading="lazy">
                     </div>
                     <div class="post-content">
                         <h3>上海旅游记 - 大城市的探索</h3>
-                        <p>和同学们一起去上海旅行，在高考前见见世面，也去了未来有可能能上的上海交通大学（虽然没考上）</p>
+                        <p>和同学们一起去上海旅行，在高考前见见世面，也去了未来有可能能上的上海交通大学。</p>
                         <div class="post-meta">
-                            <span><i class="far fa-calendar" aria-hidden="true"></i> 2024.7.28</span>
-                            <a href="\pages\travel\2024.7.28-上海旅游-3days\" class="read-more" aria-label="阅读更多关于班级篮球赛记的内容">
-                                阅读更多 <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                            </a>
+                            <span><i class="far fa-calendar"></i> 2024.7.28</span>
+                            <a href="/pages/travel/2024.7.28-上海旅游-3days/" class="read-more">阅读更多 <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </article>
@@ -893,57 +801,55 @@
                     <h3>关于我</h3>
                     <p>热爱生活，喜欢旅行和记录，用Vlog的形式分享生活中的美好瞬间和成长感悟。</p>
                     <div class="social-links">
-                        <a href="https://github.com/hyper152" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-                        <a href="https://space.bilibili.com/1689598128?spm_id_from=333.1007.0.0" aria-label="哔哩哔哩"><i class="fab fa-bilibili" aria-hidden="true"></i></a>
-                        <a href="mailto:2361542526@qq.com" aria-label="邮箱"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                        <a href="https://github.com/hyper152" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://space.bilibili.com/1689598128" target="_blank"><i class="fab fa-bilibili"></i></a>
+                        <a href="mailto:2361542526@qq.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
                     <h3>快速链接</h3>
                     <ul>
-                        <li><a href="#home"><i class="fas fa-home" aria-hidden="true"></i> 首页</a></li>
-                        <li><a href="#categories"><i class="fas fa-th-list" aria-hidden="true"></i> 内容分类</a></li>
-                        <li><a href="#blog"><i class="fas fa-blog" aria-hidden="true"></i> 最新动态</a></li>
-                        <li><a href="/talk"><i class="fas fa-comment-dots" aria-hidden="true"></i> 留言板</a></li>
+                        <li><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="#categories"><i class="fas fa-th-list"></i> 内容分类</a></li>
+                        <li><a href="#blog"><i class="fas fa-blog"></i> 最新动态</a></li>
+                        <li><a href="/talk"><i class="fas fa-comment-dots"></i> 留言板</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>内容分类</h3>
                     <ul>
-                        <!-- 同步替换：其他 → 开发日志 -->
-                        <li><a href="/pages/travel/"><i class="fas fa-map" aria-hidden="true"></i> 旅游记录</a></li>
-                        <li><a href="/pages/diy/"><i class="fas fa-laptop" aria-hidden="true"></i> 装机记录</a></li>
-                        <li><a href="/pages/YY往事/"><i class="fas fa-history" aria-hidden="true"></i> YY往事</a></li>
-                        <li><a href="/pages/video/"><i class="fas fa-video" aria-hidden="true"></i> 视频创作</a></li>
-                        <li><a href="/pages/devlog/"><i class="fas fa-code" aria-hidden="true"></i> 开发日志</a></li>
+                        <li><a href="/pages/travel/"><i class="fas fa-map"></i> 旅游记录</a></li>
+                        <li><a href="/pages/diy/"><i class="fas fa-laptop"></i> 装机记录</a></li>
+                        <li><a href="/pages/YY往事/"><i class="fas fa-history"></i> YY往事</a></li>
+                        <li><a href="/pages/video/"><i class="fas fa-video"></i> 视频创作</a></li>
+                        <li><a href="/pages/devlog/"><i class="fas fa-code"></i> 开发日志</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3>联系我</h3>
                     <ul>
-                        <!-- 核心修改：替换为QQ和微信 -->
-                        <li><a href="tencent://message/?uin=2361542526&Site=&Menu=yes" aria-label="QQ联系"><i class="fab fa-qq" aria-hidden="true"></i> QQ：2361542526</a></li>
-                        <li><a href="#" aria-label="微信联系" onclick="alert('微信：hyper20070129')"><i class="fab fa-weixin" aria-hidden="true"></i> 微信：hyper20070129</a></li>
+                        <li><a href="tencent://message/?uin=2361542526"><i class="fab fa-qq"></i> QQ：2361542526</a></li>
+                        <li><a href="#" onclick="alert('微信：hyper20070129')"><i class="fab fa-weixin"></i> 微信：hyper20070129</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <!-- 页脚也展示访问计数 -->
-                <div class="visit-count-footer" id="visitCountFooter">总访问量：<span id="footerVisitNumber">0</span> 次</div>
+                <div class="visit-count-footer">总访问量：<span id="footerVisitNumber">0</span> 次</div>
                 <p>&copy; 2025 hyper的个人Vlog | 保留所有权利</p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" id="backToTopBtn" aria-label="回到顶部">
-        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    <button class="back-to-top" id="backToTopBtn">
+        <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript 功能实现 + 访问计数获取 -->
+    <!-- 引入认证脚本 -->
+    <script src="/static/js/auth.js"></script>
     <script>
         // 移动端菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -951,7 +857,6 @@
         
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('show');
-            // 切换菜单图标
             const icon = mobileMenuBtn.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
@@ -967,39 +872,26 @@
             }
         });
 
-        // 回到顶部按钮
+        // 回到顶部
         const backToTopBtn = document.getElementById('backToTopBtn');
-        
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
+            backToTopBtn.classList.toggle('show', window.scrollY > 300);
         });
         
         backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                    
-                    // 关闭移动端菜单
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
                     navLinks.classList.remove('show');
                     const icon = mobileMenuBtn.querySelector('i');
                     icon.classList.remove('fa-times');
@@ -1008,43 +900,117 @@
             });
         });
 
-        // ===================== 访问计数功能 - 新增核心代码 =====================
-        // 获取访问次数并更新页面显示
+        // 加载访问计数 - 修复版本，支持多种数据格式
         async function loadVisitCount() {
             try {
-                // 请求访问计数接口
                 const response = await fetch('/visit-count');
-                if (!response.ok) {
-                    throw new Error(`HTTP错误，状态码：${response.status}`);
+                const data = await response.json();
+                
+                let totalVisits = 0;
+                
+                // 检查数据格式并提取访问次数
+                if (data.code === 200 && data.data) {
+                    // 格式1: {code:200, data:{total_visits:xxx}}
+                    totalVisits = data.data.total_visits;
+                } else if (data.total_visits !== undefined) {
+                    // 格式2: {total_visits:xxx}
+                    totalVisits = data.total_visits;
+                } else if (data.count !== undefined) {
+                    // 格式3: {count:xxx}
+                    totalVisits = data.count;
+                } else if (data.data && data.data.count) {
+                    // 格式4: {data:{count:xxx}}
+                    totalVisits = data.data.count;
                 }
                 
-                const data = await response.json();
-                if (data.code === 200 && data.data) {
-                    const totalVisits = data.data.total_visits;
-                    
-                    // 更新页面上的访问计数显示
-                    const counterNumber = document.getElementById('visitCounterNumber');
-                    const footerNumber = document.getElementById('footerVisitNumber');
-                    
-                    if (counterNumber) counterNumber.textContent = totalVisits;
-                    if (footerNumber) footerNumber.textContent = totalVisits;
-                    
-                    console.log(`✅ 成功获取访问计数：${totalVisits} 次`);
-                } else {
-                    console.warn(`⚠️ 获取访问计数失败：${data.message}`);
-                }
+                // 更新显示
+                document.getElementById('visitCounterNumber').textContent = totalVisits;
+                document.getElementById('footerVisitNumber').textContent = totalVisits;
+                
+                console.log('访问计数更新为:', totalVisits);
             } catch (error) {
-                console.error(`❌ 获取访问计数出错：${error.message}`);
-                // 降级处理：显示默认值或隐藏计数框
-                const counterBox = document.getElementById('visitCounterBox');
-                if (counterBox) counterBox.style.opacity = '0.7';
+                console.error('获取访问计数出错:', error);
             }
         }
 
-        // 页面加载完成后立即获取访问计数
+        // 初始化用户状态
+        async function initUserStatus() {
+            try {
+                console.log('正在检查登录状态...');
+                const status = await Auth.checkLoginStatus();
+                console.log('获取到的登录状态:', status);
+                
+                const usernameDisplay = document.getElementById('usernameDisplay');
+                const loginItem = document.getElementById('loginItem');
+                const registerItem = document.getElementById('registerItem');
+                const logoutItem = document.getElementById('logoutItem');
+                
+                if (!usernameDisplay) {
+                    console.error('找不到用户显示元素');
+                    return;
+                }
+                
+                if (status.isLogin) {
+                    console.log('用户已登录:', status.user);
+                    usernameDisplay.textContent = status.user.username || '用户';
+                    if (loginItem) loginItem.style.display = 'none';
+                    if (registerItem) registerItem.style.display = 'none';
+                    if (logoutItem) {
+                        logoutItem.style.display = 'flex';
+                        console.log('显示退出按钮');
+                    }
+                } else {
+                    // 尝试从localStorage获取用户信息作为备份
+                    const localUser = Auth.getLocalUser();
+                    if (localUser) {
+                        console.log('从localStorage恢复用户信息:', localUser);
+                        usernameDisplay.textContent = localUser.username || '用户';
+                        if (loginItem) loginItem.style.display = 'none';
+                        if (registerItem) registerItem.style.display = 'none';
+                        if (logoutItem) logoutItem.style.display = 'flex';
+                    } else {
+                        console.log('用户未登录');
+                        usernameDisplay.textContent = '未登录';
+                        if (loginItem) loginItem.style.display = 'flex';
+                        if (registerItem) registerItem.style.display = 'flex';
+                        if (logoutItem) logoutItem.style.display = 'none';
+                    }
+                }
+            } catch (error) {
+                console.error('初始化用户状态失败:', error);
+            }
+        }
+
+        // 处理登出
+        window.handleLogout = async function() {
+            const result = await Auth.logout();
+            if (result.success) {
+                alert('退出登录成功！');
+                window.location.reload();
+            } else {
+                alert(result.message || '退出失败');
+            }
+        };
+
+        // 下拉菜单
+        const userBtn = document.getElementById('userBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        if (userBtn) {
+            userBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('show');
+            });
+        }
+        
+        document.addEventListener('click', function() {
+            dropdownMenu.classList.remove('show');
+        });
+
+        // 页面加载
         document.addEventListener('DOMContentLoaded', () => {
             loadVisitCount();
-            
+            initUserStatus();
         });
     </script>
 </body>

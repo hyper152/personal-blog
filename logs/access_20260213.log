@@ -1,0 +1,1688 @@
+2026-02-13 18:04:22 - INFO - ✅ 已确保data目录存在：E:\.program\.web\.personal_vlog\data
+2026-02-13 18:04:22 - INFO - ✅ 已确保src目录存在：E:\.program\.web\.personal_vlog\src
+2026-02-13 18:04:22 - INFO - ✅ 已确保home目录存在：E:\.program\.web\.personal_vlog\home
+2026-02-13 18:04:22 - INFO - ✅ 留言板模块导入成功
+2026-02-13 18:04:22 - INFO - ✅ 访问计数模块加载成功，计数文件：E:\.program\.web\.personal_vlog\data\visit_count.json
+2026-02-13 18:04:22 - INFO - ✅ 留言板初始化成功
+2026-02-13 18:04:22 - INFO - ✅ 访问计数初始化成功，当前总访问：1380 次
+2026-02-13 18:04:22 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 18:04:22 - INFO - 
+🚀 服务启动成功！
+2026-02-13 18:04:22 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 18:04:22 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 18:04:22 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 18:04:22 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 18:04:22 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 18:04:22 - INFO - ============================================================
+2026-02-13 18:04:22 - INFO - 📝 服务已开启极致性能模式，按 Ctrl+C 停止
+2026-02-13 18:04:22 - INFO - 🔍 访问动态将实时输出在控制台...
+2026-02-13 18:04:29 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:04:29 - INFO - [访问动态] 2026-02-13 18:04:29.547 | 127.0.0.1 | GET | /visit-count | 总访问量：1381
+2026-02-13 18:04:29 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 18:04:29 - INFO - [访问日志] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+2026-02-13 18:04:29 - INFO - [访问动态] 2026-02-13 18:04:29.723 | 127.0.0.1 | GET | /favicon.ico | 总访问量：0
+2026-02-13 18:04:39 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 18:04:39 - INFO - [访问动态] 2026-02-13 18:04:39.774 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1383
+2026-02-13 18:04:43 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:04:43 - INFO - [访问动态] 2026-02-13 18:04:43.306 | 127.0.0.1 | GET | /visit-count | 总访问量：1385
+2026-02-13 18:04:43 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 18:04:43 - INFO - [访问日志] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+2026-02-13 18:04:43 - INFO - [访问动态] 2026-02-13 18:04:43.537 | 127.0.0.1 | GET | /favicon.ico | 总访问量：0
+2026-02-13 18:05:20 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 18:05:20 - INFO - [访问动态] 2026-02-13 18:05:20.257 | 127.0.0.1 | GET | /home/ | 总访问量：1387
+2026-02-13 18:05:20 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:05:20 - INFO - [访问动态] 2026-02-13 18:05:20.403 | 127.0.0.1 | GET | /visit-count | 总访问量：1389
+2026-02-13 18:07:28 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 18:07:28 - INFO - [访问动态] 2026-02-13 18:07:28.329 | 127.0.0.1 | GET | /home/ | 总访问量：1391
+2026-02-13 18:07:28 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:07:28 - INFO - [访问动态] 2026-02-13 18:07:28.463 | 127.0.0.1 | GET | /visit-count | 总访问量：1392
+2026-02-13 18:08:31 - INFO - ✅ 留言板模块导入成功
+2026-02-13 18:08:31 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 18:08:31 - INFO - ✅ 留言板初始化成功
+2026-02-13 18:08:31 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 18:08:31 - INFO - 
+🚀 服务启动成功！
+2026-02-13 18:08:31 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 18:08:31 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 18:08:31 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 18:08:31 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 18:08:31 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 18:08:38 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 18:08:38 - INFO - [访问动态] 2026-02-13 18:08:38.564 | 127.0.0.1 | GET | /home/ | 总访问量：1393
+2026-02-13 18:08:38 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:08:38 - INFO - [访问动态] 2026-02-13 18:08:38.699 | 127.0.0.1 | GET | /visit-count | 总访问量：1393
+2026-02-13 18:10:20 - INFO - ✅ 留言板模块导入成功
+2026-02-13 18:10:20 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 18:10:20 - INFO - ✅ 留言板初始化成功
+2026-02-13 18:10:20 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 18:10:20 - INFO - 
+🚀 服务启动成功！
+2026-02-13 18:10:20 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 18:10:20 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 18:10:20 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 18:10:20 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 18:10:20 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 18:10:21 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 18:10:21 - INFO - [访问动态] 2026-02-13 18:10:21.978 | 127.0.0.1 | GET | /home/ | 总访问量：1394
+2026-02-13 18:10:22 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 18:10:22 - INFO - [访问动态] 2026-02-13 18:10:22.114 | 127.0.0.1 | GET | /visit-count | 总访问量：1394
+2026-02-13 19:10:37 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/ HTTP/1.1" 200 -
+2026-02-13 19:10:37 - INFO - [访问动态] 2026-02-13 19:10:37.559 | 127.0.0.1 | GET | /pages/travel/ | 总访问量：1395
+2026-02-13 19:10:49 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:10:49 - INFO - [访问动态] 2026-02-13 19:10:49.940 | 127.0.0.1 | GET | /visit-count | 总访问量：1395
+2026-02-13 19:10:55 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:10:55 - INFO - [访问动态] 2026-02-13 19:10:55.379 | 127.0.0.1 | GET | /visit-count | 总访问量：1395
+2026-02-13 19:33:09 - INFO - ✅ 留言板模块导入成功
+2026-02-13 19:33:09 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 19:33:09 - INFO - ✅ 留言板初始化成功
+2026-02-13 19:33:09 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 19:33:09 - INFO - 
+🚀 服务启动成功！
+2026-02-13 19:33:09 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 19:33:09 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 19:33:09 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 19:33:09 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 19:33:09 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 19:33:22 - INFO - ✅ 留言板模块导入成功
+2026-02-13 19:33:22 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 19:33:22 - INFO - ✅ 留言板初始化成功
+2026-02-13 19:33:22 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 19:33:22 - INFO - 
+🚀 服务启动成功！
+2026-02-13 19:33:22 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 19:33:22 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 19:33:22 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 19:33:22 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 19:33:22 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 19:33:25 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 200 -
+2026-02-13 19:33:25 - INFO - [访问动态] 2026-02-13 19:33:25.154 | 127.0.0.1 | GET | /home/ | 总访问量：1396
+2026-02-13 19:33:25 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:33:25 - INFO - [访问动态] 2026-02-13 19:33:25.769 | 127.0.0.1 | GET | /visit-count | 总访问量：1396
+2026-02-13 19:33:28 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 117, in message_board_page
+    return render_template_string(BOARD_TEMPLATE)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:33:28 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:33:28 - INFO - [访问动态] 2026-02-13 19:33:28.014 | 127.0.0.1 | GET | /talk | 总访问量：1397
+2026-02-13 19:33:33 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 117, in message_board_page
+    return render_template_string(BOARD_TEMPLATE)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:33:33 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:33:33 - INFO - [访问动态] 2026-02-13 19:33:33.436 | 127.0.0.1 | GET | /talk | 总访问量：1398
+2026-02-13 19:34:58 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 117, in message_board_page
+    return render_template_string(BOARD_TEMPLATE)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:34:58 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:34:58 - INFO - [访问动态] 2026-02-13 19:34:58.524 | 127.0.0.1 | GET | /talk | 总访问量：1399
+2026-02-13 19:35:52 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 117, in message_board_page
+    @app.route('/talk')
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:35:52 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:35:52 - INFO - [访问动态] 2026-02-13 19:35:52.978 | 127.0.0.1 | GET | /talk | 总访问量：1400
+2026-02-13 19:35:54 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 117, in message_board_page
+    @app.route('/talk')
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:35:54 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:35:54 - INFO - [访问动态] 2026-02-13 19:35:54.879 | 127.0.0.1 | GET | /talk | 总访问量：1401
+2026-02-13 19:35:59 - INFO - ✅ 留言板模块导入成功
+2026-02-13 19:35:59 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 19:35:59 - INFO - ✅ 留言板初始化成功
+2026-02-13 19:35:59 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 19:35:59 - INFO - 
+🚀 服务启动成功！
+2026-02-13 19:35:59 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 19:35:59 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 19:35:59 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 19:35:59 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 19:35:59 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 19:36:01 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 19:36:01 - INFO - [访问动态] 2026-02-13 19:36:01.711 | 127.0.0.1 | GET | /home/ | 总访问量：1400
+2026-02-13 19:36:01 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:36:01 - INFO - [访问动态] 2026-02-13 19:36:01.856 | 127.0.0.1 | GET | /visit-count | 总访问量：1400
+2026-02-13 19:36:02 - ERROR - Exception on /talk [GET]
+Traceback (most recent call last):
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 120, in message_board_page
+    return render_template_string(BOARD_TEMPLATE)
+  File "e:\anaconda3\envs\web\lib\site-packages\flask\templating.py", line 161, in render_template_string
+    template = app.jinja_env.from_string(source)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 1111, in from_string
+    return cls.from_code(self, self.compile(source), gs, None)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+  File "e:\anaconda3\envs\web\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<unknown>", line 9, in template
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got ':'
+2026-02-13 19:36:02 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 500 -
+2026-02-13 19:36:02 - INFO - [访问动态] 2026-02-13 19:36:02.517 | 127.0.0.1 | GET | /talk | 总访问量：1401
+2026-02-13 19:36:45 - INFO - ✅ 留言板模块导入成功
+2026-02-13 19:36:45 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 19:36:45 - INFO - ✅ 留言板初始化成功
+2026-02-13 19:36:45 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 19:36:45 - INFO - 
+🚀 服务启动成功！
+2026-02-13 19:36:45 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 19:36:45 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 19:36:45 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 19:36:45 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 19:36:45 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 19:36:50 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 19:36:50 - INFO - [访问动态] 2026-02-13 19:36:50.206 | 127.0.0.1 | GET | /talk | 总访问量：1402
+2026-02-13 19:36:50 - INFO - [访问日志] 127.0.0.1 - "GET /talk/api/messages HTTP/1.1" 200 -
+2026-02-13 19:36:50 - INFO - [访问动态] 2026-02-13 19:36:50.332 | 127.0.0.1 | GET | /talk/api/messages | 总访问量：1403
+2026-02-13 19:37:00 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 19:37:00 - INFO - [访问动态] 2026-02-13 19:37:00.574 | 127.0.0.1 | GET | /home/ | 总访问量：1404
+2026-02-13 19:37:00 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:37:00 - INFO - [访问动态] 2026-02-13 19:37:00.721 | 127.0.0.1 | GET | /visit-count | 总访问量：1404
+2026-02-13 19:37:02 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 19:37:02 - INFO - [访问动态] 2026-02-13 19:37:02.977 | 127.0.0.1 | GET | /home/ | 总访问量：1405
+2026-02-13 19:37:03 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 19:37:03 - INFO - [访问动态] 2026-02-13 19:37:03.109 | 127.0.0.1 | GET | /visit-count | 总访问量：1405
+2026-02-13 19:37:04 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 19:37:04 - INFO - [访问动态] 2026-02-13 19:37:04.054 | 127.0.0.1 | GET | /talk | 总访问量：1406
+2026-02-13 19:37:04 - INFO - [访问日志] 127.0.0.1 - "GET /talk/api/messages HTTP/1.1" 200 -
+2026-02-13 19:37:04 - INFO - [访问动态] 2026-02-13 19:37:04.203 | 127.0.0.1 | GET | /talk/api/messages | 总访问量：1407
+2026-02-13 19:37:20 - INFO - [访问日志] 127.0.0.1 - "POST /talk/api/add HTTP/1.1" 200 -
+2026-02-13 19:37:20 - INFO - [访问动态] 2026-02-13 19:37:20.884 | 127.0.0.1 | POST | /talk/api/add | 总访问量：1408
+2026-02-13 19:37:22 - INFO - [访问日志] 127.0.0.1 - "GET /talk/api/messages HTTP/1.1" 200 -
+2026-02-13 19:37:22 - INFO - [访问动态] 2026-02-13 19:37:22.225 | 127.0.0.1 | GET | /talk/api/messages | 总访问量：1409
+2026-02-13 19:38:25 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 19:38:25 - INFO - [访问动态] 2026-02-13 19:38:25.020 | 127.0.0.1 | GET | /talk | 总访问量：1410
+2026-02-13 19:38:25 - INFO - [访问日志] 127.0.0.1 - "GET /talk/api/messages HTTP/1.1" 200 -
+2026-02-13 19:38:25 - INFO - [访问动态] 2026-02-13 19:38:25.156 | 127.0.0.1 | GET | /talk/api/messages | 总访问量：1411
+2026-02-13 19:38:29 - INFO - ✅ 留言板模块导入成功
+2026-02-13 19:38:29 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 19:38:29 - INFO - ✅ 留言板初始化成功
+2026-02-13 19:38:29 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 19:38:29 - INFO - 
+🚀 服务启动成功！
+2026-02-13 19:38:29 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 19:38:29 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 19:38:29 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 19:38:29 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 19:38:29 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 19:38:31 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 19:38:31 - INFO - [访问动态] 2026-02-13 19:38:31.895 | 127.0.0.1 | GET | /talk | 总访问量：1410
+2026-02-13 19:38:32 - INFO - [访问日志] 127.0.0.1 - "GET /talk/api/messages HTTP/1.1" 200 -
+2026-02-13 19:38:32 - INFO - [访问动态] 2026-02-13 19:38:32.035 | 127.0.0.1 | GET | /talk/api/messages | 总访问量：1411
+2026-02-13 20:30:07 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:30:07 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:30:07 - WARNING - 留言板初始化失败：module 'message_board' has no attribute 'init_db'
+2026-02-13 20:30:07 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:30:07 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:30:07 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:30:07 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:30:07 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:30:07 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:30:07 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:30:09 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 200 -
+2026-02-13 20:30:09 - INFO - [访问动态] 2026-02-13 20:30:09.545 | 127.0.0.1 | GET | /home/ | 总访问量：1
+2026-02-13 20:30:09 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:30:09 - INFO - [访问动态] 2026-02-13 20:30:09.559 | 127.0.0.1 | GET | /visit-count | 总访问量：1
+2026-02-13 20:30:09 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:30:09 - INFO - [访问动态] 2026-02-13 20:30:09.739 | 127.0.0.1 | GET | /visit-count | 总访问量：1
+2026-02-13 20:30:14 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:30:14 - INFO - [访问动态] 2026-02-13 20:30:14.337 | 127.0.0.1 | GET | /talk | 总访问量：2
+2026-02-13 20:30:14 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:30:14 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:30:14 - INFO - [访问动态] 2026-02-13 20:30:14.554 | 127.0.0.1 | GET | /api/talk/list | 总访问量：3
+2026-02-13 20:30:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:30:50 - INFO - [访问动态] 2026-02-13 20:30:50.157 | 127.0.0.1 | GET | /visit-count | 总访问量：3
+2026-02-13 20:30:53 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:30:53 - INFO - [访问动态] 2026-02-13 20:30:53.080 | 127.0.0.1 | GET | /talk | 总访问量：4
+2026-02-13 20:30:53 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:30:53 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:30:53 - INFO - [访问动态] 2026-02-13 20:30:53.257 | 127.0.0.1 | GET | /api/talk/list | 总访问量：5
+2026-02-13 20:30:55 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:30:55 - INFO - [访问动态] 2026-02-13 20:30:55.677 | 127.0.0.1 | GET | /talk | 总访问量：6
+2026-02-13 20:30:55 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:30:55 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:30:55 - INFO - [访问动态] 2026-02-13 20:30:55.841 | 127.0.0.1 | GET | /api/talk/list | 总访问量：7
+2026-02-13 20:31:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:31:00 - INFO - [访问动态] 2026-02-13 20:31:00.422 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：8
+2026-02-13 20:31:10 - INFO - [访问日志] 127.0.0.1 - "GET /pages/devlog/ HTTP/1.1" 200 -
+2026-02-13 20:31:10 - INFO - [访问动态] 2026-02-13 20:31:10.534 | 127.0.0.1 | GET | /pages/devlog/ | 总访问量：9
+2026-02-13 20:31:11 - INFO - [访问日志] 127.0.0.1 - "GET /pages/devlog/CQU-coursehelper/ HTTP/1.1" 200 -
+2026-02-13 20:31:11 - INFO - [访问动态] 2026-02-13 20:31:11.804 | 127.0.0.1 | GET | /pages/devlog/CQU-coursehelper/ | 总访问量：10
+2026-02-13 20:31:15 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:31:15 - INFO - [访问动态] 2026-02-13 20:31:15.806 | 127.0.0.1 | GET | /talk | 总访问量：11
+2026-02-13 20:31:16 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:31:16 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:31:16 - INFO - [访问动态] 2026-02-13 20:31:16.071 | 127.0.0.1 | GET | /api/talk/list | 总访问量：12
+2026-02-13 20:31:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:31:50 - INFO - [访问动态] 2026-02-13 20:31:50.172 | 127.0.0.1 | GET | /visit-count | 总访问量：12
+2026-02-13 20:32:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:32:00 - INFO - [访问动态] 2026-02-13 20:32:00.438 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：13
+2026-02-13 20:32:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:32:50 - INFO - [访问动态] 2026-02-13 20:32:50.184 | 127.0.0.1 | GET | /visit-count | 总访问量：13
+2026-02-13 20:33:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:33:00 - INFO - [访问动态] 2026-02-13 20:33:00.435 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：14
+2026-02-13 20:33:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:33:50 - INFO - [访问动态] 2026-02-13 20:33:50.170 | 127.0.0.1 | GET | /visit-count | 总访问量：14
+2026-02-13 20:34:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:34:00 - INFO - [访问动态] 2026-02-13 20:34:00.450 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：15
+2026-02-13 20:35:50 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:35:50 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:35:50 - WARNING - 留言板初始化失败：module 'message_board' has no attribute 'init_db'
+2026-02-13 20:35:50 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:35:50 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:35:50 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:35:50 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:35:50 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:35:50 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:35:50 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:35:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:35:50 - INFO - [访问动态] 2026-02-13 20:35:50.960 | 127.0.0.1 | GET | /visit-count | 总访问量：14
+2026-02-13 20:35:57 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 20:35:57 - INFO - [访问动态] 2026-02-13 20:35:57.271 | 127.0.0.1 | GET | /home/ | 总访问量：15
+2026-02-13 20:35:57 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:35:57 - INFO - [访问动态] 2026-02-13 20:35:57.396 | 127.0.0.1 | GET | /visit-count | 总访问量：15
+2026-02-13 20:36:01 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:36:01 - INFO - [访问动态] 2026-02-13 20:36:01.174 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：16
+2026-02-13 20:36:01 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:36:01 - INFO - [访问动态] 2026-02-13 20:36:01.462 | 127.0.0.1 | GET | /talk | 总访问量：17
+2026-02-13 20:36:01 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:36:01 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:36:01 - INFO - [访问动态] 2026-02-13 20:36:01.633 | 127.0.0.1 | GET | /api/talk/list | 总访问量：18
+2026-02-13 20:36:07 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:36:07 - INFO - [访问动态] 2026-02-13 20:36:07.853 | 127.0.0.1 | GET | /talk | 总访问量：19
+2026-02-13 20:36:08 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:36:08 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:36:08 - INFO - [访问动态] 2026-02-13 20:36:08.023 | 127.0.0.1 | GET | /api/talk/list | 总访问量：20
+2026-02-13 20:36:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:36:50 - INFO - [访问动态] 2026-02-13 20:36:50.183 | 127.0.0.1 | GET | /visit-count | 总访问量：20
+2026-02-13 20:37:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:37:00 - INFO - [访问动态] 2026-02-13 20:37:00.449 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：21
+2026-02-13 20:37:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:37:50 - INFO - [访问动态] 2026-02-13 20:37:50.170 | 127.0.0.1 | GET | /visit-count | 总访问量：21
+2026-02-13 20:38:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:38:00 - INFO - [访问动态] 2026-02-13 20:38:00.418 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：22
+2026-02-13 20:38:38 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:38:38 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:38:38 - WARNING - 留言板初始化失败：module 'message_board' has no attribute 'init_db'
+2026-02-13 20:38:38 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:38:38 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:38:38 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:38:38 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:38:38 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:38:38 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:38:38 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:38:41 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:38:41 - INFO - [访问动态] 2026-02-13 20:38:41.711 | 127.0.0.1 | GET | /talk | 总访问量：23
+2026-02-13 20:38:41 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:38:41 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:38:41 - INFO - [访问动态] 2026-02-13 20:38:41.984 | 127.0.0.1 | GET | /api/talk/list | 总访问量：24
+2026-02-13 20:38:45 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:38:45 - INFO - [访问动态] 2026-02-13 20:38:45.344 | 127.0.0.1 | GET | /talk | 总访问量：25
+2026-02-13 20:38:45 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 20:38:45 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 20:38:45 - INFO - [访问动态] 2026-02-13 20:38:45.819 | 127.0.0.1 | GET | /api/talk/list | 总访问量：26
+2026-02-13 20:38:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:38:50 - INFO - [访问动态] 2026-02-13 20:38:50.208 | 127.0.0.1 | GET | /visit-count | 总访问量：26
+2026-02-13 20:39:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:39:00 - INFO - [访问动态] 2026-02-13 20:39:00.449 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：27
+2026-02-13 20:39:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:39:50 - INFO - [访问动态] 2026-02-13 20:39:50.187 | 127.0.0.1 | GET | /visit-count | 总访问量：27
+2026-02-13 20:40:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:40:00 - INFO - [访问动态] 2026-02-13 20:40:00.443 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：28
+2026-02-13 20:40:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:40:50 - INFO - [访问动态] 2026-02-13 20:40:50.196 | 127.0.0.1 | GET | /visit-count | 总访问量：28
+2026-02-13 20:41:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:41:00 - INFO - [访问动态] 2026-02-13 20:41:00.445 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：29
+2026-02-13 20:41:04 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:41:04 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:41:04 - WARNING - 留言板初始化失败：module 'message_board' has no attribute 'init_db'
+2026-02-13 20:41:04 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:41:04 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:41:04 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:41:04 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:41:04 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:41:04 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:41:04 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:41:07 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 404 -
+2026-02-13 20:41:07 - INFO - [访问动态] 2026-02-13 20:41:07.108 | 127.0.0.1 | GET | /talk | 总访问量：29
+2026-02-13 20:41:12 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 404 -
+2026-02-13 20:41:12 - INFO - [访问动态] 2026-02-13 20:41:12.848 | 127.0.0.1 | GET | /talk | 总访问量：30
+2026-02-13 20:41:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:41:50 - INFO - [访问动态] 2026-02-13 20:41:50.158 | 127.0.0.1 | GET | /visit-count | 总访问量：30
+2026-02-13 20:42:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:42:00 - INFO - [访问动态] 2026-02-13 20:42:00.414 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：31
+2026-02-13 20:42:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:42:50 - INFO - [访问动态] 2026-02-13 20:42:50.177 | 127.0.0.1 | GET | /visit-count | 总访问量：31
+2026-02-13 20:43:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:43:00 - INFO - [访问动态] 2026-02-13 20:43:00.447 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：32
+2026-02-13 20:43:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:43:50 - INFO - [访问动态] 2026-02-13 20:43:50.177 | 127.0.0.1 | GET | /visit-count | 总访问量：32
+2026-02-13 20:44:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:44:00 - INFO - [访问动态] 2026-02-13 20:44:00.419 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：33
+2026-02-13 20:44:36 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:44:36 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:44:36 - INFO - ✅ 留言板初始化成功
+2026-02-13 20:44:36 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:44:36 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:44:36 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:44:36 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:44:36 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:44:36 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:44:36 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:44:38 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:44:38 - INFO - [访问动态] 2026-02-13 20:44:38.839 | 127.0.0.1 | GET | /talk | 总访问量：34
+2026-02-13 20:44:39 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:44:39 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:44:39 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:44:39 - INFO - [访问动态] 2026-02-13 20:44:39.064 | 127.0.0.1 | GET | /api/talk/list | 总访问量：35
+2026-02-13 20:44:39 - INFO - [访问动态] 2026-02-13 20:44:39.066 | 127.0.0.1 | POST | /api/check-login | 总访问量：36
+2026-02-13 20:44:49 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 20:44:49 - INFO - [访问动态] 2026-02-13 20:44:49.081 | 127.0.0.1 | GET | /home/index.html | 总访问量：37
+2026-02-13 20:44:49 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:44:49 - INFO - [访问动态] 2026-02-13 20:44:49.266 | 127.0.0.1 | GET | /visit-count | 总访问量：37
+2026-02-13 20:44:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:44:50 - INFO - [访问动态] 2026-02-13 20:44:50.177 | 127.0.0.1 | GET | /visit-count | 总访问量：37
+2026-02-13 20:44:50 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:44:50 - INFO - [访问动态] 2026-02-13 20:44:50.793 | 127.0.0.1 | GET | /talk | 总访问量：38
+2026-02-13 20:44:51 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:44:51 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:44:51 - INFO - [访问动态] 2026-02-13 20:44:51.019 | 127.0.0.1 | POST | /api/check-login | 总访问量：39
+2026-02-13 20:44:51 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:44:51 - INFO - [访问动态] 2026-02-13 20:44:51.033 | 127.0.0.1 | GET | /api/talk/list | 总访问量：40
+2026-02-13 20:45:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:45:00 - INFO - [访问动态] 2026-02-13 20:45:00.441 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：41
+2026-02-13 20:45:05 - INFO - ✅ 留言板模块导入成功
+2026-02-13 20:45:05 - INFO - ✅ 访问计数模块导入成功
+2026-02-13 20:45:05 - INFO - ✅ 留言板初始化成功
+2026-02-13 20:45:05 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 20:45:05 - INFO - 
+🚀 服务启动成功！
+2026-02-13 20:45:05 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 20:45:05 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 20:45:05 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 20:45:05 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 20:45:05 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 20:45:09 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:45:09 - INFO - [访问动态] 2026-02-13 20:45:09.847 | 127.0.0.1 | GET | /visit-count | 总访问量：1333
+2026-02-13 20:45:11 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:45:11 - INFO - [访问动态] 2026-02-13 20:45:11.518 | 127.0.0.1 | GET | /talk | 总访问量：1334
+2026-02-13 20:45:11 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:45:11 - INFO - [访问动态] 2026-02-13 20:45:11.754 | 127.0.0.1 | GET | /api/talk/list | 总访问量：1335
+2026-02-13 20:45:11 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:11 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:45:11 - INFO - [访问动态] 2026-02-13 20:45:11.763 | 127.0.0.1 | POST | /api/check-login | 总访问量：1336
+2026-02-13 20:45:13 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 20:45:13 - INFO - [访问动态] 2026-02-13 20:45:13.334 | 127.0.0.1 | GET | /login/index.html | 总访问量：1337
+2026-02-13 20:45:22 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:22 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 20:45:22 - INFO - [访问动态] 2026-02-13 20:45:22.424 | 127.0.0.1 | POST | /api/login/password | 总访问量：1338
+2026-02-13 20:45:23 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:45:23 - INFO - [访问动态] 2026-02-13 20:45:23.563 | 127.0.0.1 | GET | /talk | 总访问量：1339
+2026-02-13 20:45:23 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:45:23 - INFO - [访问动态] 2026-02-13 20:45:23.777 | 127.0.0.1 | GET | /api/talk/list | 总访问量：1340
+2026-02-13 20:45:23 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:23 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:45:23 - INFO - [访问动态] 2026-02-13 20:45:23.800 | 127.0.0.1 | POST | /api/check-login | 总访问量：1341
+2026-02-13 20:45:33 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 20:45:33 - INFO - [访问动态] 2026-02-13 20:45:33.217 | 127.0.0.1 | GET | /login/register.html | 总访问量：1342
+2026-02-13 20:45:41 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:41 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 20:45:41 - INFO - [访问动态] 2026-02-13 20:45:41.889 | 127.0.0.1 | POST | /api/login/password | 总访问量：1343
+2026-02-13 20:45:43 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:45:43 - INFO - [访问动态] 2026-02-13 20:45:43.037 | 127.0.0.1 | GET | /talk | 总访问量：1344
+2026-02-13 20:45:43 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:45:43 - INFO - [访问动态] 2026-02-13 20:45:43.259 | 127.0.0.1 | GET | /api/talk/list | 总访问量：1345
+2026-02-13 20:45:43 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:43 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:45:43 - INFO - [访问动态] 2026-02-13 20:45:43.282 | 127.0.0.1 | POST | /api/check-login | 总访问量：1346
+2026-02-13 20:45:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:45:50 - INFO - [访问动态] 2026-02-13 20:45:50.175 | 127.0.0.1 | GET | /visit-count | 总访问量：1346
+2026-02-13 20:45:50 - INFO - 用户hyper(1706754028@qq.com)登录成功
+2026-02-13 20:45:50 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 20:45:50 - INFO - [访问动态] 2026-02-13 20:45:50.311 | 127.0.0.1 | POST | /api/login/password | 总访问量：1347
+2026-02-13 20:45:51 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 20:45:51 - INFO - [访问动态] 2026-02-13 20:45:51.446 | 127.0.0.1 | GET | /talk | 总访问量：1348
+2026-02-13 20:45:51 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 20:45:51 - INFO - [访问动态] 2026-02-13 20:45:51.802 | 127.0.0.1 | GET | /api/talk/list | 总访问量：1349
+2026-02-13 20:45:51 - ERROR - 校验登录状态异常：cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 387, in check_login_status_api
+    from src.auth import check_login_status, get_current_user
+  File "E:\.program\.web\.personal_vlog\src\auth.py", line 20, in <module>
+    from src.qqmail import send_verification_code
+ImportError: cannot import name 'send_verification_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 20:45:51 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 20:45:51 - INFO - [访问动态] 2026-02-13 20:45:51.815 | 127.0.0.1 | POST | /api/check-login | 总访问量：1350
+2026-02-13 20:46:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:46:00 - INFO - [访问动态] 2026-02-13 20:46:00.450 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1351
+2026-02-13 20:46:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:46:50 - INFO - [访问动态] 2026-02-13 20:46:50.167 | 127.0.0.1 | GET | /visit-count | 总访问量：1351
+2026-02-13 20:47:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:47:00 - INFO - [访问动态] 2026-02-13 20:47:00.439 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1352
+2026-02-13 20:47:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:47:50 - INFO - [访问动态] 2026-02-13 20:47:50.172 | 127.0.0.1 | GET | /visit-count | 总访问量：1352
+2026-02-13 20:48:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:48:00 - INFO - [访问动态] 2026-02-13 20:48:00.439 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1353
+2026-02-13 20:48:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:48:50 - INFO - [访问动态] 2026-02-13 20:48:50.161 | 127.0.0.1 | GET | /visit-count | 总访问量：1353
+2026-02-13 20:49:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:49:00 - INFO - [访问动态] 2026-02-13 20:49:00.423 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1354
+2026-02-13 20:49:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:49:50 - INFO - [访问动态] 2026-02-13 20:49:50.189 | 127.0.0.1 | GET | /visit-count | 总访问量：1354
+2026-02-13 20:50:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:50:00 - INFO - [访问动态] 2026-02-13 20:50:00.455 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1355
+2026-02-13 20:50:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:50:50 - INFO - [访问动态] 2026-02-13 20:50:50.192 | 127.0.0.1 | GET | /visit-count | 总访问量：1355
+2026-02-13 20:51:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:51:00 - INFO - [访问动态] 2026-02-13 20:51:00.453 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1356
+2026-02-13 20:51:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:51:50 - INFO - [访问动态] 2026-02-13 20:51:50.186 | 127.0.0.1 | GET | /visit-count | 总访问量：1356
+2026-02-13 20:52:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:52:00 - INFO - [访问动态] 2026-02-13 20:52:00.440 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1357
+2026-02-13 20:52:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:52:50 - INFO - [访问动态] 2026-02-13 20:52:50.188 | 127.0.0.1 | GET | /visit-count | 总访问量：1357
+2026-02-13 20:53:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:53:00 - INFO - [访问动态] 2026-02-13 20:53:00.452 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1358
+2026-02-13 20:53:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:53:50 - INFO - [访问动态] 2026-02-13 20:53:50.184 | 127.0.0.1 | GET | /visit-count | 总访问量：1358
+2026-02-13 20:54:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:54:00 - INFO - [访问动态] 2026-02-13 20:54:00.454 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1359
+2026-02-13 20:54:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:54:50 - INFO - [访问动态] 2026-02-13 20:54:50.184 | 127.0.0.1 | GET | /visit-count | 总访问量：1359
+2026-02-13 20:55:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:55:00 - INFO - [访问动态] 2026-02-13 20:55:00.434 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1360
+2026-02-13 20:55:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:55:50 - INFO - [访问动态] 2026-02-13 20:55:50.182 | 127.0.0.1 | GET | /visit-count | 总访问量：1360
+2026-02-13 20:56:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:56:00 - INFO - [访问动态] 2026-02-13 20:56:00.452 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1361
+2026-02-13 20:56:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:56:50 - INFO - [访问动态] 2026-02-13 20:56:50.199 | 127.0.0.1 | GET | /visit-count | 总访问量：1361
+2026-02-13 20:57:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:57:00 - INFO - [访问动态] 2026-02-13 20:57:00.448 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1362
+2026-02-13 20:57:08 - INFO - [访问日志] 127.0.0.1 - "GET / HTTP/1.1" 301 -
+2026-02-13 20:57:08 - INFO - [访问动态] 2026-02-13 20:57:08.881 | 127.0.0.1 | GET | / | 总访问量：1363
+2026-02-13 20:57:10 - INFO - [访问日志] 127.0.0.1 - "GET / HTTP/1.1" 301 -
+2026-02-13 20:57:10 - INFO - [访问动态] 2026-02-13 20:57:10.868 | 127.0.0.1 | GET | / | 总访问量：1364
+2026-02-13 20:57:12 - INFO - [访问日志] 127.0.0.1 - "GET /api/v1/guest/comm/config HTTP/1.1" 404 -
+2026-02-13 20:57:12 - INFO - [访问动态] 2026-02-13 20:57:12.551 | 127.0.0.1 | GET | /api/v1/guest/comm/config | 总访问量：1365
+2026-02-13 20:57:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:57:50 - INFO - [访问动态] 2026-02-13 20:57:50.181 | 127.0.0.1 | GET | /visit-count | 总访问量：1365
+2026-02-13 20:58:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:58:00 - INFO - [访问动态] 2026-02-13 20:58:00.435 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1366
+2026-02-13 20:58:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:58:50 - INFO - [访问动态] 2026-02-13 20:58:50.192 | 127.0.0.1 | GET | /visit-count | 总访问量：1366
+2026-02-13 20:59:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 20:59:00 - INFO - [访问动态] 2026-02-13 20:59:00.450 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1367
+2026-02-13 20:59:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 20:59:50 - INFO - [访问动态] 2026-02-13 20:59:50.195 | 127.0.0.1 | GET | /visit-count | 总访问量：1367
+2026-02-13 21:00:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:00:00 - INFO - [访问动态] 2026-02-13 21:00:00.449 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1368
+2026-02-13 21:00:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:00:50 - INFO - [访问动态] 2026-02-13 21:00:50.196 | 127.0.0.1 | GET | /visit-count | 总访问量：1368
+2026-02-13 21:01:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:01:00 - INFO - [访问动态] 2026-02-13 21:01:00.465 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1369
+2026-02-13 21:01:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:01:50 - INFO - [访问动态] 2026-02-13 21:01:50.181 | 127.0.0.1 | GET | /visit-count | 总访问量：1369
+2026-02-13 21:02:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:02:00 - INFO - [访问动态] 2026-02-13 21:02:00.448 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1370
+2026-02-13 21:02:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:02:50 - INFO - [访问动态] 2026-02-13 21:02:50.194 | 127.0.0.1 | GET | /visit-count | 总访问量：1370
+2026-02-13 21:03:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:03:00 - INFO - [访问动态] 2026-02-13 21:03:00.461 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1371
+2026-02-13 21:03:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:03:50 - INFO - [访问动态] 2026-02-13 21:03:50.191 | 127.0.0.1 | GET | /visit-count | 总访问量：1371
+2026-02-13 21:04:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:04:00 - INFO - [访问动态] 2026-02-13 21:04:00.446 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1372
+2026-02-13 21:04:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:04:50 - INFO - [访问动态] 2026-02-13 21:04:50.180 | 127.0.0.1 | GET | /visit-count | 总访问量：1372
+2026-02-13 21:05:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:05:00 - INFO - [访问动态] 2026-02-13 21:05:00.424 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：1373
+2026-02-13 21:05:28 - INFO - ✅ 留言板模块导入成功
+2026-02-13 21:05:28 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 21:05:28 - INFO - 
+🚀 服务启动成功！
+2026-02-13 21:05:28 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 21:05:28 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 21:05:28 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 21:05:28 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 21:05:28 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 21:05:33 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:05:33 - INFO - [访问动态] 2026-02-13 21:05:33.601 | 127.0.0.1 | GET | /talk | 总访问量：1
+2026-02-13 21:05:33 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:05:33 - INFO - [访问动态] 2026-02-13 21:05:33.855 | 127.0.0.1 | GET | /api/talk/list | 总访问量：2
+2026-02-13 21:05:33 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:05:33 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:05:33 - INFO - [访问动态] 2026-02-13 21:05:33.867 | 127.0.0.1 | POST | /api/check-login | 总访问量：3
+2026-02-13 21:05:40 - INFO - [访问日志] 127.0.0.1 - "POST /api/logout HTTP/1.1" 200 -
+2026-02-13 21:05:40 - INFO - [访问动态] 2026-02-13 21:05:40.437 | 127.0.0.1 | POST | /api/logout | 总访问量：4
+2026-02-13 21:05:41 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:05:41 - INFO - [访问动态] 2026-02-13 21:05:41.597 | 127.0.0.1 | GET | /talk | 总访问量：5
+2026-02-13 21:05:41 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:05:41 - INFO - [访问动态] 2026-02-13 21:05:41.885 | 127.0.0.1 | GET | /api/talk/list | 总访问量：6
+2026-02-13 21:05:41 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:05:41 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:05:41 - INFO - [访问动态] 2026-02-13 21:05:41.892 | 127.0.0.1 | POST | /api/check-login | 总访问量：7
+2026-02-13 21:05:45 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:05:46 - INFO - [访问动态] 2026-02-13 21:05:46.008 | 127.0.0.1 | GET | /visit-count | 总访问量：7
+2026-02-13 21:05:47 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:05:47 - INFO - [访问动态] 2026-02-13 21:05:47.620 | 127.0.0.1 | GET | /talk | 总访问量：8
+2026-02-13 21:05:47 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:05:47 - INFO - [访问动态] 2026-02-13 21:05:47.848 | 127.0.0.1 | GET | /api/talk/list | 总访问量：9
+2026-02-13 21:05:47 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:05:47 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:05:47 - INFO - [访问动态] 2026-02-13 21:05:47.857 | 127.0.0.1 | POST | /api/check-login | 总访问量：10
+2026-02-13 21:05:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:05:50 - INFO - [访问动态] 2026-02-13 21:05:50.189 | 127.0.0.1 | GET | /visit-count | 总访问量：10
+2026-02-13 21:06:00 - INFO - [访问日志] 127.0.0.1 - "POST /api/logout HTTP/1.1" 200 -
+2026-02-13 21:06:00 - INFO - [访问动态] 2026-02-13 21:06:00.364 | 127.0.0.1 | POST | /api/logout | 总访问量：11
+2026-02-13 21:06:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:06:00 - INFO - [访问动态] 2026-02-13 21:06:00.431 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：12
+2026-02-13 21:06:01 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:06:01 - INFO - [访问动态] 2026-02-13 21:06:01.434 | 127.0.0.1 | GET | /talk | 总访问量：13
+2026-02-13 21:06:01 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:06:01 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:06:01 - INFO - [访问动态] 2026-02-13 21:06:01.651 | 127.0.0.1 | POST | /api/check-login | 总访问量：14
+2026-02-13 21:06:01 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:06:01 - INFO - [访问动态] 2026-02-13 21:06:01.943 | 127.0.0.1 | GET | /api/talk/list | 总访问量：15
+2026-02-13 21:06:09 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:06:09 - INFO - [访问动态] 2026-02-13 21:06:09.506 | 127.0.0.1 | GET | /talk | 总访问量：16
+2026-02-13 21:06:09 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:06:09 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:06:09 - INFO - [访问动态] 2026-02-13 21:06:09.738 | 127.0.0.1 | POST | /api/check-login | 总访问量：17
+2026-02-13 21:06:09 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:06:09 - INFO - [访问动态] 2026-02-13 21:06:09.745 | 127.0.0.1 | GET | /api/talk/list | 总访问量：18
+2026-02-13 21:06:23 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:06:23 - INFO - [访问动态] 2026-02-13 21:06:23.804 | 127.0.0.1 | GET | /talk | 总访问量：19
+2026-02-13 21:06:24 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:06:24 - INFO - [访问动态] 2026-02-13 21:06:24.025 | 127.0.0.1 | GET | /api/talk/list | 总访问量：20
+2026-02-13 21:06:24 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:06:24 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:06:24 - INFO - [访问动态] 2026-02-13 21:06:24.338 | 127.0.0.1 | POST | /api/check-login | 总访问量：21
+2026-02-13 21:06:28 - ERROR - 获取当前用户失败：list indices must be integers or slices, not str
+2026-02-13 21:06:28 - INFO - 用户匿名用户添加留言：1...
+2026-02-13 21:06:28 - INFO - [访问日志] 127.0.0.1 - "POST /api/talk/add HTTP/1.1" 200 -
+2026-02-13 21:06:28 - INFO - [访问动态] 2026-02-13 21:06:28.141 | 127.0.0.1 | POST | /api/talk/add | 总访问量：22
+2026-02-13 21:06:29 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:06:29 - INFO - [访问动态] 2026-02-13 21:06:29.312 | 127.0.0.1 | GET | /api/talk/list | 总访问量：23
+2026-02-13 21:06:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:06:50 - INFO - [访问动态] 2026-02-13 21:06:50.173 | 127.0.0.1 | GET | /visit-count | 总访问量：23
+2026-02-13 21:07:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:07:00 - INFO - [访问动态] 2026-02-13 21:07:00.427 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：24
+2026-02-13 21:07:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:07:50 - INFO - [访问动态] 2026-02-13 21:07:50.168 | 127.0.0.1 | GET | /visit-count | 总访问量：24
+2026-02-13 21:08:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:08:00 - INFO - [访问动态] 2026-02-13 21:08:00.417 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：25
+2026-02-13 21:08:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:08:50 - INFO - [访问动态] 2026-02-13 21:08:50.176 | 127.0.0.1 | GET | /visit-count | 总访问量：25
+2026-02-13 21:09:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:09:00 - INFO - [访问动态] 2026-02-13 21:09:00.439 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：26
+2026-02-13 21:09:24 - INFO - [访问日志] 127.0.0.1 - "GET / HTTP/1.1" 301 -
+2026-02-13 21:09:24 - INFO - [访问动态] 2026-02-13 21:09:24.976 | 127.0.0.1 | GET | / | 总访问量：27
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 200 -
+2026-02-13 21:09:25 - INFO - [访问动态] 2026-02-13 21:09:25.182 | 127.0.0.1 | GET | /home/ | 总访问量：28
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/2025.6.16-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%9D%A2%E8%AF%95%E8%AE%B0-3days/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%AC%A2%E8%BF%8E%E6%82%A8.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:25 - INFO - [访问动态] 2026-02-13 21:09:25.361 | 127.0.0.1 | GET | /pages/travel/2025.6.16-%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%9D%A2%E8%AF%95%E8%AE%B0-3days/%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%AC%A2%E8%BF%8E%E6%82%A8.jpg | 总访问量：28
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/2025.7.24-%E7%99%BE%E4%B8%88%E6%BC%88/%E5%9C%A8%E7%99%BE%E4%B8%88%E4%B8%80%E6%BC%88%E7%9A%84%E5%90%88%E5%BD%B1.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:25 - INFO - [访问动态] 2026-02-13 21:09:25.366 | 127.0.0.1 | GET | /pages/travel/2025.7.24-%E7%99%BE%E4%B8%88%E6%BC%88/%E5%9C%A8%E7%99%BE%E4%B8%88%E4%B8%80%E6%BC%88%E7%9A%84%E5%90%88%E5%BD%B1.jpg | 总访问量：28
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/2025.6.15-%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%BC%BA%E5%9F%BA%E8%AE%B0-2days/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A62.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/2025.8.17-%E9%9B%81%E8%8D%A1%E5%B1%B1/%E5%B1%B1%E6%B4%9E%E9%87%8C%E7%9A%84%E5%9C%B0%E7%93%9C.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:25 - INFO - [访问动态] 2026-02-13 21:09:25.754 | 127.0.0.1 | GET | /pages/travel/2025.6.15-%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%BC%BA%E5%9F%BA%E8%AE%B0-2days/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A62.jpg | 总访问量：28
+2026-02-13 21:09:25 - INFO - [访问动态] 2026-02-13 21:09:25.755 | 127.0.0.1 | GET | /pages/travel/2025.8.17-%E9%9B%81%E8%8D%A1%E5%B1%B1/%E5%B1%B1%E6%B4%9E%E9%87%8C%E7%9A%84%E5%9C%B0%E7%93%9C.jpg | 总访问量：28
+2026-02-13 21:09:25 - INFO - [访问日志] 127.0.0.1 - "GET /pages/diy/RTX2060%E8%A3%B8%E6%9C%BA.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:26 - INFO - [访问日志] 127.0.0.1 - "GET /pages/travel/2024.7.28-%E4%B8%8A%E6%B5%B7%E6%97%85%E6%B8%B8-3days/%E5%A4%96%E6%BB%A9.jpg HTTP/1.1" 200 -
+2026-02-13 21:09:26 - INFO - [访问动态] 2026-02-13 21:09:26.597 | 127.0.0.1 | GET | /pages/travel/2024.7.28-%E4%B8%8A%E6%B5%B7%E6%97%85%E6%B8%B8-3days/%E5%A4%96%E6%BB%A9.jpg | 总访问量：28
+2026-02-13 21:09:26 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:09:26 - INFO - [访问动态] 2026-02-13 21:09:26.853 | 127.0.0.1 | GET | /visit-count | 总访问量：28
+2026-02-13 21:09:26 - INFO - [访问日志] 127.0.0.1 - "GET /home/img/bg.png HTTP/1.1" 200 -
+2026-02-13 21:09:26 - INFO - [访问动态] 2026-02-13 21:09:26.856 | 127.0.0.1 | GET | /home/img/bg.png | 总访问量：28
+2026-02-13 21:09:39 - INFO - ✅ 留言板模块导入成功
+2026-02-13 21:09:39 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 21:09:39 - INFO - 
+🚀 服务启动成功！
+2026-02-13 21:09:39 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 21:09:39 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 21:09:39 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 21:09:39 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 21:09:39 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 21:09:39 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 21:09:39 - INFO - [访问日志] 127.0.0.1 - "GET /favicon.ico HTTP/1.1" 404 -
+2026-02-13 21:09:39 - INFO - [访问动态] 2026-02-13 21:09:39.507 | 127.0.0.1 | GET | /favicon.ico | 总访问量：28
+2026-02-13 21:09:41 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:09:41 - INFO - [访问动态] 2026-02-13 21:09:41.336 | 127.0.0.1 | GET | /talk | 总访问量：29
+2026-02-13 21:09:41 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:09:41 - INFO - [访问动态] 2026-02-13 21:09:41.562 | 127.0.0.1 | GET | /api/talk/list | 总访问量：30
+2026-02-13 21:09:41 - ERROR - 校验登录状态异常：name 'check_login_status' is not defined
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 402, in check_login_status_api
+    is_login = check_login_status(session_id)
+NameError: name 'check_login_status' is not defined
+2026-02-13 21:09:41 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:09:41 - INFO - [访问动态] 2026-02-13 21:09:41.564 | 127.0.0.1 | POST | /api/check-login | 总访问量：31
+2026-02-13 21:09:43 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 21:09:43 - INFO - [访问动态] 2026-02-13 21:09:43.696 | 127.0.0.1 | GET | /login/index.html | 总访问量：32
+2026-02-13 21:09:45 - ERROR - 登录接口异常：name 'create_session' is not defined
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 282, in login
+    session_id = create_session(email)
+NameError: name 'create_session' is not defined
+2026-02-13 21:09:45 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 21:09:45 - INFO - [访问动态] 2026-02-13 21:09:45.974 | 127.0.0.1 | POST | /api/login/password | 总访问量：33
+2026-02-13 21:09:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:09:50 - INFO - [访问动态] 2026-02-13 21:09:50.187 | 127.0.0.1 | GET | /visit-count | 总访问量：33
+2026-02-13 21:10:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:10:00 - INFO - [访问动态] 2026-02-13 21:10:00.456 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：34
+2026-02-13 21:10:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:10:50 - INFO - [访问动态] 2026-02-13 21:10:50.167 | 127.0.0.1 | GET | /visit-count | 总访问量：34
+2026-02-13 21:11:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:11:00 - INFO - [访问动态] 2026-02-13 21:11:00.437 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：35
+2026-02-13 21:11:49 - INFO - ✅ 留言板模块导入成功
+2026-02-13 21:11:49 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 21:11:49 - INFO - 
+🚀 服务启动成功！
+2026-02-13 21:11:49 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 21:11:49 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 21:11:49 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 21:11:49 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 21:11:49 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 21:11:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:11:50 - INFO - [访问动态] 2026-02-13 21:11:50.179 | 127.0.0.1 | GET | /visit-count | 总访问量：35
+2026-02-13 21:11:52 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 21:11:52 - INFO - [访问动态] 2026-02-13 21:11:52.434 | 127.0.0.1 | GET | /login/index.html | 总访问量：36
+2026-02-13 21:11:54 - INFO - 创建会话：16bd917c-8882-4d97-9dfd-520515b041bb（用户：1706754028@qq.com）
+2026-02-13 21:11:54 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：16bd917c...
+2026-02-13 21:11:54 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 21:11:54 - INFO - [访问动态] 2026-02-13 21:11:54.977 | 127.0.0.1 | POST | /api/login/password | 总访问量：37
+2026-02-13 21:11:56 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:11:56 - INFO - [访问动态] 2026-02-13 21:11:56.199 | 127.0.0.1 | GET | /talk | 总访问量：38
+2026-02-13 21:11:56 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:11:56 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:11:56 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:11:56 - INFO - [访问动态] 2026-02-13 21:11:56.416 | 127.0.0.1 | GET | /api/talk/list | 总访问量：39
+2026-02-13 21:11:56 - INFO - [访问动态] 2026-02-13 21:11:56.416 | 127.0.0.1 | POST | /api/check-login | 总访问量：40
+2026-02-13 21:12:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:12:00 - INFO - [访问动态] 2026-02-13 21:12:00.439 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：41
+2026-02-13 21:12:06 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 21:12:06 - INFO - [访问动态] 2026-02-13 21:12:06.195 | 127.0.0.1 | GET | /login/index.html | 总访问量：42
+2026-02-13 21:12:07 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:12:07 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:12:07 - INFO - [访问动态] 2026-02-13 21:12:07.495 | 127.0.0.1 | POST | /api/check-login | 总访问量：43
+2026-02-13 21:12:08 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:12:08 - INFO - [访问动态] 2026-02-13 21:12:08.030 | 127.0.0.1 | GET | /talk | 总访问量：44
+2026-02-13 21:12:08 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:12:08 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:12:08 - INFO - [访问动态] 2026-02-13 21:12:08.239 | 127.0.0.1 | POST | /api/check-login | 总访问量：45
+2026-02-13 21:12:08 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:12:08 - INFO - [访问动态] 2026-02-13 21:12:08.242 | 127.0.0.1 | GET | /api/talk/list | 总访问量：46
+2026-02-13 21:12:09 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:12:09 - INFO - [访问动态] 2026-02-13 21:12:09.768 | 127.0.0.1 | GET | /talk | 总访问量：47
+2026-02-13 21:12:09 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:12:09 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:12:09 - INFO - [访问动态] 2026-02-13 21:12:09.983 | 127.0.0.1 | GET | /api/talk/list | 总访问量：48
+2026-02-13 21:12:09 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:12:09 - INFO - [访问动态] 2026-02-13 21:12:09.987 | 127.0.0.1 | POST | /api/check-login | 总访问量：49
+2026-02-13 21:12:10 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 21:12:10 - INFO - [访问动态] 2026-02-13 21:12:10.556 | 127.0.0.1 | GET | /login/index.html | 总访问量：50
+2026-02-13 21:12:12 - INFO - 创建会话：c87d5b25-e034-4149-9424-80cad1409d09（用户：1706754028@qq.com）
+2026-02-13 21:12:12 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：c87d5b25...
+2026-02-13 21:12:12 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 21:12:12 - INFO - [访问动态] 2026-02-13 21:12:12.863 | 127.0.0.1 | POST | /api/login/password | 总访问量：51
+2026-02-13 21:12:14 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:12:14 - INFO - [访问动态] 2026-02-13 21:12:14.048 | 127.0.0.1 | GET | /talk | 总访问量：52
+2026-02-13 21:12:14 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:12:14 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:12:14 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:12:14 - INFO - [访问动态] 2026-02-13 21:12:14.319 | 127.0.0.1 | POST | /api/check-login | 总访问量：53
+2026-02-13 21:12:14 - INFO - [访问动态] 2026-02-13 21:12:14.324 | 127.0.0.1 | GET | /api/talk/list | 总访问量：54
+2026-02-13 21:12:19 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 21:12:19 - INFO - [访问动态] 2026-02-13 21:12:19.823 | 127.0.0.1 | GET | /login/index.html | 总访问量：55
+2026-02-13 21:12:22 - INFO - 创建会话：f71d0c0d-9625-4c8e-a765-686d896cae29（用户：1706754028@qq.com）
+2026-02-13 21:12:22 - INFO - 用户hyper(1706754028@qq.com)登录成功，会话ID：f71d0c0d...
+2026-02-13 21:12:22 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 21:12:22 - INFO - [访问动态] 2026-02-13 21:12:22.159 | 127.0.0.1 | POST | /api/login/password | 总访问量：56
+2026-02-13 21:12:23 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:12:23 - INFO - [访问动态] 2026-02-13 21:12:23.442 | 127.0.0.1 | GET | /talk | 总访问量：57
+2026-02-13 21:12:23 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:12:23 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:12:23 - INFO - [访问动态] 2026-02-13 21:12:23.647 | 127.0.0.1 | POST | /api/check-login | 总访问量：58
+2026-02-13 21:12:23 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:12:23 - INFO - [访问动态] 2026-02-13 21:12:23.651 | 127.0.0.1 | GET | /api/talk/list | 总访问量：59
+2026-02-13 21:12:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:12:50 - INFO - [访问动态] 2026-02-13 21:12:50.162 | 127.0.0.1 | GET | /visit-count | 总访问量：59
+2026-02-13 21:13:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:13:00 - INFO - [访问动态] 2026-02-13 21:13:00.431 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：60
+2026-02-13 21:13:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:13:50 - INFO - [访问动态] 2026-02-13 21:13:50.180 | 127.0.0.1 | GET | /visit-count | 总访问量：60
+2026-02-13 21:14:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:14:00 - INFO - [访问动态] 2026-02-13 21:14:00.441 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：61
+2026-02-13 21:14:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:14:50 - INFO - [访问动态] 2026-02-13 21:14:50.186 | 127.0.0.1 | GET | /visit-count | 总访问量：61
+2026-02-13 21:15:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:15:00 - INFO - [访问动态] 2026-02-13 21:15:00.448 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：62
+2026-02-13 21:15:15 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 21:15:15 - INFO - [访问动态] 2026-02-13 21:15:15.518 | 127.0.0.1 | GET | /login/index.html | 总访问量：63
+2026-02-13 21:15:19 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 21:15:19 - INFO - [访问日志] 127.0.0.1 - "GET /register HTTP/1.1" 404 -
+2026-02-13 21:15:19 - INFO - [访问动态] 2026-02-13 21:15:19.021 | 127.0.0.1 | GET | /register | 总访问量：64
+2026-02-13 21:15:22 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 21:15:22 - INFO - [访问日志] 127.0.0.1 - "GET /register HTTP/1.1" 404 -
+2026-02-13 21:15:22 - INFO - [访问动态] 2026-02-13 21:15:22.887 | 127.0.0.1 | GET | /register | 总访问量：65
+2026-02-13 21:15:24 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 21:15:24 - INFO - [访问日志] 127.0.0.1 - "GET /register HTTP/1.1" 404 -
+2026-02-13 21:15:24 - INFO - [访问动态] 2026-02-13 21:15:24.903 | 127.0.0.1 | GET | /register | 总访问量：66
+2026-02-13 21:15:26 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:15:26 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:15:26 - INFO - [访问动态] 2026-02-13 21:15:26.179 | 127.0.0.1 | POST | /api/check-login | 总访问量：67
+2026-02-13 21:15:28 - INFO - [访问日志] 127.0.0.1 - code 404, message File not found
+2026-02-13 21:15:28 - INFO - [访问日志] 127.0.0.1 - "GET /register HTTP/1.1" 404 -
+2026-02-13 21:15:28 - INFO - [访问动态] 2026-02-13 21:15:28.029 | 127.0.0.1 | GET | /register | 总访问量：68
+2026-02-13 21:15:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:15:50 - INFO - [访问动态] 2026-02-13 21:15:50.196 | 127.0.0.1 | GET | /visit-count | 总访问量：68
+2026-02-13 21:16:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:16:00 - INFO - [访问动态] 2026-02-13 21:16:00.452 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：69
+2026-02-13 21:16:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:16:50 - INFO - [访问动态] 2026-02-13 21:16:50.167 | 127.0.0.1 | GET | /visit-count | 总访问量：69
+2026-02-13 21:17:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:17:00 - INFO - [访问动态] 2026-02-13 21:17:00.433 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：70
+2026-02-13 21:17:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:17:50 - INFO - [访问动态] 2026-02-13 21:17:50.198 | 127.0.0.1 | GET | /visit-count | 总访问量：70
+2026-02-13 21:18:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:18:00 - INFO - [访问动态] 2026-02-13 21:18:00.454 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：71
+2026-02-13 21:18:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:18:50 - INFO - [访问动态] 2026-02-13 21:18:50.186 | 127.0.0.1 | GET | /visit-count | 总访问量：71
+2026-02-13 21:19:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:19:00 - INFO - [访问动态] 2026-02-13 21:19:00.463 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：72
+2026-02-13 21:19:06 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:19:06 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:19:06 - INFO - [访问动态] 2026-02-13 21:19:06.187 | 127.0.0.1 | POST | /api/check-login | 总访问量：73
+2026-02-13 21:19:06 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:19:06 - INFO - [访问动态] 2026-02-13 21:19:06.984 | 127.0.0.1 | GET | /talk | 总访问量：74
+2026-02-13 21:19:07 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:19:07 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:19:07 - INFO - [访问动态] 2026-02-13 21:19:07.214 | 127.0.0.1 | POST | /api/check-login | 总访问量：75
+2026-02-13 21:19:07 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:19:07 - INFO - [访问动态] 2026-02-13 21:19:07.224 | 127.0.0.1 | GET | /api/talk/list | 总访问量：76
+2026-02-13 21:19:07 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 21:19:07 - INFO - [访问动态] 2026-02-13 21:19:07.778 | 127.0.0.1 | GET | /login/index.html | 总访问量：77
+2026-02-13 21:19:10 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:19:10 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:19:10 - INFO - [访问动态] 2026-02-13 21:19:10.073 | 127.0.0.1 | POST | /api/check-login | 总访问量：78
+2026-02-13 21:19:23 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 21:19:23 - INFO - [访问动态] 2026-02-13 21:19:23.094 | 127.0.0.1 | GET | /login/index.html | 总访问量：79
+2026-02-13 21:19:24 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:19:24 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:19:24 - INFO - [访问动态] 2026-02-13 21:19:24.750 | 127.0.0.1 | POST | /api/check-login | 总访问量：80
+2026-02-13 21:19:50 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:19:50 - INFO - [访问动态] 2026-02-13 21:19:50.190 | 127.0.0.1 | GET | /visit-count | 总访问量：80
+2026-02-13 21:19:53 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:19:53 - INFO - [访问动态] 2026-02-13 21:19:53.411 | 127.0.0.1 | GET | /visit-count | 总访问量：80
+2026-02-13 21:19:55 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 200 -
+2026-02-13 21:19:55 - INFO - [访问动态] 2026-02-13 21:19:55.090 | 127.0.0.1 | GET | /home/ | 总访问量：81
+2026-02-13 21:19:55 - INFO - [访问日志] 127.0.0.1 - "GET /home/img/bg.png HTTP/1.1" 200 -
+2026-02-13 21:19:55 - INFO - [访问动态] 2026-02-13 21:19:55.136 | 127.0.0.1 | GET | /home/img/bg.png | 总访问量：81
+2026-02-13 21:19:55 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 21:19:55 - INFO - [访问动态] 2026-02-13 21:19:55.333 | 127.0.0.1 | GET | /visit-count | 总访问量：81
+2026-02-13 21:19:56 - INFO - [访问日志] 127.0.0.1 - "GET /pages/diy/RTX2060%E8%A3%B8%E6%9C%BA.jpg HTTP/1.1" 304 -
+2026-02-13 21:19:56 - INFO - [访问动态] 2026-02-13 21:19:56.799 | 127.0.0.1 | GET | /pages/diy/RTX2060%E8%A3%B8%E6%9C%BA.jpg | 总访问量：81
+2026-02-13 21:19:57 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 21:19:57 - INFO - [访问动态] 2026-02-13 21:19:57.558 | 127.0.0.1 | GET | /talk | 总访问量：82
+2026-02-13 21:19:57 - WARNING - 未获取到session_id，未登录
+2026-02-13 21:19:57 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 21:19:57 - INFO - [访问动态] 2026-02-13 21:19:57.892 | 127.0.0.1 | POST | /api/check-login | 总访问量：83
+2026-02-13 21:19:57 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 21:19:57 - INFO - [访问动态] 2026-02-13 21:19:57.930 | 127.0.0.1 | GET | /api/talk/list | 总访问量：84
+2026-02-13 21:19:58 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 21:19:58 - INFO - [访问动态] 2026-02-13 21:19:58.957 | 127.0.0.1 | GET | /login/index.html | 总访问量：85
+2026-02-13 21:20:09 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:20:09 - INFO - [访问动态] 2026-02-13 21:20:09.047 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：86
+2026-02-13 21:20:09 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 21:20:09 - INFO - [访问动态] 2026-02-13 21:20:09.232 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：87
+2026-02-13 22:14:48 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 22:14:48 - INFO - [访问动态] 2026-02-13 22:14:48.504 | 127.0.0.1 | GET | /talk | 总访问量：88
+2026-02-13 22:14:48 - WARNING - 未获取到session_id，未登录
+2026-02-13 22:14:48 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:14:48 - INFO - [访问动态] 2026-02-13 22:14:48.567 | 127.0.0.1 | POST | /api/check-login | 总访问量：89
+2026-02-13 22:14:48 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 22:14:48 - INFO - [访问动态] 2026-02-13 22:14:48.738 | 127.0.0.1 | GET | /api/talk/list | 总访问量：90
+2026-02-13 22:14:49 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 22:14:49 - INFO - [访问动态] 2026-02-13 22:14:49.923 | 127.0.0.1 | GET | /login/index.html | 总访问量：91
+2026-02-13 22:14:59 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:14:59 - INFO - [访问动态] 2026-02-13 22:14:59.973 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：92
+2026-02-13 22:15:00 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:15:00 - INFO - [访问动态] 2026-02-13 22:15:00.171 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：93
+2026-02-13 22:15:12 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:15:12 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:15:12 - INFO - [访问动态] 2026-02-13 22:15:12.407 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：94
+2026-02-13 22:15:12 - INFO - [访问动态] 2026-02-13 22:15:12.408 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：95
+2026-02-13 22:19:08 - INFO - ✅ auth模块导入成功
+2026-02-13 22:19:08 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:19:08 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:19:08 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:19:08 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:19:08 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:19:08 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:19:08 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:19:08 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:19:14 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:19:14 - INFO - [访问动态] 2026-02-13 22:19:14.476 | 127.0.0.1 | GET | /visit-count | 总访问量：95
+2026-02-13 22:19:15 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 22:19:15 - INFO - [访问动态] 2026-02-13 22:19:15.407 | 127.0.0.1 | GET | /talk | 总访问量：96
+2026-02-13 22:19:15 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:19:15 - INFO - [访问动态] 2026-02-13 22:19:15.431 | 127.0.0.1 | POST | /api/check-login | 总访问量：97
+2026-02-13 22:19:15 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 22:19:15 - INFO - [访问动态] 2026-02-13 22:19:15.754 | 127.0.0.1 | GET | /api/talk/list | 总访问量：98
+2026-02-13 22:19:25 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 22:19:25 - INFO - [访问动态] 2026-02-13 22:19:25.134 | 127.0.0.1 | GET | /home/ | 总访问量：99
+2026-02-13 22:19:25 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:19:25 - INFO - [访问动态] 2026-02-13 22:19:25.155 | 127.0.0.1 | GET | /visit-count | 总访问量：99
+2026-02-13 22:22:28 - INFO - ✅ auth模块导入成功
+2026-02-13 22:22:28 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:22:28 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:22:28 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:22:28 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:22:28 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:22:28 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:22:28 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:22:28 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:22:32 - INFO - [访问日志] 127.0.0.1 - "GET /home/ HTTP/1.1" 304 -
+2026-02-13 22:22:32 - INFO - [访问动态] 2026-02-13 22:22:32.541 | 127.0.0.1 | GET | /home/ | 总访问量：100
+2026-02-13 22:22:32 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:22:32 - INFO - [访问动态] 2026-02-13 22:22:32.556 | 127.0.0.1 | GET | /visit-count | 总访问量：100
+2026-02-13 22:22:33 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 22:22:33 - INFO - [访问动态] 2026-02-13 22:22:33.189 | 127.0.0.1 | GET | /talk | 总访问量：101
+2026-02-13 22:22:33 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:22:33 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 22:22:33 - INFO - [访问动态] 2026-02-13 22:22:33.517 | 127.0.0.1 | POST | /api/check-login | 总访问量：102
+2026-02-13 22:22:33 - INFO - [访问动态] 2026-02-13 22:22:33.543 | 127.0.0.1 | GET | /api/talk/list | 总访问量：103
+2026-02-13 22:22:34 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 22:22:34 - INFO - [访问动态] 2026-02-13 22:22:34.274 | 127.0.0.1 | GET | /login/index.html | 总访问量：104
+2026-02-13 22:22:38 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 200 -
+2026-02-13 22:22:38 - INFO - [访问动态] 2026-02-13 22:22:38.900 | 127.0.0.1 | GET | /login/register.html | 总访问量：105
+2026-02-13 22:22:44 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:22:44 - INFO - [访问动态] 2026-02-13 22:22:44.517 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：106
+2026-02-13 22:23:41 - ERROR - SMTP发送失败：Connection unexpectedly closed
+2026-02-13 22:23:41 - ERROR - 注册验证码发送失败：1706754028@qq.com - 邮件发送失败：Connection unexpectedly closed
+2026-02-13 22:23:41 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 22:23:41 - INFO - [访问动态] 2026-02-13 22:23:41.848 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：107
+2026-02-13 22:23:51 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:23:51 - INFO - [访问动态] 2026-02-13 22:23:51.800 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：108
+2026-02-13 22:25:46 - INFO - ✅ auth模块导入成功
+2026-02-13 22:25:46 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:25:46 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:25:46 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:25:46 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:25:46 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:25:46 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:25:46 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:25:46 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:25:55 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 22:25:55 - INFO - [访问动态] 2026-02-13 22:25:55.092 | 127.0.0.1 | GET | /login/register.html | 总访问量：109
+2026-02-13 22:25:59 - INFO - 正在连接QQ邮箱服务器...
+2026-02-13 22:25:59 - INFO - 正在登录...
+2026-02-13 22:25:59 - ERROR - SMTP异常：Connection unexpectedly closed
+2026-02-13 22:25:59 - ERROR - 注册验证码发送失败：1706754028@qq.com - 邮件发送失败：Connection unexpectedly closed
+2026-02-13 22:25:59 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 22:25:59 - INFO - [访问动态] 2026-02-13 22:25:59.813 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：110
+2026-02-13 22:26:05 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:26:05 - INFO - [访问动态] 2026-02-13 22:26:05.264 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：111
+2026-02-13 22:26:37 - INFO - ✅ auth模块导入成功
+2026-02-13 22:26:37 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:26:37 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:26:37 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:26:37 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:26:37 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:26:37 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:26:37 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:26:37 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:26:40 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 22:26:40 - INFO - [访问动态] 2026-02-13 22:26:40.606 | 127.0.0.1 | GET | /login/register.html | 总访问量：112
+2026-02-13 22:26:50 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:26:50 - INFO - [访问动态] 2026-02-13 22:26:50.493 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：113
+2026-02-13 22:26:50 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:26:50 - INFO - [访问动态] 2026-02-13 22:26:50.745 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：114
+2026-02-13 22:26:54 - INFO - 正在连接QQ邮箱服务器 smtp.qq.com:587...
+2026-02-13 22:26:54 - INFO - 正在启动TLS加密...
+2026-02-13 22:26:54 - INFO - 正在登录...
+2026-02-13 22:26:55 - ERROR - 服务器断开连接：Connection unexpectedly closed
+2026-02-13 22:26:55 - ERROR - 注册验证码发送失败：1706754028@qq.com - 服务器连接断开，请稍后重试
+2026-02-13 22:26:55 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 22:26:55 - INFO - [访问动态] 2026-02-13 22:26:55.154 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：115
+2026-02-13 22:27:04 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:27:04 - INFO - [访问动态] 2026-02-13 22:27:04.871 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：116
+2026-02-13 22:31:14 - INFO - ✅ auth模块导入成功
+2026-02-13 22:31:14 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:31:14 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:31:14 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:31:14 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:31:14 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:31:14 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:31:14 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:31:14 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:31:19 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 22:31:19 - INFO - [访问动态] 2026-02-13 22:31:19.121 | 127.0.0.1 | GET | /login/register.html | 总访问量：117
+2026-02-13 22:31:28 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:31:28 - INFO - [访问动态] 2026-02-13 22:31:28.993 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：118
+2026-02-13 22:31:29 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:31:29 - INFO - [访问动态] 2026-02-13 22:31:29.240 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：119
+2026-02-13 22:31:30 - ERROR - 发送注册验证码异常：cannot import name 'send_verify_code' from 'qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 179, in send_register_code
+    from src.qqmail import send_verify_code
+ImportError: cannot import name 'send_verify_code' from 'src.qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\.program\.web\.personal_vlog\src\message_board.py", line 181, in send_register_code
+    from qqmail import send_verify_code
+ImportError: cannot import name 'send_verify_code' from 'qqmail' (E:\.program\.web\.personal_vlog\src\qqmail.py)
+2026-02-13 22:31:30 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 22:31:30 - INFO - [访问动态] 2026-02-13 22:31:30.705 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：120
+2026-02-13 22:31:40 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:31:40 - INFO - [访问动态] 2026-02-13 22:31:40.940 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：121
+2026-02-13 22:34:05 - INFO - ✅ auth模块导入成功
+2026-02-13 22:34:05 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 22:34:05 - INFO - ✅ 留言板模块导入成功
+2026-02-13 22:34:05 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 22:34:05 - INFO - 
+🚀 服务启动成功！
+2026-02-13 22:34:05 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 22:34:05 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 22:34:05 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 22:34:05 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 22:34:05 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 22:34:09 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 22:34:09 - INFO - [访问动态] 2026-02-13 22:34:09.003 | 127.0.0.1 | GET | /login/register.html | 总访问量：122
+2026-02-13 22:34:18 - INFO - 正在连接QQ邮箱服务器 smtp.qq.com:465...
+2026-02-13 22:34:19 - INFO - 正在登录...
+2026-02-13 22:34:19 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:34:19 - INFO - [访问动态] 2026-02-13 22:34:19.158 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：123
+2026-02-13 22:34:19 - INFO - 正在发送邮件到 1706754028@qq.com...
+2026-02-13 22:34:19 - INFO - ✅ 验证码 157605 发送至 1706754028@qq.com 成功
+2026-02-13 22:34:19 - INFO - 注册验证码发送成功：1706754028@qq.com
+2026-02-13 22:34:19 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 22:34:19 - INFO - [访问动态] 2026-02-13 22:34:19.807 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：124
+2026-02-13 22:34:44 - INFO - 用户注册成功：hyper(1706754028@qq.com)
+2026-02-13 22:34:44 - INFO - [访问日志] 127.0.0.1 - "POST /api/register HTTP/1.1" 200 -
+2026-02-13 22:34:44 - INFO - [访问动态] 2026-02-13 22:34:44.919 | 127.0.0.1 | POST | /api/register | 总访问量：125
+2026-02-13 22:34:47 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 22:34:47 - INFO - [访问动态] 2026-02-13 22:34:47.958 | 127.0.0.1 | GET | /login/index.html | 总访问量：126
+2026-02-13 22:34:58 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 22:34:58 - INFO - [访问动态] 2026-02-13 22:34:58.271 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：127
+2026-02-13 22:35:09 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 22:35:09 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 22:35:09 - INFO - [访问动态] 2026-02-13 22:35:09.858 | 127.0.0.1 | POST | /api/login/password | 总访问量：128
+2026-02-13 22:35:11 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 22:35:11 - INFO - [访问动态] 2026-02-13 22:35:11.413 | 127.0.0.1 | GET | /home/index.html | 总访问量：129
+2026-02-13 22:35:11 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:35:11 - INFO - [访问动态] 2026-02-13 22:35:11.727 | 127.0.0.1 | GET | /visit-count | 总访问量：129
+2026-02-13 22:35:15 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 22:35:15 - INFO - [访问动态] 2026-02-13 22:35:15.228 | 127.0.0.1 | GET | /talk | 总访问量：130
+2026-02-13 22:35:15 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:35:15 - INFO - [访问动态] 2026-02-13 22:35:15.291 | 127.0.0.1 | POST | /api/check-login | 总访问量：131
+2026-02-13 22:35:15 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 22:35:15 - INFO - [访问动态] 2026-02-13 22:35:15.486 | 127.0.0.1 | GET | /api/talk/list | 总访问量：132
+2026-02-13 22:35:24 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 22:35:24 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 22:35:24 - INFO - [访问动态] 2026-02-13 22:35:24.822 | 127.0.0.1 | POST | /api/login/password | 总访问量：133
+2026-02-13 22:35:26 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:35:26 - INFO - [访问动态] 2026-02-13 22:35:26.400 | 127.0.0.1 | GET | /visit-count | 总访问量：133
+2026-02-13 22:35:28 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 22:35:28 - INFO - [访问动态] 2026-02-13 22:35:28.334 | 127.0.0.1 | GET | /talk | 总访问量：134
+2026-02-13 22:35:28 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:35:28 - INFO - [访问动态] 2026-02-13 22:35:28.662 | 127.0.0.1 | POST | /api/check-login | 总访问量：135
+2026-02-13 22:35:28 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 22:35:28 - INFO - [访问动态] 2026-02-13 22:35:28.695 | 127.0.0.1 | GET | /api/talk/list | 总访问量：136
+2026-02-13 22:41:20 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 22:41:20 - INFO - [访问动态] 2026-02-13 22:41:20.179 | 127.0.0.1 | GET | /home/index.html | 总访问量：137
+2026-02-13 22:41:20 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 22:41:20 - INFO - [访问动态] 2026-02-13 22:41:20.215 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：137
+2026-02-13 22:41:20 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:41:20 - INFO - [访问动态] 2026-02-13 22:41:20.437 | 127.0.0.1 | POST | /api/check-login | 总访问量：138
+2026-02-13 22:41:20 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:41:20 - INFO - [访问动态] 2026-02-13 22:41:20.550 | 127.0.0.1 | GET | /visit-count | 总访问量：138
+2026-02-13 22:44:09 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 22:44:09 - INFO - [访问动态] 2026-02-13 22:44:09.673 | 127.0.0.1 | GET | /home/index.html | 总访问量：139
+2026-02-13 22:44:09 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 22:44:09 - INFO - [访问动态] 2026-02-13 22:44:09.710 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：139
+2026-02-13 22:44:09 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:44:09 - INFO - [访问动态] 2026-02-13 22:44:09.933 | 127.0.0.1 | GET | /visit-count | 总访问量：139
+2026-02-13 22:44:10 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:44:10 - INFO - [访问动态] 2026-02-13 22:44:10.054 | 127.0.0.1 | POST | /api/check-login | 总访问量：140
+2026-02-13 22:44:21 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 22:44:21 - INFO - [访问动态] 2026-02-13 22:44:21.404 | 127.0.0.1 | GET | /login/index.html | 总访问量：141
+2026-02-13 22:44:21 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 22:44:21 - INFO - [访问动态] 2026-02-13 22:44:21.737 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：141
+2026-02-13 22:44:23 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 22:44:23 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 22:44:23 - INFO - [访问动态] 2026-02-13 22:44:23.366 | 127.0.0.1 | POST | /api/login/password | 总访问量：142
+2026-02-13 22:44:24 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 22:44:24 - INFO - [访问动态] 2026-02-13 22:44:24.920 | 127.0.0.1 | GET | /home/index.html | 总访问量：143
+2026-02-13 22:44:25 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:44:25 - INFO - [访问动态] 2026-02-13 22:44:25.237 | 127.0.0.1 | POST | /api/check-login | 总访问量：144
+2026-02-13 22:44:25 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:44:25 - INFO - [访问动态] 2026-02-13 22:44:25.315 | 127.0.0.1 | GET | /visit-count | 总访问量：144
+2026-02-13 22:44:34 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 22:44:34 - INFO - [访问动态] 2026-02-13 22:44:34.868 | 127.0.0.1 | GET | /login/index.html | 总访问量：145
+2026-02-13 22:44:34 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 22:44:34 - INFO - [访问动态] 2026-02-13 22:44:34.930 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：145
+2026-02-13 22:44:36 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 22:44:36 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 22:44:36 - INFO - [访问动态] 2026-02-13 22:44:36.087 | 127.0.0.1 | POST | /api/login/password | 总访问量：146
+2026-02-13 22:44:37 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 22:44:37 - INFO - [访问动态] 2026-02-13 22:44:37.950 | 127.0.0.1 | GET | /home/index.html | 总访问量：147
+2026-02-13 22:44:38 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 22:44:38 - INFO - [访问动态] 2026-02-13 22:44:38.019 | 127.0.0.1 | POST | /api/check-login | 总访问量：148
+2026-02-13 22:44:38 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 22:44:38 - INFO - [访问动态] 2026-02-13 22:44:38.200 | 127.0.0.1 | GET | /visit-count | 总访问量：148
+2026-02-13 23:14:25 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 23:14:25 - INFO - [访问动态] 2026-02-13 23:14:25.787 | 127.0.0.1 | GET | /home/index.html | 总访问量：149
+2026-02-13 23:14:25 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:14:25 - INFO - [访问动态] 2026-02-13 23:14:25.831 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：149
+2026-02-13 23:14:26 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:14:26 - INFO - [访问动态] 2026-02-13 23:14:26.026 | 127.0.0.1 | GET | /visit-count | 总访问量：149
+2026-02-13 23:14:26 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:14:26 - INFO - [访问动态] 2026-02-13 23:14:26.165 | 127.0.0.1 | POST | /api/check-login | 总访问量：150
+2026-02-13 23:16:38 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:16:38 - INFO - [访问动态] 2026-02-13 23:16:38.134 | 127.0.0.1 | GET | /home/index.html | 总访问量：151
+2026-02-13 23:16:38 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:16:38 - INFO - [访问动态] 2026-02-13 23:16:38.199 | 127.0.0.1 | POST | /api/check-login | 总访问量：152
+2026-02-13 23:16:38 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:16:38 - INFO - [访问动态] 2026-02-13 23:16:38.358 | 127.0.0.1 | GET | /visit-count | 总访问量：152
+2026-02-13 23:16:40 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:16:40 - INFO - [访问动态] 2026-02-13 23:16:40.228 | 127.0.0.1 | GET | /talk | 总访问量：153
+2026-02-13 23:16:40 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:16:40 - INFO - [访问动态] 2026-02-13 23:16:40.333 | 127.0.0.1 | POST | /api/check-login | 总访问量：154
+2026-02-13 23:16:40 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:16:40 - INFO - [访问动态] 2026-02-13 23:16:40.474 | 127.0.0.1 | GET | /api/talk/list | 总访问量：155
+2026-02-13 23:16:44 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 23:16:44 - INFO - [访问动态] 2026-02-13 23:16:44.370 | 127.0.0.1 | GET | /login/index.html | 总访问量：156
+2026-02-13 23:16:46 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:16:46 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:16:46 - INFO - [访问动态] 2026-02-13 23:16:46.907 | 127.0.0.1 | POST | /api/login/password | 总访问量：157
+2026-02-13 23:16:48 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:16:48 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:16:48 - INFO - [访问动态] 2026-02-13 23:16:48.773 | 127.0.0.1 | GET | /visit-count | 总访问量：157
+2026-02-13 23:16:48 - INFO - [访问动态] 2026-02-13 23:16:48.773 | 127.0.0.1 | POST | /api/check-login | 总访问量：158
+2026-02-13 23:16:59 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:16:59 - INFO - [访问动态] 2026-02-13 23:16:59.023 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：159
+2026-02-13 23:17:26 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:17:26 - INFO - [访问动态] 2026-02-13 23:17:26.273 | 127.0.0.1 | GET | /login/index.html | 总访问量：160
+2026-02-13 23:17:26 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:17:26 - INFO - [访问动态] 2026-02-13 23:17:26.338 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：160
+2026-02-13 23:17:29 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:17:29 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:17:29 - INFO - [访问动态] 2026-02-13 23:17:29.057 | 127.0.0.1 | POST | /api/login/password | 总访问量：161
+2026-02-13 23:17:30 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:17:30 - INFO - [访问动态] 2026-02-13 23:17:30.930 | 127.0.0.1 | GET | /home/index.html | 总访问量：162
+2026-02-13 23:17:30 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:17:30 - INFO - [访问动态] 2026-02-13 23:17:30.995 | 127.0.0.1 | POST | /api/check-login | 总访问量：163
+2026-02-13 23:17:31 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:17:31 - INFO - [访问动态] 2026-02-13 23:17:31.188 | 127.0.0.1 | GET | /visit-count | 总访问量：163
+2026-02-13 23:22:37 - INFO - ✅ auth模块导入成功
+2026-02-13 23:22:37 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:22:37 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:22:37 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:22:37 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:22:37 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:22:37 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:22:37 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:22:37 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:22:37 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:22:40 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 23:22:40 - INFO - [访问动态] 2026-02-13 23:22:40.701 | 127.0.0.1 | GET | /home/index.html | 总访问量：164
+2026-02-13 23:22:40 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:22:40 - INFO - [访问动态] 2026-02-13 23:22:40.701 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：164
+2026-02-13 23:22:40 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:22:40 - INFO - [访问动态] 2026-02-13 23:22:40.828 | 127.0.0.1 | GET | /visit-count | 总访问量：164
+2026-02-13 23:22:41 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:22:41 - INFO - [访问动态] 2026-02-13 23:22:41.078 | 127.0.0.1 | POST | /api/check-login | 总访问量：165
+2026-02-13 23:22:42 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:22:42 - INFO - [访问动态] 2026-02-13 23:22:42.187 | 127.0.0.1 | GET | /login/index.html | 总访问量：166
+2026-02-13 23:22:43 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:22:43 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:22:43 - INFO - [访问动态] 2026-02-13 23:22:43.594 | 127.0.0.1 | POST | /api/login/password | 总访问量：167
+2026-02-13 23:22:45 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:22:45 - INFO - [访问动态] 2026-02-13 23:22:45.137 | 127.0.0.1 | GET | /home/index.html | 总访问量：168
+2026-02-13 23:22:45 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:22:45 - INFO - [访问动态] 2026-02-13 23:22:45.451 | 127.0.0.1 | GET | /visit-count | 总访问量：168
+2026-02-13 23:22:45 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:22:45 - INFO - [访问动态] 2026-02-13 23:22:45.507 | 127.0.0.1 | POST | /api/check-login | 总访问量：169
+2026-02-13 23:22:48 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:22:48 - INFO - [访问动态] 2026-02-13 23:22:48.856 | 127.0.0.1 | GET | /talk | 总访问量：170
+2026-02-13 23:22:48 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:22:48 - INFO - [访问动态] 2026-02-13 23:22:48.926 | 127.0.0.1 | POST | /api/check-login | 总访问量：171
+2026-02-13 23:22:49 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:22:49 - INFO - [访问动态] 2026-02-13 23:22:49.104 | 127.0.0.1 | GET | /api/talk/list | 总访问量：172
+2026-02-13 23:22:52 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:22:52 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:22:52 - INFO - [访问动态] 2026-02-13 23:22:52.517 | 127.0.0.1 | POST | /api/login/password | 总访问量：173
+2026-02-13 23:22:54 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:22:54 - INFO - [访问动态] 2026-02-13 23:22:54.074 | 127.0.0.1 | GET | /home/index.html | 总访问量：174
+2026-02-13 23:22:54 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:22:54 - INFO - [访问动态] 2026-02-13 23:22:54.417 | 127.0.0.1 | GET | /visit-count | 总访问量：174
+2026-02-13 23:22:54 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:22:54 - INFO - [访问动态] 2026-02-13 23:22:54.437 | 127.0.0.1 | POST | /api/check-login | 总访问量：175
+2026-02-13 23:23:04 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:23:04 - INFO - [访问动态] 2026-02-13 23:23:04.685 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：176
+2026-02-13 23:26:04 - INFO - ✅ auth模块导入成功
+2026-02-13 23:26:04 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:26:04 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:26:04 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:26:04 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:26:04 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:26:04 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:26:04 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:26:04 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:26:04 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:26:09 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:26:09 - INFO - [访问动态] 2026-02-13 23:26:09.073 | 127.0.0.1 | GET | /home/index.html | 总访问量：177
+2026-02-13 23:26:09 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:26:09 - INFO - [访问动态] 2026-02-13 23:26:09.091 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：177
+2026-02-13 23:26:09 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:26:09 - INFO - [访问动态] 2026-02-13 23:26:09.226 | 127.0.0.1 | GET | /visit-count | 总访问量：177
+2026-02-13 23:26:09 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:26:09 - INFO - [访问动态] 2026-02-13 23:26:09.457 | 127.0.0.1 | POST | /api/check-login | 总访问量：178
+2026-02-13 23:26:17 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:26:17 - INFO - [访问动态] 2026-02-13 23:26:17.950 | 127.0.0.1 | GET | /login/index.html | 总访问量：179
+2026-02-13 23:26:18 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:26:18 - INFO - [访问动态] 2026-02-13 23:26:18.041 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：179
+2026-02-13 23:26:19 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:26:19 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:26:19 - INFO - [访问动态] 2026-02-13 23:26:19.850 | 127.0.0.1 | POST | /api/login/password | 总访问量：180
+2026-02-13 23:26:21 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:26:21 - INFO - [访问动态] 2026-02-13 23:26:21.715 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：180
+2026-02-13 23:26:21 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:26:21 - INFO - [访问动态] 2026-02-13 23:26:21.744 | 127.0.0.1 | POST | /api/check-login | 总访问量：181
+2026-02-13 23:26:21 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:26:21 - INFO - [访问动态] 2026-02-13 23:26:21.966 | 127.0.0.1 | GET | /visit-count | 总访问量：181
+2026-02-13 23:26:25 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:26:25 - INFO - [访问动态] 2026-02-13 23:26:25.256 | 127.0.0.1 | GET | /talk | 总访问量：182
+2026-02-13 23:26:25 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:26:25 - INFO - [访问动态] 2026-02-13 23:26:25.314 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：182
+2026-02-13 23:26:25 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:26:25 - INFO - [访问动态] 2026-02-13 23:26:25.528 | 127.0.0.1 | POST | /api/check-login | 总访问量：183
+2026-02-13 23:26:25 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:26:25 - INFO - [访问动态] 2026-02-13 23:26:25.668 | 127.0.0.1 | GET | /api/talk/list | 总访问量：184
+2026-02-13 23:26:28 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:26:28 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:26:28 - INFO - [访问动态] 2026-02-13 23:26:28.381 | 127.0.0.1 | POST | /api/login/password | 总访问量：185
+2026-02-13 23:26:29 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:26:29 - INFO - [访问动态] 2026-02-13 23:26:29.951 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：185
+2026-02-13 23:26:30 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:26:30 - INFO - [访问动态] 2026-02-13 23:26:30.245 | 127.0.0.1 | GET | /visit-count | 总访问量：185
+2026-02-13 23:26:30 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:26:30 - INFO - [访问动态] 2026-02-13 23:26:30.297 | 127.0.0.1 | POST | /api/check-login | 总访问量：186
+2026-02-13 23:26:32 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:26:32 - INFO - [访问动态] 2026-02-13 23:26:32.587 | 127.0.0.1 | GET | /talk | 总访问量：187
+2026-02-13 23:26:32 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:26:32 - INFO - [访问动态] 2026-02-13 23:26:32.662 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：187
+2026-02-13 23:26:32 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:26:32 - INFO - [访问动态] 2026-02-13 23:26:32.838 | 127.0.0.1 | POST | /api/check-login | 总访问量：188
+2026-02-13 23:26:33 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:26:33 - INFO - [访问动态] 2026-02-13 23:26:33.028 | 127.0.0.1 | GET | /api/talk/list | 总访问量：189
+2026-02-13 23:26:43 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:26:43 - INFO - [访问动态] 2026-02-13 23:26:43.021 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：190
+2026-02-13 23:28:46 - INFO - ✅ auth模块导入成功
+2026-02-13 23:28:46 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:28:46 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:28:46 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:28:46 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:28:46 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:28:46 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:28:46 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:28:46 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:28:46 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:28:51 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:28:51 - INFO - [访问动态] 2026-02-13 23:28:51.896 | 127.0.0.1 | GET | /login/index.html | 总访问量：191
+2026-02-13 23:28:51 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:28:51 - INFO - [访问动态] 2026-02-13 23:28:51.927 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：191
+2026-02-13 23:28:54 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:28:54 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:28:54 - INFO - [访问动态] 2026-02-13 23:28:54.186 | 127.0.0.1 | POST | /api/login/password | 总访问量：192
+2026-02-13 23:28:55 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:28:55 - INFO - [访问动态] 2026-02-13 23:28:55.704 | 127.0.0.1 | GET | /home/index.html | 总访问量：193
+2026-02-13 23:28:56 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:28:56 - INFO - [访问动态] 2026-02-13 23:28:56.026 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：193
+2026-02-13 23:28:56 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:28:56 - INFO - [访问动态] 2026-02-13 23:28:56.363 | 127.0.0.1 | GET | /visit-count | 总访问量：193
+2026-02-13 23:28:56 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:28:56 - INFO - [访问动态] 2026-02-13 23:28:56.383 | 127.0.0.1 | POST | /api/check-login | 总访问量：194
+2026-02-13 23:29:06 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:29:06 - INFO - [访问动态] 2026-02-13 23:29:06.628 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：195
+2026-02-13 23:34:15 - INFO - ✅ auth模块导入成功
+2026-02-13 23:34:15 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:34:15 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:34:15 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:34:15 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:34:15 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:34:15 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:34:15 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:34:15 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:34:15 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:34:19 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 200 -
+2026-02-13 23:34:19 - INFO - [访问动态] 2026-02-13 23:34:19.066 | 127.0.0.1 | GET | /home/index.html | 总访问量：196
+2026-02-13 23:34:19 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:34:19 - INFO - [访问动态] 2026-02-13 23:34:19.083 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：196
+2026-02-13 23:34:19 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:34:19 - INFO - [访问动态] 2026-02-13 23:34:19.216 | 127.0.0.1 | POST | /api/check-login | 总访问量：197
+2026-02-13 23:34:19 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:34:19 - INFO - [访问动态] 2026-02-13 23:34:19.409 | 127.0.0.1 | GET | /visit-count | 总访问量：197
+2026-02-13 23:34:23 - INFO - [访问日志] 127.0.0.1 - "POST /api/logout HTTP/1.1" 200 -
+2026-02-13 23:34:23 - INFO - [访问动态] 2026-02-13 23:34:23.085 | 127.0.0.1 | POST | /api/logout | 总访问量：198
+2026-02-13 23:34:25 - INFO - [访问日志] 127.0.0.1 - "POST /api/logout HTTP/1.1" 200 -
+2026-02-13 23:34:25 - INFO - [访问动态] 2026-02-13 23:34:25.455 | 127.0.0.1 | POST | /api/logout | 总访问量：199
+2026-02-13 23:36:11 - INFO - ✅ auth模块导入成功
+2026-02-13 23:36:11 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:36:11 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:36:11 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:36:11 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:36:11 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:36:11 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:36:11 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:36:11 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:36:11 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:36:15 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:36:15 - INFO - [访问动态] 2026-02-13 23:36:15.644 | 127.0.0.1 | GET | /home/index.html | 总访问量：200
+2026-02-13 23:36:15 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:36:15 - INFO - [访问动态] 2026-02-13 23:36:15.653 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：200
+2026-02-13 23:36:15 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:36:15 - INFO - [访问动态] 2026-02-13 23:36:15.776 | 127.0.0.1 | GET | /visit-count | 总访问量：200
+2026-02-13 23:36:15 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:15 - INFO - [访问动态] 2026-02-13 23:36:15.999 | 127.0.0.1 | POST | /api/check-login | 总访问量：201
+2026-02-13 23:36:17 - INFO - [访问日志] 127.0.0.1 - "POST /api/logout HTTP/1.1" 200 -
+2026-02-13 23:36:17 - INFO - [访问动态] 2026-02-13 23:36:17.543 | 127.0.0.1 | POST | /api/logout | 总访问量：202
+2026-02-13 23:36:18 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:36:18 - INFO - [访问动态] 2026-02-13 23:36:18.560 | 127.0.0.1 | GET | /home/index.html | 总访问量：203
+2026-02-13 23:36:18 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:18 - INFO - [访问动态] 2026-02-13 23:36:18.886 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：203
+2026-02-13 23:36:19 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:36:19 - INFO - [访问动态] 2026-02-13 23:36:19.216 | 127.0.0.1 | GET | /visit-count | 总访问量：203
+2026-02-13 23:36:19 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:19 - INFO - [访问动态] 2026-02-13 23:36:19.221 | 127.0.0.1 | POST | /api/check-login | 总访问量：204
+2026-02-13 23:36:21 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 23:36:21 - INFO - [访问动态] 2026-02-13 23:36:21.852 | 127.0.0.1 | GET | /login/index.html | 总访问量：205
+2026-02-13 23:36:22 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:22 - INFO - [访问动态] 2026-02-13 23:36:22.163 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：205
+2026-02-13 23:36:23 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:36:23 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:36:23 - INFO - [访问动态] 2026-02-13 23:36:23.727 | 127.0.0.1 | POST | /api/login/password | 总访问量：206
+2026-02-13 23:36:24 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:24 - INFO - [访问动态] 2026-02-13 23:36:24.800 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：206
+2026-02-13 23:36:25 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:36:25 - INFO - [访问动态] 2026-02-13 23:36:25.091 | 127.0.0.1 | GET | /visit-count | 总访问量：206
+2026-02-13 23:36:25 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:25 - INFO - [访问动态] 2026-02-13 23:36:25.145 | 127.0.0.1 | POST | /api/check-login | 总访问量：207
+2026-02-13 23:36:26 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:36:26 - INFO - [访问动态] 2026-02-13 23:36:26.363 | 127.0.0.1 | GET | /talk | 总访问量：208
+2026-02-13 23:36:26 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:26 - INFO - [访问动态] 2026-02-13 23:36:26.418 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：208
+2026-02-13 23:36:26 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:26 - INFO - [访问动态] 2026-02-13 23:36:26.635 | 127.0.0.1 | POST | /api/check-login | 总访问量：209
+2026-02-13 23:36:26 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:36:26 - INFO - [访问动态] 2026-02-13 23:36:26.760 | 127.0.0.1 | GET | /api/talk/list | 总访问量：210
+2026-02-13 23:36:29 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:29 - INFO - [访问动态] 2026-02-13 23:36:29.782 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：210
+2026-02-13 23:36:30 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:36:30 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:36:30 - INFO - [访问动态] 2026-02-13 23:36:30.968 | 127.0.0.1 | POST | /api/login/password | 总访问量：211
+2026-02-13 23:36:32 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:36:32 - INFO - [访问动态] 2026-02-13 23:36:32.324 | 127.0.0.1 | GET | /home/index.html | 总访问量：212
+2026-02-13 23:36:32 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:32 - INFO - [访问动态] 2026-02-13 23:36:32.378 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：212
+2026-02-13 23:36:32 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:32 - INFO - [访问动态] 2026-02-13 23:36:32.584 | 127.0.0.1 | POST | /api/check-login | 总访问量：213
+2026-02-13 23:36:32 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:36:32 - INFO - [访问动态] 2026-02-13 23:36:32.718 | 127.0.0.1 | GET | /visit-count | 总访问量：213
+2026-02-13 23:36:34 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:36:34 - INFO - [访问动态] 2026-02-13 23:36:34.641 | 127.0.0.1 | GET | /talk | 总访问量：214
+2026-02-13 23:36:34 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:36:34 - INFO - [访问动态] 2026-02-13 23:36:34.721 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：214
+2026-02-13 23:36:34 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:36:34 - INFO - [访问动态] 2026-02-13 23:36:34.915 | 127.0.0.1 | POST | /api/check-login | 总访问量：215
+2026-02-13 23:36:35 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:36:35 - INFO - [访问动态] 2026-02-13 23:36:35.084 | 127.0.0.1 | GET | /api/talk/list | 总访问量：216
+2026-02-13 23:36:45 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:36:45 - INFO - [访问动态] 2026-02-13 23:36:45.074 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：217
+2026-02-13 23:40:52 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:40:52 - INFO - [访问动态] 2026-02-13 23:40:52.015 | 127.0.0.1 | GET | /talk | 总访问量：218
+2026-02-13 23:40:52 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:40:52 - INFO - [访问动态] 2026-02-13 23:40:52.049 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：218
+2026-02-13 23:40:52 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:40:52 - INFO - [访问动态] 2026-02-13 23:40:52.278 | 127.0.0.1 | POST | /api/check-login | 总访问量：219
+2026-02-13 23:40:52 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:40:52 - INFO - [访问动态] 2026-02-13 23:40:52.388 | 127.0.0.1 | GET | /api/talk/list | 总访问量：220
+2026-02-13 23:40:54 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:40:54 - INFO - [访问动态] 2026-02-13 23:40:54.244 | 127.0.0.1 | GET | /login/index.html | 总访问量：221
+2026-02-13 23:40:55 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:40:55 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:40:55 - INFO - [访问动态] 2026-02-13 23:40:55.505 | 127.0.0.1 | POST | /api/login/password | 总访问量：222
+2026-02-13 23:40:56 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:40:56 - INFO - [访问动态] 2026-02-13 23:40:56.552 | 127.0.0.1 | GET | /home/index.html | 总访问量：223
+2026-02-13 23:40:56 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:40:56 - INFO - [访问动态] 2026-02-13 23:40:56.870 | 127.0.0.1 | GET | /visit-count | 总访问量：223
+2026-02-13 23:40:56 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:40:56 - INFO - [访问动态] 2026-02-13 23:40:56.928 | 127.0.0.1 | POST | /api/check-login | 总访问量：224
+2026-02-13 23:40:59 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:40:59 - INFO - [访问动态] 2026-02-13 23:40:59.457 | 127.0.0.1 | GET | /talk | 总访问量：225
+2026-02-13 23:40:59 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:40:59 - INFO - [访问动态] 2026-02-13 23:40:59.544 | 127.0.0.1 | POST | /api/check-login | 总访问量：226
+2026-02-13 23:40:59 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:40:59 - INFO - [访问动态] 2026-02-13 23:40:59.740 | 127.0.0.1 | GET | /api/talk/list | 总访问量：227
+2026-02-13 23:41:07 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:41:07 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:41:07 - INFO - [访问动态] 2026-02-13 23:41:07.399 | 127.0.0.1 | POST | /api/login/password | 总访问量：228
+2026-02-13 23:41:08 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:41:08 - INFO - [访问动态] 2026-02-13 23:41:08.460 | 127.0.0.1 | GET | /visit-count | 总访问量：228
+2026-02-13 23:41:08 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:41:08 - INFO - [访问动态] 2026-02-13 23:41:08.779 | 127.0.0.1 | POST | /api/check-login | 总访问量：229
+2026-02-13 23:41:11 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:41:11 - INFO - [访问动态] 2026-02-13 23:41:11.841 | 127.0.0.1 | GET | /talk | 总访问量：230
+2026-02-13 23:41:11 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:41:11 - INFO - [访问动态] 2026-02-13 23:41:11.915 | 127.0.0.1 | POST | /api/check-login | 总访问量：231
+2026-02-13 23:41:12 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:41:12 - INFO - [访问动态] 2026-02-13 23:41:12.095 | 127.0.0.1 | GET | /api/talk/list | 总访问量：232
+2026-02-13 23:41:22 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:41:22 - INFO - [访问动态] 2026-02-13 23:41:22.213 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：233
+2026-02-13 23:48:40 - INFO - ✅ auth模块导入成功
+2026-02-13 23:48:40 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:48:40 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:48:40 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:48:40 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:48:40 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:48:40 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:48:40 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:48:40 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:48:40 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:48:43 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:48:43 - INFO - [访问动态] 2026-02-13 23:48:43.650 | 127.0.0.1 | GET | /talk | 总访问量：234
+2026-02-13 23:48:43 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:48:43 - INFO - [访问动态] 2026-02-13 23:48:43.796 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：234
+2026-02-13 23:48:43 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:48:43 - INFO - [访问动态] 2026-02-13 23:48:43.893 | 127.0.0.1 | POST | /api/check-login | 总访问量：235
+2026-02-13 23:48:44 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:48:44 - INFO - [访问动态] 2026-02-13 23:48:44.139 | 127.0.0.1 | GET | /api/talk/list | 总访问量：236
+2026-02-13 23:48:46 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:48:46 - INFO - [访问动态] 2026-02-13 23:48:46.169 | 127.0.0.1 | GET | /login/index.html | 总访问量：237
+2026-02-13 23:48:47 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:48:47 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:48:47 - INFO - [访问动态] 2026-02-13 23:48:47.346 | 127.0.0.1 | POST | /api/login/password | 总访问量：238
+2026-02-13 23:48:48 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:48:48 - INFO - [访问动态] 2026-02-13 23:48:48.380 | 127.0.0.1 | GET | /home/index.html | 总访问量：239
+2026-02-13 23:48:48 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:48:48 - INFO - [访问动态] 2026-02-13 23:48:48.714 | 127.0.0.1 | POST | /api/check-login | 总访问量：240
+2026-02-13 23:48:48 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:48:48 - INFO - [访问动态] 2026-02-13 23:48:48.738 | 127.0.0.1 | GET | /visit-count | 总访问量：240
+2026-02-13 23:48:50 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:48:50 - INFO - [访问动态] 2026-02-13 23:48:50.809 | 127.0.0.1 | GET | /talk | 总访问量：241
+2026-02-13 23:48:50 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:48:50 - INFO - [访问动态] 2026-02-13 23:48:50.877 | 127.0.0.1 | POST | /api/check-login | 总访问量：242
+2026-02-13 23:48:51 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:48:51 - INFO - [访问动态] 2026-02-13 23:48:51.063 | 127.0.0.1 | GET | /api/talk/list | 总访问量：243
+2026-02-13 23:48:59 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:48:59 - INFO - [访问动态] 2026-02-13 23:48:59.969 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：243
+2026-02-13 23:49:03 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:49:03 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:49:03 - INFO - [访问动态] 2026-02-13 23:49:03.072 | 127.0.0.1 | POST | /api/login/password | 总访问量：244
+2026-02-13 23:49:04 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:49:04 - INFO - [访问动态] 2026-02-13 23:49:04.440 | 127.0.0.1 | GET | /visit-count | 总访问量：244
+2026-02-13 23:49:04 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:49:04 - INFO - [访问动态] 2026-02-13 23:49:04.453 | 127.0.0.1 | POST | /api/check-login | 总访问量：245
+2026-02-13 23:49:08 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:49:08 - INFO - [访问动态] 2026-02-13 23:49:08.664 | 127.0.0.1 | GET | /talk | 总访问量：246
+2026-02-13 23:49:08 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:49:08 - INFO - [访问动态] 2026-02-13 23:49:08.980 | 127.0.0.1 | POST | /api/check-login | 总访问量：247
+2026-02-13 23:49:09 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 404 -
+2026-02-13 23:49:09 - INFO - [访问动态] 2026-02-13 23:49:09.003 | 127.0.0.1 | GET | /api/talk/list | 总访问量：248
+2026-02-13 23:55:00 - INFO - ✅ auth模块导入成功
+2026-02-13 23:55:00 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:55:00 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:55:00 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:55:00 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:55:00 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:55:00 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:55:00 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:55:00 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:55:00 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
+2026-02-13 23:55:03 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:55:03 - INFO - [访问动态] 2026-02-13 23:55:03.398 | 127.0.0.1 | GET | /talk | 总访问量：249
+2026-02-13 23:55:03 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 200 -
+2026-02-13 23:55:03 - INFO - [访问动态] 2026-02-13 23:55:03.563 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：249
+2026-02-13 23:55:03 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:55:03 - INFO - [访问动态] 2026-02-13 23:55:03.663 | 127.0.0.1 | POST | /api/check-login | 总访问量：250
+2026-02-13 23:55:03 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:55:03 - INFO - [访问动态] 2026-02-13 23:55:03.891 | 127.0.0.1 | GET | /api/talk/list | 总访问量：251
+2026-02-13 23:55:06 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:55:06 - INFO - [访问动态] 2026-02-13 23:55:06.422 | 127.0.0.1 | GET | /talk | 总访问量：252
+2026-02-13 23:55:06 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:55:06 - INFO - [访问动态] 2026-02-13 23:55:06.439 | 127.0.0.1 | POST | /api/check-login | 总访问量：253
+2026-02-13 23:55:06 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:55:06 - INFO - [访问动态] 2026-02-13 23:55:06.765 | 127.0.0.1 | GET | /api/talk/list | 总访问量：254
+2026-02-13 23:55:08 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 200 -
+2026-02-13 23:55:08 - INFO - [访问动态] 2026-02-13 23:55:08.179 | 127.0.0.1 | GET | /login/index.html | 总访问量：255
+2026-02-13 23:55:09 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:55:09 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:55:09 - INFO - [访问动态] 2026-02-13 23:55:09.427 | 127.0.0.1 | POST | /api/login/password | 总访问量：256
+2026-02-13 23:55:10 - INFO - [访问日志] 127.0.0.1 - "GET /home/index.html HTTP/1.1" 304 -
+2026-02-13 23:55:10 - INFO - [访问动态] 2026-02-13 23:55:10.482 | 127.0.0.1 | GET | /home/index.html | 总访问量：257
+2026-02-13 23:55:10 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:55:10 - INFO - [访问动态] 2026-02-13 23:55:10.875 | 127.0.0.1 | GET | /visit-count | 总访问量：257
+2026-02-13 23:55:10 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:55:10 - INFO - [访问动态] 2026-02-13 23:55:10.888 | 127.0.0.1 | POST | /api/check-login | 总访问量：258
+2026-02-13 23:55:12 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:55:12 - INFO - [访问动态] 2026-02-13 23:55:12.298 | 127.0.0.1 | GET | /talk | 总访问量：259
+2026-02-13 23:55:12 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:55:12 - INFO - [访问动态] 2026-02-13 23:55:12.627 | 127.0.0.1 | POST | /api/check-login | 总访问量：260
+2026-02-13 23:55:12 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:55:12 - INFO - [访问动态] 2026-02-13 23:55:12.656 | 127.0.0.1 | GET | /api/talk/list | 总访问量：261
+2026-02-13 23:56:08 - INFO - [访问日志] 127.0.0.1 - "GET /login/register.html HTTP/1.1" 304 -
+2026-02-13 23:56:08 - INFO - [访问动态] 2026-02-13 23:56:08.609 | 127.0.0.1 | GET | /login/register.html | 总访问量：262
+2026-02-13 23:56:16 - INFO - 正在连接QQ邮箱服务器 smtp.qq.com:465...
+2026-02-13 23:56:16 - INFO - 正在登录...
+2026-02-13 23:56:16 - INFO - 正在发送邮件到 1706754028@qq.com...
+2026-02-13 23:56:16 - INFO - ✅ 验证码 111448 发送至 1706754028@qq.com 成功
+2026-02-13 23:56:16 - INFO - 注册验证码发送成功：1706754028@qq.com
+2026-02-13 23:56:16 - INFO - [访问日志] 127.0.0.1 - "POST /api/register/send-code HTTP/1.1" 200 -
+2026-02-13 23:56:16 - INFO - [访问动态] 2026-02-13 23:56:16.982 | 127.0.0.1 | POST | /api/register/send-code | 总访问量：263
+2026-02-13 23:56:18 - INFO - [访问日志] 127.0.0.1 - Request timed out: timeout('timed out')
+2026-02-13 23:56:18 - INFO - [访问动态] 2026-02-13 23:56:18.891 | 127.0.0.1 | 未知方法 | 未知路径 | 总访问量：264
+2026-02-13 23:56:36 - INFO - 用户注册成功：hyper(1706754028@qq.com)
+2026-02-13 23:56:36 - INFO - [访问日志] 127.0.0.1 - "POST /api/register HTTP/1.1" 200 -
+2026-02-13 23:56:36 - INFO - [访问动态] 2026-02-13 23:56:36.616 | 127.0.0.1 | POST | /api/register | 总访问量：265
+2026-02-13 23:56:39 - INFO - [访问日志] 127.0.0.1 - "GET /login/index.html HTTP/1.1" 304 -
+2026-02-13 23:56:39 - INFO - [访问动态] 2026-02-13 23:56:39.661 | 127.0.0.1 | GET | /login/index.html | 总访问量：266
+2026-02-13 23:56:39 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:56:39 - INFO - [访问动态] 2026-02-13 23:56:39.981 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：266
+2026-02-13 23:56:43 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:56:43 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:56:43 - INFO - [访问动态] 2026-02-13 23:56:43.100 | 127.0.0.1 | POST | /api/login/password | 总访问量：267
+2026-02-13 23:56:44 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:56:44 - INFO - [访问动态] 2026-02-13 23:56:44.181 | 127.0.0.1 | GET | /visit-count | 总访问量：267
+2026-02-13 23:56:44 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:56:44 - INFO - [访问动态] 2026-02-13 23:56:44.466 | 127.0.0.1 | POST | /api/check-login | 总访问量：268
+2026-02-13 23:56:46 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:56:46 - INFO - [访问动态] 2026-02-13 23:56:46.048 | 127.0.0.1 | GET | /talk | 总访问量：269
+2026-02-13 23:56:46 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:56:46 - INFO - [访问动态] 2026-02-13 23:56:46.112 | 127.0.0.1 | POST | /api/check-login | 总访问量：270
+2026-02-13 23:56:46 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:56:46 - INFO - [访问动态] 2026-02-13 23:56:46.311 | 127.0.0.1 | GET | /api/talk/list | 总访问量：271
+2026-02-13 23:56:51 - INFO - 用户密码登录成功：hyper(1706754028@qq.com)
+2026-02-13 23:56:52 - INFO - [访问日志] 127.0.0.1 - "POST /api/login/password HTTP/1.1" 200 -
+2026-02-13 23:56:52 - INFO - [访问动态] 2026-02-13 23:56:52.000 | 127.0.0.1 | POST | /api/login/password | 总访问量：272
+2026-02-13 23:56:53 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:56:53 - INFO - [访问动态] 2026-02-13 23:56:53.072 | 127.0.0.1 | GET | /visit-count | 总访问量：272
+2026-02-13 23:56:53 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:56:53 - INFO - [访问动态] 2026-02-13 23:56:53.373 | 127.0.0.1 | POST | /api/check-login | 总访问量：273
+2026-02-13 23:56:55 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:56:55 - INFO - [访问动态] 2026-02-13 23:56:55.116 | 127.0.0.1 | GET | /talk | 总访问量：274
+2026-02-13 23:56:55 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:56:55 - INFO - [访问动态] 2026-02-13 23:56:55.178 | 127.0.0.1 | POST | /api/check-login | 总访问量：275
+2026-02-13 23:56:55 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:56:55 - INFO - [访问动态] 2026-02-13 23:56:55.382 | 127.0.0.1 | GET | /api/talk/list | 总访问量：276
+2026-02-13 23:56:59 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:56:59 - INFO - [访问动态] 2026-02-13 23:56:59.147 | 127.0.0.1 | POST | /api/check-login | 总访问量：277
+2026-02-13 23:56:59 - INFO - [访问日志] 127.0.0.1 - "GET /visit-count HTTP/1.1" 200 -
+2026-02-13 23:56:59 - INFO - [访问动态] 2026-02-13 23:56:59.454 | 127.0.0.1 | GET | /visit-count | 总访问量：277
+2026-02-13 23:57:04 - INFO - [访问日志] 127.0.0.1 - "GET /talk HTTP/1.1" 200 -
+2026-02-13 23:57:04 - INFO - [访问动态] 2026-02-13 23:57:04.356 | 127.0.0.1 | GET | /talk | 总访问量：278
+2026-02-13 23:57:04 - INFO - [访问日志] 127.0.0.1 - "GET /static/js/auth.js HTTP/1.1" 304 -
+2026-02-13 23:57:04 - INFO - [访问动态] 2026-02-13 23:57:04.679 | 127.0.0.1 | GET | /static/js/auth.js | 总访问量：278
+2026-02-13 23:57:05 - INFO - [访问日志] 127.0.0.1 - "POST /api/check-login HTTP/1.1" 200 -
+2026-02-13 23:57:05 - INFO - [访问动态] 2026-02-13 23:57:05.007 | 127.0.0.1 | POST | /api/check-login | 总访问量：279
+2026-02-13 23:57:05 - INFO - [访问日志] 127.0.0.1 - "GET /api/talk/list HTTP/1.1" 200 -
+2026-02-13 23:57:05 - INFO - [访问动态] 2026-02-13 23:57:05.027 | 127.0.0.1 | GET | /api/talk/list | 总访问量：280
+2026-02-13 23:57:13 - INFO - ✅ auth模块导入成功
+2026-02-13 23:57:13 - INFO - ✅ 从src.qqmail导入邮件模块成功
+2026-02-13 23:57:13 - INFO - ✅ 留言板模块导入成功
+2026-02-13 23:57:14 - INFO - ✅ 服务器绑定成功：('0.0.0.0', 8000)
+2026-02-13 23:57:14 - INFO - 
+🚀 服务启动成功！
+2026-02-13 23:57:14 - INFO - ├─ 本地访问: http://localhost:8000
+2026-02-13 23:57:14 - INFO - ├─ 外网访问: http://192.168.2.103:8000
+2026-02-13 23:57:14 - INFO - ├─ 留言板: http://localhost:8000/talk
+2026-02-13 23:57:14 - INFO - ├─ 计数查询: http://localhost:8000/visit-count
+2026-02-13 23:57:14 - INFO - └─ 根目录: E:\.program\.web\.personal_vlog
