@@ -2,14 +2,14 @@
   {
     "id": "1770987988127",
     "username": "hyper",
-    "content": "v1.0完成-基础功能",
+    "content": "v1.0-基础功能",
     "create_time": 1739170694.0,
     "create_time_str": "2026-02-10 12:58:14"
   },
   {
     "id": "1770987988128",
     "username": "hyper",
-    "content": "v2.0完成-加入访问计数功能",
+    "content": "v2.0-加入访问计数功能",
     "create_time": 1739183729.0,
     "create_time_str": "2026-02-10 16:35:29"
   },
@@ -58,14 +58,14 @@
   {
     "id": "1770999232763238",
     "username": "hyper",
-    "content": "v3.0完成-完成登录注册功能",
+    "content": "v3.0-完成登录注册功能",
     "create_time": 1770999232.7631164,
     "create_time_str": "2026-02-14 00:13:52"
   },
   {
     "id": "1771000591805166",
     "username": "hyper",
-    "content": "v3.1完成-完成密码加密和访问限制",
+    "content": "v3.1-完成密码加密和访问限制",
     "create_time": 1771000591.80577,
     "create_time_str": "2026-02-14 00:36:31"
   }
